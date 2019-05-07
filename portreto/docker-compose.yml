@@ -1,0 +1,129 @@
+version: '3.7'
+services:
+
+  # Grouping Services for dev purposes
+  db:
+    image: rwgrim/docker-noop
+    depends_on: 
+      - mongo-rs0-1
+      - mongo-rs0-2
+      - mongo-rs0-3
+      - setup-rs
+      - adminmongo
+
+  zoo:
+    image: rwgrim/docker-noop
+    depends_on: 
+      - zoo1
+      - zoo2
+      - zoo3
+
+  # Django Web APP
+  web:
+    build:
+      context: ./web_app
+      network: host
+    hostname: web
+    # initialization shell script
+    command: sh ./init.sh
+    # command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./web_app/dockerfiles:/web_app
+    ports:
+       - "8000:8000"
+      #  - "80:80"
+      #  - "53:53"
+      #  - "3128:3128"
+
+  # Zookeeper Ensemble
+  zoo1:
+    image: zookeeper
+    restart: always
+    hostname: zoo1
+    ports:
+      - 2181:2181
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
+      ZOO_TICK_TIME: 2000
+
+  zoo2:
+    image: zookeeper
+    restart: always
+    hostname: zoo2
+    ports:
+      - 2182:2181
+    environment:
+      ZOO_MY_ID: 2
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=0.0.0.0:2888:3888 server.3=zoo3:2888:3888
+      ZOO_TICK_TIME: 2000
+
+  zoo3:
+    image: zookeeper
+    restart: always
+    hostname: zoo3
+    ports:
+      - 2183:2181
+    environment:
+      ZOO_MY_ID: 3
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=0.0.0.0:2888:3888
+      ZOO_TICK_TIME: 2000
+
+
+  # Mongo replica set    
+  mongo-rs0-1:
+    image: "mongo-start"
+    build: ./mongo-rs0-1
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-rs0-1/data:/data/db
+    depends_on:
+      - "mongo-rs0-2"
+      - "mongo-rs0-3"
+
+  mongo-rs0-2:
+    image: "mongo"
+    command: --replSet rs0 --smallfiles --oplogSize 128
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./mongo-rs0-2/data:/data/db
+
+  mongo-rs0-3:
+    image: "mongo"
+    command: --replSet rs0 --smallfiles --oplogSize 128
+    ports:
+      - "27019:27017"
+    volumes:
+      - ./mongo-rs0-3/data:/data/db
+
+  # Docker to setup replica set and then die (:
+  setup-rs:
+    image: "setup-rs"
+    build: ./setup
+    depends_on:
+      - "mongo-rs0-1"
+  
+  # Admin page for mongoDB
+  adminmongo:
+    image: "adicom/admin-mongo"
+    # First connection can be initialized with environment variables
+    # Web connection syntax: mongodb://<user>:<password>@127.0.0.1:<port>/<db>
+    # Web connection 1 string:  mongodb://mongo-rs0-1
+
+    environment:
+      # The name of the connection to create on boot
+      CONN_NAME: mongo1
+      # The username for the database connection
+      # - DB_USERNAME=""
+      # The password fot the database user
+      # - DB_PASSWORD=""
+      # The host IP address or DNS name without the port!      
+      DB_HOST: mongo-rs0-1
+      # The port of the mongoDB database, if not provided the default 27017 will be used      
+      # - DB_PORT=
+    ports:
+      - "1234:1234"
+    depends_on:
+      - "mongo-rs0-1"
