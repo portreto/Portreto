@@ -68,8 +68,6 @@ Helpfull commands:
     `mongodb://<user>:<password>@127.0.0.1:<port>/<db>`
 
 
-
-
 ## Groups
 
 For developent purposes groups have been created using noop images
