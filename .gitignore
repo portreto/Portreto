@@ -1,0 +1,4 @@
+ #ignore database files
+ portreto/mongo-rs0-1/data/**
+ portreto/mongo-rs0-2/data/**
+ portreto/mongo-rs0-3/data/**
