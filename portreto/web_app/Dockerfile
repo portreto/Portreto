@@ -7,4 +7,3 @@ COPY django/requirements.txt /web_app/
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-

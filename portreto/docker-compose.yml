@@ -28,7 +28,7 @@ services:
     hostname: web
     # initialization shell script
     # command: sh ./init.sh
-    command: python manage.py runserver 0.0.0.0:8000
+    command: sh init.sh
     volumes:
       - ./web_app/django:/web_app
     ports:
