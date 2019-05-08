@@ -67,6 +67,25 @@ Helpfull commands:
 - General connect syntax: <br>
     `mongodb://<user>:<password>@127.0.0.1:<port>/<db>`
 
+## Django
+
+Current containers:
+- web
+
+## Helpfull commands:
+
+### Django Make Migrations
+1) Run containers (if needed): `docker-compose up`
+2) Connect to container shell: `docker-compose run web bash`
+3) Make Migrations: `python manage.py makemigrations`
+4) Migrate: `python manage.py migrate`
+
+### Django add python library
+1) In django project folder run: `pip freeze > requirements.txt`
+2) Build new django image: `docker-compose build web`
+3) Run django container: `docker-compose up web`
+
+
 
 ## Groups
 
@@ -79,3 +98,5 @@ For developent purposes groups have been created using noop images
 | zoo  	| Fire up all zookeeper related containers 	|
 
 groups are called through `docker-compose run <name>` just like any other container
+
+

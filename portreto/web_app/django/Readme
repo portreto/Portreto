@@ -1,0 +1,32 @@
+-Run server
+python manage.py runserver
+
+-Create an app
+python manage.py startapp <name>
+
+-Create superuser
+python manage.py createsuperuser
+
+
+-The following two must be executed together
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-Detects changes and prepares django for the changes
+python manage.py makemigrations
+
+-Sync all apps and settings project
+python manage.py migrate
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+--Interactive shell with python and django objects
+python manage.py shell
+
+	--from portreto.models import Post
+	--from django.contrib.auth.models import User
+		User.objects.<property> ex filter is used to filter tables
+
+--Crispy forms install to make forms nicer
+pip install django-crispy-forms
+
+--To work with images install pillow
+pip install Pillow
