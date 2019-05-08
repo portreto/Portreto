@@ -1,9 +1,31 @@
-# Personal Notes
+# Important Notes
+
+## Run
+1) Build Django container: <br>
+     `docker-compose build`
+2) Run containers: <br>
+     `docker-compose up -d`
+
+## Helpfull docker commands
+- List all running containers: <br>
+    `docker ps`
+- See logs of a container: <br>
+    `docker logs <container>`
+- Kill all running containers: <br>
+    `docker kill $(docker ps -q)`
+- Delete all stoped containers: <br>
+    `docker rm $(docker ps -a -q)`
+- Delete all images: <br>
+    `docker rmi $(docker images -q) --force`
+- Run bash (or any other command) in container using docker-compose: <br>
+    `docker-compose run <docker_name> bash`
 
 ## Web-app Django Container
-- uses venv for all the python dependencies for easier development
-- init.sh to activate venv and run Django from it
+
 - host url: http://localhost:8000
+- for every new python package installed: <br>
+    `pip freeze > requirements.txt` <br>
+    inside django's directory
 
 ## Zookeeper ensemble
 - 3 zookeeper containers
@@ -11,7 +33,8 @@
     - zoo2
     - zoo3
 
-## MongoDB Set
+## MongoDB  Replica Set
+
 - 3 MongoDB containers
     - mongo-rs0-1
     - mongo-rs0-2
@@ -19,21 +42,33 @@
 - Setup container (setup-rs) runs on deployment to connect mongoDB replicas
 - Mongo Admin container (adminmongo)
     - host url: http://localhost:1234
-    - connection syntax: `mongodb://<user>:<password>@127.0.0.1:<port>/<db>`
     - example connection: `mongodb://mongo-rs0-1`
 
-Mongo Create User: <br>
-`db.createUser({user: "portreto",pwd: "portreto",roles: [ { role: "readWrite", db: "appdata" } ]})`
+### Connect to database using <b> adminmongo </b> container
+1) Go to admin page: http://localhost:1234
+2) Add connection `mongo1` at `mongodb://mongo-rs0-1`
+3) Add connection `mongo2` at `mongodb://mongo-rs0-2`
+4) Add connection `mongo3` at `mongodb://mongo-rs0-3`
+5) Connect to each one of the above connections to find the primary replica 
 
-Mongo connect to replica set <br>
-`mongo --host rs0/mongo-rs0-1:27017,mongo-rs0-2:27017,mongo-rs0-3:27017`
+
+### Connect to database CLI:
+1) Run bush in setup-rs container: <br>
+     `docker-compose run setup-rs bash`
+2) Mongo connect to replica set: <br>
+     `mongo --host rs0/mongo-rs0-1:27017,mongo-rs0-2:27017,mongo-rs0-3:27017`
+3) Mongo use appdata db: <br>
+     `use appdata`
+
+Helpfull commands:
+
+- Create User: <br>
+    `db.createUser({user: "portreto",pwd: "portreto",roles: [ { role: "readWrite", db: "appdata" } ]})`
+- General connect syntax: <br>
+    `mongodb://<user>:<password>@127.0.0.1:<port>/<db>`
 
 
 
-build Django container: `docker-compose build`
-
-run containers: 
-`docker-compose up -d`
 
 ## Groups
 
