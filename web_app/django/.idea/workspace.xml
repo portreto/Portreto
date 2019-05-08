@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c6db08f1-1757-43f4-983b-acffc81311c8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/WiredTiger.turtle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/WiredTiger.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/_mdb_catalog.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/_mdb_catalog.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0--1962702094783270332.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0--1962702094783270332.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0-3103856724374403696.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0-3103856724374403696.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0-5231937812941982941.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0-5231937812941982941.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0-5558904949980015460.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0-5558904949980015460.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0-9119599008384120331.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-0-9119599008384120331.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-1-9119599008384120331.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-1-9119599008384120331.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-11-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-11-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-14-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-14-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-18-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-18-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-2--1962702094783270332.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-2--1962702094783270332.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-21-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-21-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-25-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-25-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-28-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-28-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-3-5231937812941982941.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-3-5231937812941982941.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-3-9119599008384120331.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-3-9119599008384120331.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-4--1962702094783270332.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-4--1962702094783270332.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-4-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-4-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-42-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-42-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-47-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-47-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-5-9119599008384120331.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-5-9119599008384120331.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-6--1962702094783270332.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-6--1962702094783270332.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-7-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-7-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-7-9119599008384120331.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-7-9119599008384120331.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-9-9119599008384120331.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/collection-9-9119599008384120331.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-00-24Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-00-24Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-01-31Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-01-31Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-04-49Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-04-49Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-09-18Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-09-18Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-10-42Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-10-42Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-17-34Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-17-34Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-19-30Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-19-30Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-26-20Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-26-20Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-38-00Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-38-00Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-40-15Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-40-15Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-44-24Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-07T22-44-24Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T12-09-53Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T12-09-53Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T12-11-26Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T12-11-26Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T12-12-40Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T12-12-40Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T12-38-32Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T12-38-32Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T12-45-06Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T12-45-06Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T13-47-07Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T13-47-07Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T16-56-51Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T16-56-51Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T17-10-44Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T17-10-44Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T17-24-59Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.2019-05-08T17-24-59Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/diagnostic.data/metrics.interim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-1--1962702094783270332.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-1--1962702094783270332.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-1-3103856724374403696.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-1-3103856724374403696.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-1-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-1-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-1-5231937812941982941.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-1-5231937812941982941.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-1-5558904949980015460.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-1-5558904949980015460.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-10-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-10-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-10-9119599008384120331.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-10-9119599008384120331.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-12-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-12-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-13-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-13-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-15-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-15-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-16-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-16-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-17-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-17-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-19-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-19-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-2-3103856724374403696.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-2-3103856724374403696.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-2-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-2-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-2-5231937812941982941.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-2-5231937812941982941.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-2-5558904949980015460.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-2-5558904949980015460.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-2-9119599008384120331.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-2-9119599008384120331.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-20-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-20-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-22-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-22-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-23-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-23-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-24-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-24-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-26-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-26-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-27-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-27-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-29-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-29-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-3--1962702094783270332.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-3--1962702094783270332.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-3-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-3-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-3-5558904949980015460.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-3-5558904949980015460.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-30-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-30-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-31-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-31-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-32-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-32-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-33-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-33-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-34-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-34-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-35-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-35-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-36-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-36-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-37-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-37-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-38-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-38-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-39-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-39-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-4-5231937812941982941.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-4-5231937812941982941.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-4-9119599008384120331.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-4-9119599008384120331.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-40-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-40-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-41-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-41-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-43-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-43-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-44-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-44-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-45-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-45-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-46-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-46-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-48-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-48-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-49-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-49-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-5--1962702094783270332.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-5--1962702094783270332.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-5-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-5-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-50-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-50-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-6-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-6-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-6-9119599008384120331.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-6-9119599008384120331.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-7--1962702094783270332.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-7--1962702094783270332.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-8-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-8-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-8-9119599008384120331.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-8-9119599008384120331.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-9-5167613877237167106.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/index-9-5167613877237167106.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/journal/WiredTigerLog.0000000020" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/mongod.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/sizeStorer.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/storage.bson" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-1/data/storage.bson" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/WiredTiger.turtle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/WiredTiger.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/_mdb_catalog.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/_mdb_catalog.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0--2555269098110594645.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0--2555269098110594645.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0--4435996910649447221.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0--4435996910649447221.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0--7250216573023815565.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0--7250216573023815565.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0-1479363580279448260.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0-1479363580279448260.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0-7314322579003498814.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-0-7314322579003498814.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-11-1479363580279448260.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-11-1479363580279448260.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-11-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-11-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-13-1479363580279448260.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-13-1479363580279448260.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-14-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-14-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-18-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-18-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-2--7250216573023815565.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-2--7250216573023815565.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-21-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-21-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-25-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-25-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-28-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-28-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-3-7314322579003498814.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-3-7314322579003498814.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-4--7250216573023815565.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-4--7250216573023815565.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-4-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-4-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-42-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-42-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-47-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-47-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-6--7250216573023815565.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-6--7250216573023815565.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-6-1479363580279448260.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-6-1479363580279448260.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-7-1479363580279448260.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-7-1479363580279448260.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-7-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-7-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-9-1479363580279448260.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/collection-9-1479363580279448260.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-00-24Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-00-24Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-01-30Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-01-30Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-09-18Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-09-18Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-10-42Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-10-42Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-17-32Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-17-32Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-19-29Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-19-29Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-26-19Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-26-19Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-38-00Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-38-00Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-40-14Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-40-14Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-44-23Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-07T22-44-23Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T12-09-52Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T12-09-52Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T12-11-26Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T12-11-26Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T12-12-39Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T12-12-39Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T12-38-31Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T12-38-31Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T12-45-05Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T12-45-05Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T13-47-07Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T13-47-07Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T16-56-47Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T16-56-47Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T17-21-37Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T17-21-37Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T17-24-56Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.2019-05-08T17-24-56Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/diagnostic.data/metrics.interim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1--2555269098110594645.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1--2555269098110594645.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1--4435996910649447221.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1--4435996910649447221.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1--7250216573023815565.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1--7250216573023815565.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1-1479363580279448260.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1-1479363580279448260.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1-7314322579003498814.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-1-7314322579003498814.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-10-1479363580279448260.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-10-1479363580279448260.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-10-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-10-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-12-1479363580279448260.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-12-1479363580279448260.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-12-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-12-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-13-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-13-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-14-1479363580279448260.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-14-1479363580279448260.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-15-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-15-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-16-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-16-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-17-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-17-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-19-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-19-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-2--2555269098110594645.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-2--2555269098110594645.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-2--4435996910649447221.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-2--4435996910649447221.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-2-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-2-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-2-7314322579003498814.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-2-7314322579003498814.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-20-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-20-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-22-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-22-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-23-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-23-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-24-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-24-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-26-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-26-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-27-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-27-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-29-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-29-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-3--2555269098110594645.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-3--2555269098110594645.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-3--7250216573023815565.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-3--7250216573023815565.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-3-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-3-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-30-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-30-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-31-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-31-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-32-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-32-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-33-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-33-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-34-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-34-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-35-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-35-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-36-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-36-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-37-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-37-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-38-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-38-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-39-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-39-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-4-7314322579003498814.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-4-7314322579003498814.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-40-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-40-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-41-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-41-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-43-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-43-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-44-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-44-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-45-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-45-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-46-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-46-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-48-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-48-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-49-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-49-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-5--7250216573023815565.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-5--7250216573023815565.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-5-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-5-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-50-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-50-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-6-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-6-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-7--7250216573023815565.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-7--7250216573023815565.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-8-1479363580279448260.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-8-1479363580279448260.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-8-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-8-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-9-3608307199209806107.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/index-9-3608307199209806107.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/journal/WiredTigerLog.0000000020" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/mongod.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/sizeStorer.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/storage.bson" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-2/data/storage.bson" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/WiredTiger.turtle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/WiredTiger.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/_mdb_catalog.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/_mdb_catalog.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0--1298490577665029359.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0--1298490577665029359.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0--8866240791653188465.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0--8866240791653188465.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0-1732621039680794177.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0-1732621039680794177.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0-2064627950583034135.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0-2064627950583034135.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0-748958512574964103.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-0-748958512574964103.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-11--1298490577665029359.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-11--1298490577665029359.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-11-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-11-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-13--1298490577665029359.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-13--1298490577665029359.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-14-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-14-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-18-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-18-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-2-748958512574964103.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-2-748958512574964103.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-21-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-21-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-25-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-25-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-28-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-28-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-3-2064627950583034135.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-3-2064627950583034135.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-4-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-4-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-4-748958512574964103.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-4-748958512574964103.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-42-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-42-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-47-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-47-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-6--1298490577665029359.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-6--1298490577665029359.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-6-748958512574964103.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-6-748958512574964103.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-7--1298490577665029359.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-7--1298490577665029359.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-7-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-7-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-9--1298490577665029359.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/collection-9--1298490577665029359.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-00-23Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-00-23Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-01-30Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-01-30Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-09-18Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-09-18Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-10-42Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-10-42Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-17-33Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-17-33Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-19-29Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-19-29Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-26-19Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-26-19Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-38-00Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-38-00Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-40-14Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-40-14Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-44-23Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-07T22-44-23Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T12-09-52Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T12-09-52Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T12-11-25Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T12-11-25Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T12-12-39Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T12-12-39Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T12-38-30Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T12-38-30Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T12-45-05Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T12-45-05Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T13-47-06Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T13-47-06Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T16-56-47Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T16-56-47Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T17-21-37Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T17-21-37Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T17-24-56Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.2019-05-08T17-24-56Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/diagnostic.data/metrics.interim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1--1298490577665029359.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1--1298490577665029359.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1--8866240791653188465.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1--8866240791653188465.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1-1732621039680794177.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1-1732621039680794177.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1-2064627950583034135.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1-2064627950583034135.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1-748958512574964103.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-1-748958512574964103.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-10--1298490577665029359.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-10--1298490577665029359.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-10-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-10-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-12--1298490577665029359.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-12--1298490577665029359.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-12-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-12-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-13-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-13-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-14--1298490577665029359.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-14--1298490577665029359.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-15-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-15-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-16-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-16-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-17-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-17-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-19-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-19-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-2--8866240791653188465.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-2--8866240791653188465.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-2-1732621039680794177.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-2-1732621039680794177.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-2-2064627950583034135.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-2-2064627950583034135.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-2-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-2-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-20-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-20-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-22-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-22-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-23-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-23-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-24-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-24-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-26-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-26-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-27-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-27-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-29-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-29-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-3--8866240791653188465.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-3--8866240791653188465.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-3-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-3-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-3-748958512574964103.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-3-748958512574964103.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-30-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-30-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-31-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-31-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-32-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-32-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-33-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-33-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-34-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-34-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-35-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-35-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-36-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-36-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-37-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-37-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-38-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-38-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-39-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-39-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-4-2064627950583034135.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-4-2064627950583034135.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-40-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-40-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-41-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-41-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-43-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-43-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-44-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-44-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-45-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-45-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-46-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-46-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-48-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-48-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-49-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-49-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-5-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-5-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-5-748958512574964103.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-5-748958512574964103.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-50-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-50-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-6-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-6-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-7-748958512574964103.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-7-748958512574964103.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-8--1298490577665029359.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-8--1298490577665029359.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-8-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-8-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-9-6852801388522526859.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/index-9-6852801388522526859.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/journal/WiredTigerLog.0000000020" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/mongod.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/sizeStorer.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/storage.bson" beforeDir="false" afterPath="$PROJECT_DIR$/../../portreto/mongo-rs0-3/data/storage.bson" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/web_app/urls.py" />
+        <option value="$PROJECT_DIR$/web_app/settings.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="57" />
+    <option name="y" value="73" />
+    <option name="width" value="1799" />
+    <option name="height" value="887" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <showExcludedFiles Scope="true" ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="web_app" type="Python.DjangoServer" factoryName="Django server">
+      <module name="web_app" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6db08f1-1757-43f4-983b-acffc81311c8" name="Default Changelist" comment="" />
+      <created>1557102131237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557102131237</updated>
+      <workItem from="1557102158765" duration="574000" />
+      <workItem from="1557160685404" duration="688000" />
+      <workItem from="1557231058309" duration="1692000" />
+      <workItem from="1557233770623" duration="4928000" />
+      <workItem from="1557271229885" duration="783000" />
+      <workItem from="1557318398357" duration="684000" />
+      <workItem from="1557335779503" duration="604000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9953000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="57" y="73" width="1799" height="887" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2681118" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49971476" weight="0.32921812" />
+      <window_info anchor="bottom" id="Docker" order="7" sideWeight="0.49971476" weight="0.32921812" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5014261" side_tool="true" visible="true" weight="0.3270525" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49857387" visible="true" weight="0.3270525" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.5071306" weight="0.38926175" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding>
+            <element signature="e#631#663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

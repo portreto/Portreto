@@ -17,6 +17,8 @@ services:
       - zoo1
       - zoo2
       - zoo3
+      - zoonav
+      - zoonav-api
 
   # Django Web APP
   web:
@@ -68,6 +70,26 @@ services:
       ZOO_MY_ID: 3
       ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=0.0.0.0:2888:3888
       ZOO_TICK_TIME: 2000
+
+  # Web GUI for Zookeeper
+  zoonav:
+    image: elkozmon/zoonavigator-web:0.6.1
+    container_name: zoonav
+    ports:
+     - "8080:8080"
+    environment:
+      WEB_HTTP_PORT: 8080
+      API_HOST: "zoonav-api"
+      API_PORT: 9000
+    depends_on:
+     - zoonav-api
+    restart: always
+  zoonav-api:
+    image: elkozmon/zoonavigator-api:0.6.1
+    container_name: zoonav-api
+    environment:
+      API_HTTP_PORT: 9000
+    restart: always    
 
 
   # Mongo replica set    
