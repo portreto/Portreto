@@ -1,5 +1,11 @@
 # Important Notes
 
+## BEFORE ANY `git add .`
+you must own all files, to do so:
+
+1) go to root folder of project
+2) run `sudo chown -R <user> portreto`
+
 ## Run
 1) Build Django container: <br>
      `docker-compose build`
@@ -32,6 +38,14 @@
     - zoo1
     - zoo2
     - zoo3
+- Zoo-Navigator web interface & api
+
+### Navigate zookeeper cluster using Zoo-Navigator web interface:
+1) goto http://localhost:8080
+2) Connect to cluster using the following: 
+    - <i> Connection string </i>: `zoo1:2181,zoo2:2181,zoo3:2181`
+    - <i> Auth username: </i>: Blank
+    - <i> Auth password: </i>: Blank
 
 ## MongoDB  Replica Set
 
