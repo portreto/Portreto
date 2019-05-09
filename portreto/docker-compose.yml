@@ -30,12 +30,23 @@ services:
     # command: sh ./init.sh
     command: sh init.sh
     volumes:
-      - ./web_app/django:/web_app
+      - ./web_app/django:/app
     ports:
        - "8000:8000"
-      #  - "80:80"
-      #  - "53:53"
-      #  - "3128:3128"
+
+  # Storage Servers
+  storage_1:
+    build:
+      context: ./storage
+      network: host
+    hostname: storage_1
+    # initialization shell script
+    command: sh init.sh
+    volumes:
+      - ./storage/django:/app
+      - ./storage/storage_1:/data
+    ports:
+       - "8001:8000"
 
   # Zookeeper Ensemble
   zoo1:
@@ -123,7 +134,7 @@ services:
   # Docker to setup replica set and then die (:
   setup-rs:
     image: "setup-rs"
-    build: ./setup
+    build: ./setup-rs
     depends_on:
       - "mongo-rs0-1"
   
