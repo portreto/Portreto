@@ -10,7 +10,6 @@ services:
       - mongo-rs0-3
       - setup-rs
       - adminmongo
-
   zoo:
     image: rwgrim/docker-noop
     depends_on: 
@@ -19,6 +18,12 @@ services:
       - zoo3
       - zoonav
       - zoonav-api
+  storage:
+    image: rwgrim/docker-noop
+    depends_on: 
+      - storage_1
+      - storage_2
+      - storage_3
 
   # Django Web APP
   web:
@@ -35,23 +40,6 @@ services:
        - "8000:8000"
 
   # Storage Servers
-  storage_1:
-    build:
-      context: ./storage
-      network: host
-    hostname: storage_1
-    # initialization shell script
-    command: sh init.sh
-    volumes:
-      - ./storage/django:/app
-      - ./storage/storage_1:/data
-    ports:
-      - "8001:8000"
-    environment:
-      STORAGE_ID: 1 
-    depends_on:
-      - zoo
-
   storage_1:
     build:
       context: ./storage
