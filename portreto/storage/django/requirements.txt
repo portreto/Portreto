@@ -1,2 +1,6 @@
 Django==2.2.1
-Pillow==6.0.0
+kazoo==2.6.1
+pytz==2019.1
+PyYAML==5.1
+six==1.12.0
+sqlparse==0.3.0

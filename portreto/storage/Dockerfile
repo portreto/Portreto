@@ -1,5 +1,9 @@
 FROM python:3
 ENV PYTHONUNBUFFERED 1
+
+#Set default environment variables
+ENV STORAGE_ID=0
+
 RUN mkdir /app
 RUN mkdir /data
 WORKDIR /app

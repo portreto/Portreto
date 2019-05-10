@@ -46,7 +46,62 @@ services:
       - ./storage/django:/app
       - ./storage/storage_1:/data
     ports:
-       - "8001:8000"
+      - "8001:8000"
+    environment:
+      STORAGE_ID: 1 
+    depends_on:
+      - zoo
+
+  storage_1:
+    build:
+      context: ./storage
+      network: host
+    hostname: storage_1
+    # initialization shell script
+    command: sh init.sh
+    volumes:
+      - ./storage/django:/app
+      - ./storage/storage_1:/data
+    ports:
+      - "8001:8000"
+    environment:
+      STORAGE_ID: 1 
+    depends_on:
+      - zoo
+
+  storage_2:
+    build:
+      context: ./storage
+      network: host
+    hostname: storage_2
+    # initialization shell script
+    command: sh init.sh
+    volumes:
+      - ./storage/django:/app
+      - ./storage/storage_2:/data
+    ports:
+      - "8002:8000"
+    environment:
+      STORAGE_ID: 2 
+    depends_on:
+      - zoo
+      
+  storage_3:
+    build:
+      context: ./storage
+      network: host
+    hostname: storage_3
+    # initialization shell script
+    command: sh init.sh
+    volumes:
+      - ./storage/django:/app
+      - ./storage/storage_3:/data
+    ports:
+      - "8003:8000"
+    environment:
+      STORAGE_ID: 3 
+    depends_on:
+      - zoo     
 
   # Zookeeper Ensemble
   zoo1:
@@ -95,13 +150,13 @@ services:
     depends_on:
      - zoonav-api
     restart: always
+  
   zoonav-api:
     image: elkozmon/zoonavigator-api:0.6.1
     container_name: zoonav-api
     environment:
       API_HTTP_PORT: 9000
     restart: always    
-
 
   # Mongo replica set    
   mongo-rs0-1:
