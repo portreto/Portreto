@@ -6,41 +6,46 @@ from kazoo.client import KazooState
 import logging
 import socket
 import yaml
+import random
+import string
+
+# Random String Generator
+def randomString(stringLength=10):
+    """Generate a random string of fixed length """
+    letters = string.digits + string.ascii_letters
+    return bytes(''.join(random.choice(letters) for i in range(stringLength)), 'utf-8')
 
 #For sending and reading zookeeper values
 def dict_to_bytes(the_dict):
     b = bytes(yaml.dump(the_dict), 'utf-8')
     return b
-
 def bytes_to_dict(the_binary):
     d = yaml.load(the_binary)
     return d
 
 logging.basicConfig(level=logging.DEBUG)
 
-# Connecto to zookeeper
+# Connect to zookeeper
 zk = KazooClient(hosts="zoo1:2181,zoo2:2181,zoo3:2181")
 zk.start()
 
+# Listen to connection
+def zklistener(state):
+    if state == KazooState.LOST:
+        print("Zookeeper Connection Lost")
+    elif state == KazooState.SUSPENDED:
+        print("Zookeeper Connection Suspended")
+    else:
+        print("Zookeeper Connected")
+zk.add_listener(zklistener)
 
+# Add watcher for hashing key
+@zk.DataWatch("/storage")
+def watch_node(data, stat):
+    print("Version: %s, data: %s" % (stat.version, data.decode("utf-8")))
+    settings.GLOBALS["hash_key"] = data.decode("utf-8")
 
-# def zklistener(state):
-#     if state == KazooState.LOST:
-#         zkstate = "LOST"
-#         # Register somewhere that the session was lost
-#     elif state == KazooState.SUSPENDED:
-#         zkstate = "SUSPENDED"
-#         # Handle being disconnected from Zookeeper
-#     else:
-#         zkstate = "CONNECTED"
-#         # Handle being connected/reconnected to Zookeeper
-
-
-# zk.add_listener(zklistener)
-
-print("zk client started")
-print("Storage_ID: "+str(settings.FS_ID))
-
+# Data for personal zNode
 zkdata = {
     "ID" : settings.FS_ID,
     "hostname" : socket.gethostname()
@@ -48,20 +53,19 @@ zkdata = {
 
 # Make sure path exists
 zk.ensure_path("/storage")
-
-# Make (or update) an entity in zookeeper about yourself
+# Update Hash Key
+zk.set("/storage", randomString(30))
+# Make (or update) personal zNode
 if zk.exists("/storage/storage_"+str(settings.FS_ID)) != None:
     zk.set("/storage/storage_"+str(settings.FS_ID),dict_to_bytes(zkdata))
 else:
-    zk.create("/storage/storage_"+str(settings.FS_ID),dict_to_bytes(zkdata))
+    zk.create("/storage/storage_"+str(settings.FS_ID),dict_to_bytes(zkdata), ephemeral=True)
 
-nodes = zk.get_children("/storage/")
-for n in nodes:
-    print(n)
-    print(bytes_to_dict(zk.get("/storage/"+n)[0]))
-
-# Create your views here.
+# index page
 def index(request):
     ID = settings.FS_ID
-    responce = "Storage server ID: " + str(ID) + " SK State: " + str(zk.state)
+    responce = "<HEAD><TITLE>Storage Server</TITLE></HEAD>" \
+               "<BODY><H1> Storage Server " + "</H1>"+ \
+               "<P> Storage server ID: " + str(ID) + "</P>"+ \
+               "<P> ZK State: " + str(zk.state) + "</P></BODY>"
     return HttpResponse(responce)
