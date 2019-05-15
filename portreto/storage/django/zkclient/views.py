@@ -36,7 +36,14 @@ def zklistener(state):
     elif state == KazooState.SUSPENDED:
         print("Zookeeper Connection Suspended")
     else:
-        print("Zookeeper Connected")
+        #Create personal ZNode
+        try:
+            zk.delete("/storage/storage_"+str(settings.FS_ID))
+        except:
+            pass
+        finally:
+            zk.create("/storage/storage_"+str(settings.FS_ID),dict_to_bytes(zkdata), ephemeral=True)
+        print("Zookeeper Connected AND UPDATED")
 zk.add_listener(zklistener)
 
 # Add watcher for hashing key
@@ -45,21 +52,33 @@ def watch_node(data, stat):
     print("Version: %s, data: %s" % (stat.version, data.decode("utf-8")))
     settings.GLOBALS["hash_key"] = data.decode("utf-8")
 
+
 # Data for personal zNode
 zkdata = {
     "ID" : settings.FS_ID,
-    "hostname" : socket.gethostname()
+    "hostname" : socket.gethostname(),
+    "EXT_URL" : settings.EXT_URL
 }
 
 # Make sure path exists
 zk.ensure_path("/storage")
 # Update Hash Key
 zk.set("/storage", randomString(30))
-# Make (or update) personal zNode
-if zk.exists("/storage/storage_"+str(settings.FS_ID)) != None:
-    zk.set("/storage/storage_"+str(settings.FS_ID),dict_to_bytes(zkdata))
-else:
+#Create personal ZNode
+try:
+    zk.delete("/storage/storage_"+str(settings.FS_ID))
+except:
+    pass
+finally:
     zk.create("/storage/storage_"+str(settings.FS_ID),dict_to_bytes(zkdata), ephemeral=True)
+# Add listener
+zk.add_listener(zklistener)
+
+
+print("EXISTS------------------------------------------------------------------------------")
+print(zk.exists("/storage/storage_"+str(settings.FS_ID)))
+
+
 
 # index page
 def index(request):
@@ -67,5 +86,7 @@ def index(request):
     responce = "<HEAD><TITLE>Storage Server</TITLE></HEAD>" \
                "<BODY><H1> Storage Server " + "</H1>"+ \
                "<P> Storage server ID: " + str(ID) + "</P>"+ \
-               "<P> ZK State: " + str(zk.state) + "</P></BODY>"
+               "<P> ZK State: " + str(zk.state) + "</P></BODY>" \
+               "<P> Hostname: " + socket.gethostname() + "</P></BODY>"
+               
     return HttpResponse(responce)

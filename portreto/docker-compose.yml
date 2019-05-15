@@ -21,9 +21,12 @@ services:
   storage:
     image: rwgrim/docker-noop
     depends_on: 
-      - storage_1
-      - storage_2
-      - storage_3
+      - storage1
+      - storage2
+      - storage3
+      - storage4
+      - storage5
+      - storage6
 
   # Django Web APP
   web:
@@ -39,58 +42,137 @@ services:
     ports:
        - "8000:8000"
 
+  # Django Application Service
+  app_service:
+    build:
+      context: ./application
+      network: host
+    hostname: app
+    # initialization shell script
+    # command: sh ./init.sh
+    command: sh init.sh
+    volumes:
+      - ./application/app_service:/app
+    ports:
+       - "8009:8000"    
+    depends_on:
+      - zoo
+      - storage
+
   # Storage Servers
-  storage_1:
+  storage1:
     build:
       context: ./storage
       network: host
-    hostname: storage_1
     # initialization shell script
     command: sh init.sh
+    hostname: storage1
     volumes:
       - ./storage/django:/app
       - ./storage/storage_1:/data
     ports:
-      - "8001:8000"
+      - "8001:80"
     environment:
       STORAGE_ID: 1 
+      EXTERNAL_URL: "http://localhost:8001"
     depends_on:
       - zoo
 
-  storage_2:
+  storage2:
     build:
       context: ./storage
       network: host
-    hostname: storage_2
     # initialization shell script
     command: sh init.sh
+    hostname: storage2
     volumes:
       - ./storage/django:/app
       - ./storage/storage_2:/data
     ports:
-      - "8002:8000"
+      - "8002:80"
     environment:
       STORAGE_ID: 2 
+      EXTERNAL_URL: "http://localhost:8002"
+
     depends_on:
       - zoo
       
-  storage_3:
+  storage3:
     build:
       context: ./storage
       network: host
-    hostname: storage_3
+    restart: always
     # initialization shell script
     command: sh init.sh
+    hostname: storage3
     volumes:
       - ./storage/django:/app
       - ./storage/storage_3:/data
     ports:
-      - "8003:8000"
+      - "8003:80"
     environment:
       STORAGE_ID: 3 
+      EXTERNAL_URL: "http://localhost:8003"
     depends_on:
       - zoo     
 
+  storage4:
+    build:
+      context: ./storage
+      network: host
+    # initialization shell script
+    command: sh init.sh
+    hostname: storage4
+    volumes:
+      - ./storage/django:/app
+      - ./storage/storage_4:/data
+    ports:
+      - "8004:80"
+    environment:
+      STORAGE_ID: 4 
+      EXTERNAL_URL: "http://localhost:8004"
+    depends_on:
+      - zoo
+
+  storage5:
+    build:
+      context: ./storage
+      network: host
+    # initialization shell script
+    command: sh init.sh
+    hostname: storage5
+    volumes:
+      - ./storage/django:/app
+      - ./storage/storage_5:/data
+    ports:
+      - "8005:80"
+    environment:
+      STORAGE_ID: 5 
+      EXTERNAL_URL: "http://localhost:8005"
+
+    depends_on:
+      - zoo
+      
+  storage6:
+    build:
+        context: ./storage
+        network: host
+    restart: always
+    # initialization shell script
+    command: sh init.sh
+    hostname: storage6
+    volumes:
+      - ./storage/django:/app
+      - ./storage/storage_6:/data
+    ports:
+      - "8006:80"
+    environment:
+      STORAGE_ID: 6 
+      EXTERNAL_URL: "http://localhost:8006"
+    depends_on:
+      - zoo     
+  
+  
   # Zookeeper Ensemble
   zoo1:
     image: zookeeper

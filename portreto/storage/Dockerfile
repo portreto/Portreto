@@ -3,6 +3,7 @@ ENV PYTHONUNBUFFERED 1
 
 #Set default environment variables
 ENV STORAGE_ID=0
+ENV EXTERNAL_URL='http://localhost:8000'
 
 RUN mkdir /app
 RUN mkdir /data

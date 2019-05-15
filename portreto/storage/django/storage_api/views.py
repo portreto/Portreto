@@ -7,11 +7,19 @@ from django.http import HttpResponse
 import hashlib
 from django.conf import settings
 from .models import File
+import random
+import string
 
-class FileUploadView(APIView):
+
+def randomString(stringLength=10):
+    """Generate a random string of fixed length """
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(stringLength))
+
+class FilesView(APIView):
     parser_class = (FileUploadParser,)
     # Upload Image
-    def post(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):      
         file_serializer = FileSerializer(data=request.data)
         # Hash Value
         key = settings.GLOBALS["hash_key"]
@@ -27,6 +35,8 @@ class FileUploadView(APIView):
         if not file_serializer.is_valid(): return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         # Check duplicates
         filename = file_serializer.validated_data['file']
+        print("FILENAME----------------------------------: ")
+        print(filename)
         if len(File.objects.filter(file=filename)) > 0: return Response(status=status.HTTP_409_CONFLICT)
         # Save file
         file_serializer.save()
@@ -53,6 +63,7 @@ class FileUploadView(APIView):
         response['Content-Type'] = 'image'
         return response
 
+    # Delete Image
     def delete(self, request):
         # get hashing key
         key = settings.GLOBALS["hash_key"]
@@ -63,14 +74,39 @@ class FileUploadView(APIView):
         if filename == None : return Response(status=status.HTTP_400_BAD_REQUEST)
         if hash == None : return Response(status=status.HTTP_400_BAD_REQUEST)
         # hash filename and key
-        hash_object = hashlib.sha256(bytes(filename+key,'utf-8'))
+        hash_object = hashlib.sha256(bytes(key,'utf-8'))
         hex_dig = hash_object.hexdigest()
         # validate
-        if hex_dig != hash : return Response(status=status.HTTP_400_BAD_REQUEST)
-        # query db
-        files = File.objects.filter(file=filename)
-        # Check if exists
-        if len(files) != 1 : return Response(status=status.HTTP_404_NOT_FOUND)
-        # Delete file
-        file = files[0].delete()
+        if hex_dig != hash :
+            print("---------------------------------------------------------------ERROR DELETE HASH")
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+         # Delete file
+        try:     
+            file = File.objects.get(file=filename)
+            file.delete()
+            print("-----------------------------------------------------------------DELETED")
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
         return Response(status=status.HTTP_200_OK)
+
+class NameView(APIView):
+        # Get Image
+    def get(self, request):
+        # get hashing key
+        key = settings.GLOBALS["hash_key"]
+        # get filename
+        hash = request.query_params.get('hash')
+        # check filename
+        # if hash == None : return Response(status=status.HTTP_400_BAD_REQUEST)
+        # key
+        hash_object = hashlib.sha256(bytes(key,'utf-8'))
+        hex_dig = hash_object.hexdigest()
+        # validate hash
+        # if hex_dig != hash : return Response(status=status.HTTP_400_BAD_REQUEST)
+        
+        filename = randomString()
+        while len(File.objects.filter(file=filename)) > 0 :
+            filename = randomString()
+
+        return Response(filename,  status=status.HTTP_200_OK)
