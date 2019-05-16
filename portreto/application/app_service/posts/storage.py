@@ -38,6 +38,7 @@ def randomString(stringLength=10):
 def dict_to_bytes(the_dict):
     b = bytes(yaml.dump(the_dict), 'utf-8')
     return b
+
 def bytes_to_dict(the_binary):
     d = yaml.load(the_binary)
     return d

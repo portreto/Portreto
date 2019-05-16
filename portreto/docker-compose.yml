@@ -234,8 +234,8 @@ services:
     build: ./mongo-rs0-1
     ports:
       - "27017:27017"
-    volumes:
-      - ./mongo-rs0-1/data:/data/db
+    # volumes:
+    #   - ./mongo-rs0-1/data:/data/db
     depends_on:
       - "mongo-rs0-2"
       - "mongo-rs0-3"
@@ -245,16 +245,16 @@ services:
     command: --replSet rs0 --smallfiles --oplogSize 128
     ports:
       - "27018:27017"
-    volumes:
-      - ./mongo-rs0-2/data:/data/db
+    # volumes:
+    #   - ./mongo-rs0-2/data:/data/db
 
   mongo-rs0-3:
     image: "mongo"
     command: --replSet rs0 --smallfiles --oplogSize 128
     ports:
       - "27019:27017"
-    volumes:
-      - ./mongo-rs0-3/data:/data/db
+    # volumes:
+    #   - ./mongo-rs0-3/data:/data/db
 
   # Docker to setup replica set and then die (:
   setup-rs:
