@@ -35,7 +35,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'posts.apps.PostsConfig'
+    # custom
+    'crispy_forms',  # crispy used to styles forms
+    'users.apps.UsersConfig',
+    'webmain.apps.WebmainConfig',
+    'posts.apps.PostsConfig',
+    'api.apps.ApiConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -138,3 +144,11 @@ KEY = "lol"
 GLOBALS = {"hash_key":"init"}
 
 ZOOCLIENTS = "zoo1:2181,zoo2:2181,zoo3:2181"
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR ,'media') #Media root is the full path to the directory where django stores files
+MEDIA_URL = '/media/' #This is how we are going to see this in the url
+CRISPY_TEMPLATE_PACK = 'bootstrap4' # Default crispy form is bootstrap 2.Change it to 4
+
+LOGIN_REDIRECT_URL = 'webmain:index'    #As we use the default backend django form we need to change the default path to be redirected after login
+#LOGIN_LOGIN = 'users:login'

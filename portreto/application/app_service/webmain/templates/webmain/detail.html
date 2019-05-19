@@ -1,0 +1,60 @@
+{% extends 'webmain/base.html' %}
+{% block title %}{{ gallery }}{% endblock %}
+
+{% block body %}
+<div class="container-fluid songs-container">
+
+    <div class="row">
+
+        <!-- Left Album Info -->
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h1>{{ gallery.Name }} <small>{{ gallery.Description }}</small></h1>
+                    <h2>{{ gallery.Owner }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Song Info -->
+        <<div class="col-sm-8 col-md-9">
+
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation" class="active"><a href="{% url 'webmain:detail' gallery.id %}">View All</a></li>
+                <li role="presentation"><a href="{% url 'webmain:add_photo' gallery.id %}">Add New Photo</a></li>
+            </ul>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <h3>All Photos</h3>
+
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Location</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for photo in gallery.photo_set.all %}
+                            <tr>
+                                <td>{{ photo.Location }}</td>
+                                <img src="{{ photo.Photo.url }}" class="img-responsive">
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

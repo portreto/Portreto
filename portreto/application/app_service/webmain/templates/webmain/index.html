@@ -1,0 +1,38 @@
+{% extends 'webmain/base.html' %}
+
+{% block body %}
+
+
+
+<!--    <h3>ALL PHOTOS</h3>-->
+<!--    <ul>-->
+<!--        {% for gallery in all_galleries %}-->
+<!--        <li><a href="{% url 'webmain:detail' gallery.id %}">{{ gallery.Name }} - {{ gallery.Visibility }} - {{ gallery.Description }}</a></li>-->
+<!--             <input type="hidden" name="photo" value="{{ gallery.id }}" />-->
+
+<!--        {% endfor %}-->
+<!--    </ul>-->
+
+    {% for gallery in all_galleries %}
+        <article class="media content-section">
+
+<!--          <img class="rounded-circle article-image" src="{{ gallery.GalleryOwner.Profile.PhotoProfile.url }}"  alt="img">-->
+            <img src="{{ MEDIA_URL }}{{ gallery.GalleryOwner.profile.ProfilePhoto.url }}"  alt="Avatar">
+
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ gallery.Name  }}</a>
+                <a class="mr-2" href="#">{{ gallery.GalleryOwner}}</a>
+              <small class="text-muted">{{ gallery.UploadDateTime|date:"F d, Y" }}</small>
+            </div>
+            <h2><img class="rounded-circle article-img" src="{{ MEDIA_URL }}{{ gallery.AlbumCover.url }}"  alt="img"></h2>
+
+            <p class="article-content">{{ gallery.Description }}</p>
+          </div>
+        </article>
+    {% endfor %}
+
+
+{% endblock %}
+
+

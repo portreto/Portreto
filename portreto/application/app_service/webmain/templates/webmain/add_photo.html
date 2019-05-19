@@ -1,0 +1,71 @@
+{% extends 'webmain/base.html' %}
+{% block title %}Add a New Photo{% endblock %}
+
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="row">
+
+
+<!--        {% if messages %}-->
+<!--            <ul class="messages">-->
+<!--                {% for message in messages %}-->
+<!--                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>-->
+<!--                {% endfor %}-->
+<!--            </ul>-->
+<!--        {% endif %}-->
+
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h1>{{ gallery.Name }} <small>{{ gallery.GalleryOwner }}</small></h1>
+                    <h2>{{ gallery.Description }}</h2>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-sm-8 col-md-9">
+
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation"><a href="{% url 'webmain:detail' gallery.id%}">View All</a></li>
+                <li role="presentation" class="active"><a href="{% url 'webmain:add_photo' gallery.id%}">Add New Photo</a></li>
+            </ul>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Add a New Photo</h3>
+<!--                    {% if error_message %}-->
+<!--                        <p><strong>{{ error_message }}</strong></p>-->
+<!--                    {% endif %}-->
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="hidden" name="gallery" value="{{ gallery }}">
+                            {% for field in form %}
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                            <span class="text-danger small">{{ field.errors }}</span>
+                                    </div>
+                                    <label class="control-label col-sm-2" >{{ field.label_tag }}</label>
+                                    <div class="col-sm-10">{{ field }}</div>
+                                </div>
+                            {% endfor %}
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.db import models
-from .storage import ExternalStorage
+from webmain.storage import ExternalStorage
 from django.core.files.storage import *
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
