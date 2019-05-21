@@ -1,0 +1,111 @@
+{% extends 'webmain/base.html' %}
+{% block title %}{{ gallery }}{% endblock %}
+
+{% block body %}
+
+{% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+<div class="container-fluid songs-container">
+
+    <div class="row">
+
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="{% url 'webmain:detail' gallery.id %}">
+                        {% if gallery.AlbumCover %}
+                            <img src="{{ gallery.AlbumCover }}" class="img-responsive">
+                        {% else %}
+                            <h3>No gallery to display</h3>
+                        {% endif %}
+                    </a>
+                    <h1>{{ gallery.Name }} <small>{{ gallery.Description }}</small></h1>
+                    <h2>{{ gallery.GalleryOwner }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Song Info -->
+        <<div class="col-sm-8 col-md-9">
+
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation" class="active"><a href="{% url 'webmain:detail' gallery.id %}">View All</a></li>
+                &nbsp;&nbsp;<li role="presentation" class="active"><a href="{% url 'webmain:like_gallery' gallery.id %}">Like</a></li>
+                {% if gallery.GalleryOwner.username == request.user.username %}
+                    &nbsp;&nbsp;<li role="presentation"><a href="{% url 'webmain:add_photo' gallery.id %}">Add New Photo</a></li>
+                    &nbsp;&nbsp;<li role="presentation"><a href="{% url 'webmain:update_gallery' gallery.id %}">Update Gallery</a></li>
+                    &nbsp;&nbsp;<li role="presentation"><a href="{% url 'webmain:delete_gallery' gallery.id %}">Delete Gallery</a></li>
+                {% endif %}
+
+            </ul>
+            <div class="row px-2">
+                <form class="form-inline w-100" method="get" action="{% url 'webmain:comment_gallery' gallery.id %}">
+                    <div class="input-group w-100">
+                        <input type="text" name="comment" class="form-control" style="resize: none" aria-label="Add a comment…" placeholder="Add a comment…">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-dark input-group-text" type="submit">
+                                <i class="far fa-comment"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        {% for comment in comments %}
+            {% if gallery.id == comment.Gallery.id %}
+                <p><strong>&nbsp;<a href="{% url 'webmain:index'%}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }} &nbsp;<a href="{% url 'webmain:delete_comment_gallery' comment_id=comment.id gallery_id=gallery.id %}" class="link">DELETE COMM</a></p>
+            {% endif %}
+        {% endfor %}
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <h3>All Photos</h3>
+
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Location</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for photo in photos %}
+                            <tr>
+                                <td>{{ photo.Location }}</td>
+                                <a href="{% url 'webmain:photo_detail' gallery.id photo.id %}">
+                                <img src="{{ photo.Photo }}" class="img-responsive">
+                                </a>
+                            </tr>
+                            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                                <li role="presentation" class="active"><a href="{% url 'webmain:like_photo' gallery.id photo.id %} ">Like</a></li>
+                                {% if gallery.GalleryOwner.username == request.user.username %}
+                                    &nbsp;&nbsp;<li role="presentation"><a href="{% url 'webmain:update_photo' gallery_id=gallery.id photo_id=photo.id %}">Update Photo</a></li>
+                                    &nbsp;&nbsp;<li role="presentation"><a href="{% url 'webmain:delete_photo' gallery_id=gallery.id photo_id=photo.id %}">Delete Photo</a></li>
+                                {% endif %}
+                            </ul>
+
+
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'webmain/base.html' %}
+{% block title %}Add a New Photo{% endblock %}
+{% load bootstrap4%}
+
+{% block body %}
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- Left Album Info -->
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                        <a href="{% url 'webmain:detail' gallery.id %}">
+                            {% if gallery.AlbumCover %}
+                                <img src="{{ gallery.AlbumCover.url }}" class="img-responsive">
+                            {% else %}
+                                <h3>No cover to display</h3>
+                            {% endif %}
+                        </a>
+                    <h3> Name: {{ gallery.Name }}</h3>
+                    <h4> Owner:{{ gallery.GalleryOwner }}</h4>
+                    <h6> Description: {{ gallery.Description }}</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Song Info -->
+        <div class="col-sm-8 col-md-9">
+
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation"><a href="{% url 'webmain:detail' gallery.id%}">View All</a></li>
+                <li role="presentation" class="active"><a href="{% url 'webmain:add_photo' gallery.id %}">Add New Photo</a></li>
+            </ul>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Add or Update a Photo</h3>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="hidden" name="album" value="{{ gallery }}">
+                        {% for field in form %}
+                            <div class="form-group ">
+                                <label class="control-label col-sm-5" >{{ field.label_tag }}</label> {{ field }}
+                            </div>
+                        {% endfor %}
+                        <div class="form-group ">
+                            <div class="col-sm-offset-2 col-sm-10 ">
+                                <button class="btn mx-auto w-50"><i class="fas fa-upload text-center"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

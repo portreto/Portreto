@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    {% block styles %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-dark fixed-top sticky-top">
+    <span class="site-brand-container"><a class="navbar-brand " style="color: white" href="{% url 'webmain:index' %}" ><span class="logo-container"><img class="logo" src="{% static 'images/portreto.png' %}" alt="" style="width: 40px"></span> <span class="vr">|</span><span class="my-font" >Portreto</span></a></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    {% if user.is_authenticated %}
+
+    <div class="collapse navbar-collapse order-3 order-sm-2" id="navbarNav">
+
+        <span class="navbar-nav mx-auto navbar-fixed-top">
+            <form class=" navbar-form "  role="search" action="{% url 'webmain:search' %}">
+
+                <div class="input-group ">
+                    <input type="text" class="form-control" placeholder="Search" name="q" value="{{ request.GET.q }}">
+                </div>
+
+            </form>
+        </span>
+
+        <ul class="navbar-nav navbar-right ml-auto">
+                <li class="nav-item avatar">
+                    <a class="nav-link p-0" href="{% url 'users:profile' %}">
+                        <img src ="{{ request.user.profile.ProfilePhoto.url }}" class="" style="height: 35px; width: 35px; border-radius: 100%"
+                        alt="Profile Picture">&nbsp;
+                        </a>
+                </li>
+                <li>
+                    <a href="{% url 'webmain:create_gallery' %}">
+                        &nbsp; Add Gallery &nbsp;
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'users:logout' %}">
+                        &nbsp; Logout &nbsp;
+                    </a>
+                </li>
+
+        </ul>
+
+        {% else %}
+
+             <ul class="navbar-nav navbar-right ml-auto">
+
+                    <li>
+                        <a href="{% url 'users:login' %}">
+                            &nbsp; Login &nbsp;
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{%  url 'users:register' %}">
+                            &nbsp; Register &nbsp;
+                        </a>
+                    </li>
+
+            </ul>
+        {% endif %}
+
+    </div>
+</nav>
+
+
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+{%extends 'webmain/base.html'%}
+{% block body %}
+
+{% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+    <div class="container feed">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                {% for n_user in users %}
+                    <div class="feed">
+                        <div class="card ">
+
+                            <span>&nbsp;<img src ="{{ MEDIA_URL }}{{ n_user.user.profile.ProfilePhoto.url }}" class="" style="height: 65px; width: 65px; border-radius: 100%"
+                        alt="Profile Picture">
+                            <strong><a href="{% url 'users:getProfile' n_user.user.username %}" class="link">{{ n_user.user }}</a></strong>
+<!--                            <p>&nbsp;&nbsp;&nbsp;{{ n_user.user.profile.Bio }}</p>-->
+                            </span>
+                            <p>&nbsp;&nbsp;&nbsp;
+                               <font size=2>
+                                   <strong>Email:</strong> {{ n_user.user.email }}
+                               </font>
+                                <br>&nbsp;&nbsp;&nbsp;
+                                <font size=2>
+                                   <strong>Full name:</strong> {{ n_user.user.profile.LastName }} {{ n_user.user.profile.FirstName }}
+                               </font>
+                                <br>&nbsp;&nbsp;&nbsp;
+                                <font size=2>
+                                   <strong>Bio:</strong> {{ n_user.user.profile.Bio }}
+                               </font>
+                            </p>
+
+
+                            <form action="{% url 'webmain:follow' n_user.user.id%}" method="post" style="display: inline;">
+                                        {% csrf_token %}
+<!--                                        <input type="hidden" name="user_id" value="{{ n_user.user.username }}" />-->
+                                        <button type="submit" class="btn btn-outline-info">
+<!--                                            <span class="glyphicon glyphicon-remove"></span>&nbsp; -->
+                                            Share Content
+                                        </button>
+                                    </form>
+
+                        </div>
+                    </div>
+
+                {% empty %}
+                    <div>
+                        <h1>Could not find any user with that username. Please try again</h1>
+
+                    </div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+    </div>
+
+
+{% endblock %}

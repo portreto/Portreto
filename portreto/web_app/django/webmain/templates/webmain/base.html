@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load bootstrap4 %}
+{% load staticfiles %}
+<html>
+<head>
+    {{ form.media }}
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="{% static 'images/portreto.png'  %}">
+
+    {% block styles %}
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+    {% endblock %}
+    <title>Portreto</title>
+
+</head>
+<body>
+{% include 'webmain/navbar.html' %}
+
+{% block body %}
+
+
+
+
+
+{%endblock%}
+
+
+
+</body>
+</html>

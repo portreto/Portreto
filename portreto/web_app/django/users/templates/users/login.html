@@ -1,21 +1,56 @@
-{% extends "portreto/base.html" %}
+
+
+{%extends "webmain/base.html"%}
+{% load bootstrap4 %}
 {% load crispy_forms_tags %}
-{% block content %}
-    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Log In</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Login</button>
+{% block body %}
+
+
+    <div class="container reg-cen">
+        <div class="row">
+            <!-- Empty div -->
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="card">
+
+                    <div class="card-heading">
+                        <h1 class="text-center my-font">Portreto</h1>
+                    </div>
+                    <div class="card-body">
+
+                        <form method="post">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                <legend class="border-bottom mb-4">Log In</legend>
+                                {{ form|crispy }}
+                            </fieldset>
+
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-outline-info" value="Login">
+                            </div>
+
+<!--                            <input type="hidden" name="next" value="/">-->
+
+                        </form>
+
+
+
+                    </div>
+
+                </div>
+                <br>
+                <div class="border-0">
+                    <br>
+<!--                    <center><p class="text-muted"><a class="ml-2" href="{% url 'users:register' %}">Sign Up Now</a><center>-->
+                    <small class="text-muted">
+                        Need An Account? <a class="ml-2" href="{% url 'users:register' %}">Sign Up Now</a>
+                    </small>
+                </div>
+
             </div>
-        </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
-            </small>
+            <!-- empty div -->
+            <div class="col-md-4"></div>
         </div>
     </div>
-{% endblock content %}
+
+{% endblock %}

@@ -1,0 +1,14 @@
+@font-face {
+font-family: 'Billabong';
+font-style: normal;
+font-weight: normal;
+src: local('Billabong'), url('Billabong.woff') format('woff');
+}
+
+.my-font {
+    font-family: Billabong;
+}
+
+body{
+    background-color: #f8f9fa;
+}

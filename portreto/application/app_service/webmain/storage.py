@@ -83,6 +83,9 @@ class ExternalStorage(Storage):
         if not key:
             key = settings.GLOBALS["hash_key"]
     def _open(self, name, mode='rb'):
+
+        print("\n\n\n\nOPENING WITH NAME = " + str(name) + "\n\n\n")
+
         # get url
         url = self.url(name=name,internal=True)
         # create temporary image
@@ -94,6 +97,9 @@ class ExternalStorage(Storage):
 
     # Store files in storage servers
     def _save(self, name, content):
+
+        print("\n\n\n\nSAVING WITH NAME = " + str(name) + "\n\n\n")
+
         # open image
         data = content.open().read()
         # create content for http post request
@@ -135,8 +141,16 @@ class ExternalStorage(Storage):
 
     # Get url for image
     def url(self, name=None, internal=False):
+
+
+        # print("\n\n\n\nFILE INSTANCE NAME = " + str(name)+"\n\n\n")
+
         # get file instance
-        fileInstance = FileEntry.objects.get(name=name)
+        try:
+            fileInstance = FileEntry.objects.get(name=name)
+        except:
+            return
+
         # get storage IDs for file
         ID=[fileInstance.storage_1_ID,fileInstance.storage_2_ID]
 
@@ -183,6 +197,10 @@ class ExternalStorage(Storage):
 
     def get_available_name(self, name, max_length=None):
         # generate random names and make sure there are no duplicates
+
+        print("\n\n\n\nGETTING AVAILABLE NAME = " + str(name)+"\n\n\n")
+
+
         extension = name.split('.')[-1]
         rand_name = randomString(stringLength=20) + '.'+extension
         while len(FileEntry.objects.filter(name=rand_name)) > 0 :

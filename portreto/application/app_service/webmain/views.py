@@ -9,6 +9,13 @@ from django.contrib.auth.models import User
 from .api_client import *
 
 
+import socket
+
+HOSTNAME = socket.gethostname()
+
+print("HOSTNAME" + "="*50 + str(HOSTNAME))
+
+
 # Responsible to show all galleries. Currently not used and will be deleted.Just for test purposes
 @login_required(login_url='users:login')
 def index(request):
@@ -33,7 +40,15 @@ def home_view(request):
     print("\n\nGETING_USER"+"="*40+"\n"+str( get_user())+"\n\n")
     print("\n\nGETING_FOLLOWING"+"="*40+"\n"+str( get_following("admin"))+"\n\n")
     print("\n\nGETING_FOLLOWERS"+"="*40+"\n"+str( get_followers("admin"))+"\n\n")
+    print("\n\nGETING_FOLLOWING_PROFILES"+"="*40+"\n"+str( get_following_profiles("admin"))+"\n\n")
+    print("\n\nGETING_FOLLOWERS_PROFILES"+"="*40+"\n"+str( get_followers_profiles("admin"))+"\n\n")
     print("\n\nGETING_PROFILES"+"="*40+"\n"+str(get_profile())+"\n\n")
+    print("\n\nGETING_GALLERIES" + "=" * 40 + "\n" + str(get_gallery()) + "\n\n")
+    print("\n\nGETING_PHOTOS" + "=" * 40 + "\n" + str(get_photo()) + "\n\n")
+    print("\n\nGETING_SHARED_GALLERIES" + "=" * 40 + "\n" + str(get_shared_galleries("admin")) + "\n\n")
+    print("\n\nGETING_SEARCH_PROFILES" + "=" * 40 + "\n" + str(get_search_profiles("a")) + "\n\n")
+
+
 
     # People that have me as a friend can show me their photos
     friends = Follow.objects.filter(FollowCond2__id=request.user.id).all().values_list('FollowCond1', flat=True)

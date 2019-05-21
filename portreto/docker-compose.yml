@@ -43,18 +43,18 @@ services:
        - "8000:8000"
 
 # Django Application Service
-  app_service:
+  appservice:
     build:
       context: ./application
       network: host
-    hostname: app
+    hostname: appservice
     # initialization shell script
     # command: sh ./init.sh
     command: sh init.sh
     volumes:
       - ./application/app_service:/app
     ports:
-       - "8009:8000"    
+       - "8009:80"    
     depends_on:
       - zoo
       - storage

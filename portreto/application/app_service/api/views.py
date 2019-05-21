@@ -5,17 +5,26 @@ from .serializers import *
 from rest_framework.generics import get_object_or_404
 from rest_framework.exceptions import AuthenticationFailed
 from django.db.models import Q
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import authentication, permissions
+from django.contrib.auth.models import User
+from rest_framework import status
 
 #checks if "requser" can view "user" data
 def has_permission(user,requsername=None,requserid=None,cud=False):
+
+
     # permission flags
     is_owner = False
     has_view_rights = False
 
     # Get queryset of followers
-    queryset = user.follower.all()
-    s = queryset.values_list('FollowCond1', flat=True)
+    queryset = user.followed.all()
+    s = queryset.values_list('FollowCond2', flat=True)
     followers = User.objects.filter(id__in=list(s))
+
+    # print("\n\nFOLLOWERS"+"="*80+str(queryset))
 
     #  Populate flags
     if requserid is not None:
@@ -66,6 +75,7 @@ class GalleryView(viewsets.ModelViewSet):
         user = obj.GalleryOwner
         # Check Permissions
         if not has_permission(user, requsername, requserid, cud):
+            print("\n\n\n\nNO PERMISSIONS" + "*" * 80 + str(has_permission) + "\n\n\n\n")
             raise AuthenticationFailed
         return
 
@@ -110,6 +120,7 @@ class GalleryReactionView(viewsets.ModelViewSet):
         user = obj.Gallery.GalleryOwner
         # Check Permissions
         if not has_permission(user, requsername, requserid, cud):
+            print("CHECKING PERMISSIONS"+"="*40+str(requsername)+" "+str(requserid)+"  cud=="+str(cud))
             raise AuthenticationFailed
         return
 
@@ -145,6 +156,9 @@ class PhotoView(viewsets.ModelViewSet):
         return queryset
 
     def check_object_permissions(self, request, obj):
+
+        print("\n\n\n\nREQUEST" + "*" * 80 + str(request.method) + "\n\n\n\n")
+
         #request parameters
         cud= request.method != 'GET'
         requserid = request.query_params.get('requserid', None)
@@ -153,6 +167,7 @@ class PhotoView(viewsets.ModelViewSet):
         user = obj.Gallery.GalleryOwner
         # Check Permissions
         if not has_permission(user, requsername, requserid, cud):
+            print("\n\n\n\nNO PERMISSION" + "*" * 80 +  "\n\n\n\n")
             raise AuthenticationFailed
         return
 
@@ -284,6 +299,22 @@ class PhotoCommentView(viewsets.ModelViewSet):
 class FollowView(viewsets.ModelViewSet):
     queryset = Follow.objects.all()
     serializer_class = FollowSerializer
+
+    def get_queryset(self):
+        queryset = self.queryset
+
+        FC1 = self.request.query_params.get('fc1username', None)
+        FC2 = self.request.query_params.get('fc2username', None)
+
+        if FC1 is not None:
+            user = get_object_or_404(User,username=FC1)
+            queryset = queryset.filter(FollowCond1__id=user.id )
+
+        if FC2 is not None:
+            user = get_object_or_404(User,username=FC2)
+            queryset = queryset.filter(FollowCond2__id=user.id )
+
+        return queryset
 
     def check_object_permissions(self, request, obj):
         #request parameters
@@ -448,6 +479,9 @@ class FollowingView(viewsets.ReadOnlyModelViewSet):
 
         queryset = User.objects.filter(id__in = list(s))
 
+        if following_filter != None:
+            queryset = queryset.filter(username=following_filter)
+
         return queryset
 
 class FollowingProfileView(viewsets.ReadOnlyModelViewSet):
@@ -489,3 +523,65 @@ class SearchProfileView(viewsets.ReadOnlyModelViewSet):
             queryset = queryset.none()
         return queryset
 
+# Reaction Toggle
+class PhotoReactionToggle(APIView):
+
+    def get(self, request):
+
+        # Requesting User
+        requserid = request.query_params.get('requserid', None)
+        requsername = request.query_params.get('requsername', None)
+
+        photoid = request.query_params.get('photoid', None)
+
+        user = None
+        try:
+            if requserid is not None:
+                user = User.objects.get(id=requserid)
+            if requsername is not None:
+                user = User.objects.get(username=requsername)
+
+            photo = Photo.objects.get(id=int(photoid))
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+        if not has_permission(user, requsername, requserid, False):
+            raise AuthenticationFailed
+
+        instance, created = PhotoReaction.objects.get_or_create(User=user, Photo=photo)
+
+        if not created:
+            instance.delete()
+            return Response(status=status.HTTP_302_FOUND)
+
+        return Response(status=status.HTTP_201_CREATED)
+
+class GalleryReactionToggle(APIView):
+    def get(self, request):
+        # Requesting User
+        requserid = request.query_params.get('requserid', None)
+        requsername = request.query_params.get('requsername', None)
+
+        galleryid = request.query_params.get('galleryid', None)
+
+        user = None
+        try:
+            if requserid is not None:
+                user = User.objects.get(id=requserid)
+            if requsername is not None:
+                user = User.objects.get(username=requsername)
+
+            gallery = Gallery.objects.get(id=int(galleryid))
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+        if not has_permission(user, requsername, requserid, False):
+            raise AuthenticationFailed
+
+        instance, created = GalleryReaction.objects.get_or_create(User=user, Gallery=gallery)
+
+        if not created:
+            instance.delete()
+            return Response(status=status.HTTP_302_FOUND)
+
+        return Response(status=status.HTTP_201_CREATED)

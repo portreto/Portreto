@@ -25,7 +25,7 @@ SECRET_KEY = '8!)h=^k8rz+dqq^@msa#hd9z1p2pwb==wq=jl@f8h@98cm4y_d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
@@ -152,3 +152,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # Default crispy form is bootstrap 2.Change 
 
 LOGIN_REDIRECT_URL = 'webmain:index'    #As we use the default backend django form we need to change the default path to be redirected after login
 #LOGIN_LOGIN = 'users:login'
+REST_FRAMEWORK = {
+    'UPLOADED_FILES_USE_URL': True,
+}

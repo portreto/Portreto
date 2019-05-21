@@ -1,6 +1,9 @@
 -Run server
 python manage.py runserver
 
+-Create project
+django-admin startproject mysite
+
 -Create an app
 python manage.py startapp <name>
 
@@ -30,3 +33,10 @@ pip install django-crispy-forms
 
 --To work with images install pillow
 pip install Pillow
+
+--RESETING MIGRATION
+-Inside these commands on project directory
+find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+find . -path "*/migrations/*.pyc"  -delete
+
+-Then migrate as usual

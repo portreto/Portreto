@@ -1,14 +1,87 @@
-{% extends "portreto/base.html" %}
+{% extends "webmain/base.html" %}
 {% load crispy_forms_tags %}
-{% block content %}
-    <div class="content-section">
-      <div class="media">
-        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
-        <div class="media-body">
-          <h2 class="account-heading">{{ user.username }}</h2>
-          <p class="text-secondary">{{ user.email }}</p>
+{% block body %}
+
+
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+    <div class="container">
+        <div class="row profile-header">
+            <div class="row-lg-6">
+                <div class="col-lg-4">
+                    <a class="" href="{% url 'webmain:index' %}">
+                            <img class="" style="height: 120px; width: 120px; border-radius: 100% " src="{{ user.profile.ProfilePhoto.url }}" alt="">
+                    </a>
+                    <br/>
+                    <h2>{{ user.username }}
+                    </h2>
+                </div>
+
+                {% if user.username == request.user.username %}
+
+                    <div class="row in-profile-header">
+
+                        <form method="POST" enctype = "multipart/form-data">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                            <legend class="border-bottom mb-4"></legend>
+                                {{ user_form|crispy }}
+                                {{ profile_form|crispy }}
+                        </fieldset>
+                            <div class="form-group">
+                                <button class="btn btn-outline-info" type="submit">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                {% else %}
+                    <div class="row in-profile-header">
+                        <div class="col">
+                            <h7>Username: <strong>{{ user.username }}</strong></h7>
+                            </br><h7>Email:<strong>{{ user.email }}</strong></h7>
+                            </br><h7>First Name: <strong>{{ user.profile.FirstName }}</strong></h7>
+                            </br><h7>Last Name: <strong>{{ user.profile.LastName }}</strong></h7>
+                            </br><h7>Bio: <strong>{{ user.profile.Bio }}</strong></h7>
+                            </br><h7>Date of birth: <strong>{{ user.profile.BirthDate }}</strong></h7>
+                            </br><h7>Sex: <strong>{{ user.profile.Sex }}</strong></h7>
+
+                        </div>
+                        <form action="{% url 'webmain:follow' user.id%}" method="post" style="display: inline;">
+                                        {% csrf_token %}
+<!--                                        <input type="hidden" name="user_id" value="{{ n_user.user.username }}" />-->
+                                        <button type="submit" class="btn btn-outline-info">
+<!--                                            <span class="glyphicon glyphicon-remove"></span>&nbsp; -->
+                                            Share Content
+                                        </button>
+                                    </form>
+                    </div>
+                {% endif %}
+
+                {% for gallery in my_galleries %}
+
+                            <div class="ImgBody">
+                                <a href="{% url 'webmain:detail' gallery.id%}">
+                                <img class="proPic" src="{{ gallery.AlbumCover.url }}" alt="epicodus logo">
+                                </a>
+                            </div>
+
+
+
+                {% endfor %}
+            </div>
+            <div class="col-lg-4">
+
+            </div>
         </div>
-      </div>
-      <!-- FORM HERE -->
     </div>
-{% endblock content %}
+
+
+
+{% endblock%}
+

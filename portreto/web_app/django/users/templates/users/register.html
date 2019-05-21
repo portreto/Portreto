@@ -1,21 +1,39 @@
-{% extends "portreto/base.html" %}
+{% extends "webmain/base.html" %}
 {% load crispy_forms_tags %}
-{% block content %}
-    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Join Today</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Sign Up</button>
-            </div>
-        </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Already Have An Account? <a class="ml-2" href="#">Sign In</a>
-            </small>
+{% load bootstrap4 %}
+{% load staticfiles %}
+
+{% block body %}
+
+    <div class="container-fluid reg-cen">
+        <div class="row">
+            <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="card card-default">
+                        <div class="card-heading">
+                            <h1 class="text-center my-font">Portreto</h1>
+                        </div>
+                            <div class="card-body">
+
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <fieldset class="form-group">
+                                        <legend class="border-bottom mb-4">Join Today</legend>
+                                        {{ form|crispy }}
+                                    </fieldset>
+                                    <div class="form-group">
+                                        <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                                    </div>
+
+                                </form>
+                                <small class="text-muted">
+                                    Already Have An Account? <a class="ml-2" href="users:login">Log In</a>
+                                </small>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                </div>
         </div>
     </div>
-{% endblock content %}
+
+{% endblock %}

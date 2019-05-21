@@ -1,0 +1,49 @@
+{% extends 'webmain/base.html' %}
+
+
+{% block body %}
+
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+
+
+
+        {{ phot.Location }}
+            <img src="{{ phot.Photo }}">
+
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation" class="active"><a href="{% url 'webmain:detail' gallery.id %}">View Gallery</a></li>
+                <li role="presentation"><a href="{% url 'webmain:update_photo' gallery_id=gallery.id photo_id=phot.id %}">Update Photo</a></li>
+                <li role="presentation"><a href="{% url 'webmain:delete_photo' gallery_id=gallery.id photo_id=phot.id %}">Delete Photo</a></li>
+
+            </ul>
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation" class="active"><a href="{% url 'webmain:like_photo' gallery_id=gallery.id photo_id=phot.id %} ">Like</a></li>
+            </ul>
+
+                <div class="row px-2">
+                    <form class="form-inline w-100" method="get" action="{% url 'webmain:comment_photo' phot.id %}">
+                        <div class="input-group w-100">
+                            <input type="text" name="comment" class="form-control" style="resize: none" aria-label="Add a comment…" placeholder="Add a comment…">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-dark input-group-text" type="submit">
+                                    <i class="far fa-comment"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        {% for comment in comments %}
+            {% if phot.id == comment.Photo.id %}
+                <p><strong>&nbsp;<a href="{% url 'webmain:index'%}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }} &nbsp;<a href="{% url 'webmain:delete_comment_photo' comment_id=comment.id photo_id=phot.id %}" class="link">DELETE COMM</a></p>
+            {% endif %}
+        {% endfor %}
+
+{% endblock %}
