@@ -101,8 +101,6 @@ class CreateUser:
         except Exception as e:
             raise Exception("Failed to Create new user creation token!" + e)
 
-
-
 '''
     Use this Class only when you want to authenticate user 
 

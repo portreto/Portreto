@@ -163,7 +163,7 @@ def my_login_required(login_page= None, next_page= None):
                 except Exception as e:
                     cookie_in_blacklist(token)
                     response = redirect(login_url)
-                    if DEBUG is True: print("Internal Server error\n"+"~" * 40)
+                    if DEBUG is True: print("Internal Server error\n"+"~" * 40+"\n"+str(e))
                     return delete_my_cookies(response)
         return wrapper
     return decorator

@@ -38,7 +38,7 @@
             <ul class="nav nav-pills" style="margin-bottom: 10px;">
                 <li role="presentation" class="active"><a href="{% url 'webmain:detail' gallery.id %}">View All</a></li>
                 &nbsp;&nbsp;<li role="presentation" class="active"><a href="{% url 'webmain:like_gallery' gallery.id %}">Like</a></li>
-                {% if gallery.GalleryOwner.username == request.user.username %}
+                {% if gallery.GalleryOwner.username == user.username %}
                     &nbsp;&nbsp;<li role="presentation"><a href="{% url 'webmain:add_photo' gallery.id %}">Add New Photo</a></li>
                     &nbsp;&nbsp;<li role="presentation"><a href="{% url 'webmain:update_gallery' gallery.id %}">Update Gallery</a></li>
                     &nbsp;&nbsp;<li role="presentation"><a href="{% url 'webmain:delete_gallery' gallery.id %}">Delete Gallery</a></li>

@@ -1,12 +1,8 @@
 from django.shortcuts import render,redirect , get_object_or_404
-#from django.contrib.auth.forms import UserCreationForm  #This generates an form contained in the backend of django
-from django.contrib import messages #This is the way to show messages success, failure etc
-from .forms import UserRegistrationForm, UserUpdateForm, ProfileUpdateForm #Access form created in forms.py
+from django.contrib import messages
+from .forms import UserRegistrationForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from webmain.models import Gallery
-from webmain.views import is_friend
 from webmain import api_client
 from django.http import Http404
 
@@ -31,7 +27,6 @@ def get_api_objects_or_404(objects):
         raise Http404('No matches the given query.')
     return objects
 
-
 def register(request):
     token = my_cookie_get(request, TOKEN_COOKIE)
     username = my_cookie_get(request, USERNAME_COOKIE)
@@ -55,9 +50,12 @@ def register(request):
                 url = str(protocol) + str(domain) + ':' + str(port) + str(location)
                 #response = requests.post(url=url, data=data["token"])
 
+                # TODO: POST THIS USERNAME TO APP LOGIC
                 username = form.cleaned_data.get('username')
                 messages.success(request,f'Your account has been successfully created {username}')
 
+                user = User(username=username)
+                api_client.post_user(user,username)
 
                 response = redirect(PORTRETO)    #This is used to redirect in our home page after successful update of form
                 my_cookie_set(response, TOKEN_COOKIE, data["token"])
@@ -111,10 +109,8 @@ def login(request, next=None):
             return render(request, 'users/login.html', {'form': form})
 
     else:
-
         form = AuthenticationForm()
     return render(request,'users/login.html', {'form': form}) #Again create a template file again to access everything we want
-
 
 def logout(request):
     return logout_user(request)
@@ -135,22 +131,15 @@ def page1(request, number1, username=None, token=None):
     print(username + " | number1: " + number1 )
     return HttpResponse("<p>Username: " + username  + " | number1: " + number1 + "</p>")
 
-
-
-
 #We will specify something that it is different in each user
-@login_required(login_url='users:login')     #@ declarator adds extra functionality on an extisting function
-def profile(request):
-    requsername = request.user.username
-
+@my_login_required()
+def profile(request, username=None, token=None):
+    requsername = username
     user = get_api_objects_or_404(api_client.get_user(username=requsername))[0]
     profile = get_api_objects_or_404(api_client.get_profile(username=requsername))[0]
-
-
     my_galleries = api_client.get_gallery(requsername=requsername,username=requsername)
 
     if request.method == 'POST':
-
         user_form = UserUpdateForm(request.POST, instance=user)
         profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=profile)    #request.files for images
 
@@ -158,34 +147,36 @@ def profile(request):
             tuser = user_form.save(commit=False)
             tprofile = profile_form.save(commit=False)
 
-            api_client.post_user(tuser,requsername)
-            api_client.post_profile(tprofile,requsername)
+            api_client.put_user(tuser,requsername)
+            api_client.put_profile(tprofile,requsername)
 
             messages.success(request, f'Your account has been successfully updated')
             return redirect('users:profile')
     else:
 
-        user_form = UserUpdateForm(instance=request.user)
-        profile_form = ProfileUpdateForm(instance=request.user.profile)
+        user_form = UserUpdateForm(instance=user)
+        profile_form = ProfileUpdateForm(instance=profile)
 
     context = {
         'user': user,
+        'profile' : profile,
         'user_form': user_form,
-        'profile_form': profile_form,
+        'profile_form' : profile_form,
         'my_galleries': my_galleries,
+        'requsername' : requsername
     }
     return render(request,'users/profile.html',context)
 
 #TODO ADD CHECKS
-@login_required(login_url='users:login')
-def getProfile(request,username):
-    requsername = request.user.username
+@my_login_required()
+def getProfile(request, profile_username, username=None, token=None):
+    requsername = username
 
-    user = get_api_objects_or_404(api_client.get_user(username=username))[0]
+    user = get_api_objects_or_404(api_client.get_user(username=profile_username))[0]
 
-    profile = get_api_objects_or_404(api_client.get_profile(username=username))[0]
+    profile = get_api_objects_or_404(api_client.get_profile(username=profile_username))[0]
 
-    my_galleries = api_client.get_gallery(requsername=requsername,username=username)
+    my_galleries = api_client.get_gallery(requsername=requsername, username=profile_username)
 
     user_form = UserUpdateForm(instance=user)
     profile_form = ProfileUpdateForm(instance=profile)

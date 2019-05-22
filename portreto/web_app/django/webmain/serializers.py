@@ -29,7 +29,7 @@ class GalleryCommentSerializer(serializers.ModelSerializer):
     def create(self, validated_data = None):
 
         self.is_valid()
-        print("\n\n\n\nGCOMMENT SERIALIZER ERRORS" + "*" * 80 + str(self.errors) + "\n\n\n\n")
+        # print("\n\n\n\nGCOMMENT SERIALIZER ERRORS" + "*" * 80 + str(self.errors) + "\n\n\n\n")
 
         return GalleryComment(**self.validated_data)
 
@@ -95,8 +95,8 @@ class ProfileDeserializer(serializers.ModelSerializer):
     def create(self, validated_data = None):
 
         self.is_valid()
-        print ("\n\nVALIDATED_DATA"+"="*40+"\n"+str(self.validated_data))
-        print ("\n\nERRORS"+"="*40+"\n"+str(self.errors))
+        # print ("\n\nVALIDATED_DATA"+"="*40+"\n"+str(self.validated_data))
+        # print ("\n\nERRORS"+"="*40+"\n"+str(self.errors))
 
         user_dt = self.validated_data.pop("user")
         user_serializer = UserSerializer(data=user_dt)

@@ -83,7 +83,7 @@ class ExternalStorage(Storage):
         if not key:
             key = settings.GLOBALS["hash_key"]
     def _open(self, name, mode='rb'):
-        print("OPENING"+"#"*60)
+        # print("OPENING"+"#"*60)
         # get url
         url = self.url(name=name,internal=True)
         # create temporary image

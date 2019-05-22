@@ -87,7 +87,12 @@ class GalleryView(viewsets.ModelViewSet):
 
         user = User.objects.get(username=gallert_owner_data[1])
 
+        print("\n\n OWNER" + str(user) + "\n\n")
+
         data["GalleryOwner"]=user.id
+
+        print("\n\n SERIALIZER DATA" + str(data) + "\n\n")
+
         serializer = GallerySerializerNoFk(data=data)
 
 

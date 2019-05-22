@@ -68,10 +68,14 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ['id','username']
 
     def create(self, validated_data = None):
-        return User(**self.validated_data)
+
+        user = User(**self.validated_data)
+        user.save()
+
+        return user
 
 class ProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer(required=None)
+    user = UserSerializer()
     # user = UserSerializer()
     # id = serializers.IntegerField(validators=None)
 
@@ -82,8 +86,9 @@ class ProfileSerializer(serializers.ModelSerializer):
     def create(self, validated_data = None):
 
         prof = Profile(**self.validated_data)
+        prof.save()
 
-        return Profile(**self.validated_data)
+        return prof
 
 class ProfileDeserializer(serializers.ModelSerializer):
     ProfilePhoto = serializers.CharField()
@@ -179,7 +184,6 @@ class GallerySerializerNoFk(serializers.ModelSerializer):
         gall.save()
 
         return gall
-
 
 class PhotoSerializer(serializers.ModelSerializer):
     # id = serializers.IntegerField(validators=None)

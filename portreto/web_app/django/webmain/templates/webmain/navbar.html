@@ -23,8 +23,6 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    {% if user.is_authenticated %}
-
     <div class="collapse navbar-collapse order-3 order-sm-2" id="navbarNav">
 
         <span class="navbar-nav mx-auto navbar-fixed-top">
@@ -55,24 +53,6 @@
                     </a>
                 </li>
         </ul>
-
-        {% else %}
-
-             <ul class="navbar-nav navbar-right ml-auto">
-
-                    <li>
-                        <a href="{% url 'users:login' %}">
-                            &nbsp; Login &nbsp;
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{%  url 'users:register' %}">
-                            &nbsp; Register &nbsp;
-                        </a>
-                    </li>
-
-            </ul>
-        {% endif %}
 
     </div>
 </nav>

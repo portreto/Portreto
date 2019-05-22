@@ -251,18 +251,7 @@ def get_shared_galleries(requsername):
     params["requsername"] = requsername
 
     r = requests.get(url,params=params)
-
-    # data = r.text
-    # print("DATA"+"#"*60+"\n"+str(data))
-
     data = r.json()
-
-    print("DATA"+"#"*60+"\n"+str(data))
-
-    # if id is not None:
-    #     d2 = data
-    #     data = []
-    #     data.append(d2)
     objects=[]
 
     for dt in data:
@@ -388,7 +377,7 @@ def photo_reaction_toggle(requsername,photoid):
     r = requests.get(url,params=params)
     return r
 
-def gallert_reaction_toggle(requsername,galleryid):
+def gallery_reaction_toggle(requsername, galleryid):
     params={}
     url = base_url+'/gallery_reaction_toggle'
 
@@ -405,15 +394,17 @@ def post_gallery(object,requsername):
     params["requsername"] = requsername
     serializer = GallerySerializer(object)
 
+    # print("\n\n SERIALIZER ID" + str(object.GalleryOwner.id)+"\n\n")
+    # print("\n\n SERIALIZER USERNAME" + str(object.GalleryOwner.id)+"\n\n")
 
     data = serializer.data
-    data["GalleryOwner"]=[1,"admin"]
+    data["GalleryOwner"]=[object.GalleryOwner.id,object.GalleryOwner.username]
 
-    print("\n\n SERIALIZER DATA" + str(data)+"\n\n")
+    # print("\n\n SERIALIZER DATA" + str(data)+"\n\n")
 
     r = requests.post(base_url + '/basic/gallery/', data=data, params=params, files=dict(AlbumCover=object.AlbumCover))
 
-    print("\n\n POST _ GALLERY _ RESPONCE" + str(r.text) + "\n\n")
+    # print("\n\n POST _ GALLERY _ RESPONCE" + str(r.text) + "\n\n")
 
     return r
 
@@ -516,7 +507,9 @@ def put_profile(object,requsername):
     params = {}
     params["requsername"] = requsername
     serializer = ProfileSerializer(object)
-    return requests.put(base_url + '/basic/profiles/'+str(object.id)+"/", data=serializer.data, params=params,files=dict(ProfilePhoto=object.ProfilePhoto))
+    response = requests.put(base_url + '/basic/profiles/'+str(object.id)+"/", data=serializer.data, params=params,files=dict(ProfilePhoto=object.ProfilePhoto))
+    print("\n\nRESPONSE" + "=" * 80+"\n"+str(response))
+    return response
 
 def put_user(object,requsername):
     params = {}
