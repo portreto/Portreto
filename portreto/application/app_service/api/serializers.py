@@ -22,22 +22,29 @@ class PhotoReactionSerializer(serializers.ModelSerializer):
         return PhotoReaction(**self.validated_data)
 
 class GalleryCommentSerializer(serializers.ModelSerializer):
-    id = serializers.IntegerField(validators=None)
+    # id = serializers.IntegerField(validators=None)
     class Meta:
         model = GalleryComment
         fields = '__all__'
 
     def create(self, validated_data = None):
-        return GalleryComment(**self.validated_data)
+        self.is_valid()
+        comment = GalleryComment(**self.validated_data)
+        comment.save()
+
+        return comment
 
 class PhotoCommentSerializer(serializers.ModelSerializer):
-    id = serializers.IntegerField(validators=None)
     class Meta:
         model = PhotoComment
         fields = '__all__'
 
     def create(self, validated_data = None):
-        return PhotoComment(**self.validated_data)
+
+        photo_comment = PhotoComment(**self.validated_data)
+        photo_comment.save()
+
+        return photo_comment
 
 class FollowSerializer(serializers.ModelSerializer):
     class Meta:
@@ -53,8 +60,8 @@ class FollowSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
 
-    username = serializers.CharField(validators=None)
-    id = serializers.IntegerField(validators=None)
+    # username = serializers.CharField(validators=None)
+    # id = serializers.IntegerField(validators=None)
 
     class Meta:
         model = User
@@ -64,7 +71,7 @@ class UserSerializer(serializers.ModelSerializer):
         return User(**self.validated_data)
 
 class ProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer()
+    user = UserSerializer(required=None)
     # user = UserSerializer()
     # id = serializers.IntegerField(validators=None)
 
@@ -94,6 +101,7 @@ class ProfileDeserializer(serializers.ModelSerializer):
         return Profile(user = user, **self.validated_data)
 
 class GallerySerializer(serializers.ModelSerializer):
+    GalleryOwner = UserSerializer(read_only=False)
 
     class Meta:
         model = Gallery
@@ -116,7 +124,6 @@ class GallerySerializer(serializers.ModelSerializer):
             return
 
         gall.save()
-
         return gall
 
     def destroy(self):
@@ -128,6 +135,7 @@ class GallerySerializer(serializers.ModelSerializer):
 
         user_galleries = Gallery.objects.filter(GalleryOwner__username= gall.GalleryOwner, Name = galleryName)
 
+
         if len(user_galleries)>0:
             raise NotAcceptable
             return
@@ -136,14 +144,42 @@ class GallerySerializer(serializers.ModelSerializer):
 
         return gall
 
-class GalleryDeserializer(serializers.ModelSerializer):
-    AlbumCover = serializers.CharField()
+class GallerySerializerNoFk(serializers.ModelSerializer):
     class Meta:
         model = Gallery
         fields = '__all__'
 
     def create(self, validated_data = None):
-        return Gallery(**self.validated_data)
+        gall = Gallery(**self.validated_data)
+        #check for duplicates
+        galleryName = gall.Name
+        print("\n\n\n\nGALLERY NAME" + "*" * 80 + str(galleryName) + "\n\n\n\n")
+        user_galleries = Gallery.objects.filter(GalleryOwner__username= gall.GalleryOwner, Name = galleryName)
+        print("\n\n\n\nUSER GALLERIES" + "*" * 80 + str(user_galleries) + "\n\n\n\n")
+        if len(user_galleries)>0:
+            raise NotAcceptable
+            return
+        gall.save()
+        return gall
+
+    def destroy(self):
+        gall = Gallery(**self.validated_data)
+
+        #check for duplicates
+
+        galleryName = gall.Name
+
+        user_galleries = Gallery.objects.filter(GalleryOwner__username= gall.GalleryOwner, Name = galleryName)
+
+
+        if len(user_galleries)>0:
+            raise NotAcceptable
+            return
+
+        gall.save()
+
+        return gall
+
 
 class PhotoSerializer(serializers.ModelSerializer):
     # id = serializers.IntegerField(validators=None)

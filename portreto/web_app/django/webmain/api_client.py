@@ -157,7 +157,7 @@ def get_photo_comment(requsername=None, id=None, photoid=None):
     objects=[]
 
     for dt in data:
-        serializer = PhotoReactionSerializer(data=dt)
+        serializer = PhotoCommentSerializer(data=dt)
         serializer.is_valid()
         obj = serializer.create()
         objects.append(obj)
@@ -200,7 +200,7 @@ def get_profile(id=None,username=None):
     if username is not None:
         params["username"] = username
 
-    r = requests.get(url)
+    r = requests.get(url, params=params)
     data = r.json()
 
     if id is not None:
@@ -213,7 +213,6 @@ def get_profile(id=None,username=None):
     for dt in data:
         serializer = ProfileDeserializer(data=dt)
         serializer.is_valid()
-        # print("\n\nIS_VALID" + "=" * 40 + "\n" + str(serializer.errors) + "\n\n")
         obj = serializer.create()
         objects.append(obj)
 
@@ -227,7 +226,7 @@ def get_user(id=None,username=None):
     if username is not None:
         params["username"] = username
 
-    r = requests.get(url)
+    r = requests.get(url, params=params)
     data = r.json()
 
     if id is not None:
@@ -354,13 +353,29 @@ def get_search_profiles(query):
     r = requests.get(url,params=params)
     data = r.json()
 
+    print("\n\nPROFILE_DATA" + "=" * 30 + str(data))
     objects=[]
 
     for dt in data:
+
         serializer = ProfileDeserializer(data=dt)
         serializer.is_valid()
+
         obj = serializer.create()
+
+        # user = dt.pop("user")
+        # id = dt.pop("id")
+        #
+        #
+        #
+        # serializer = UserSerializer(data=user)
+        # serializer.is_valid()
+        #
+        # obj.user = serializer.create()
+        # obj.id = id
+
         objects.append(obj)
+
     return objects
 
 def photo_reaction_toggle(requsername,photoid):
@@ -390,9 +405,15 @@ def post_gallery(object,requsername):
     params["requsername"] = requsername
     serializer = GallerySerializer(object)
 
-    print("\n\n SERIALIZER DATA" + str(serializer.data)+"\n\n")
 
-    r = requests.post(base_url + '/basic/gallery/', data=serializer.data, params=params,files=dict(AlbumCover=object.AlbumCover))
+    data = serializer.data
+    data["GalleryOwner"]=[1,"admin"]
+
+    print("\n\n SERIALIZER DATA" + str(data)+"\n\n")
+
+    r = requests.post(base_url + '/basic/gallery/', data=data, params=params, files=dict(AlbumCover=object.AlbumCover))
+
+    print("\n\n POST _ GALLERY _ RESPONCE" + str(r.text) + "\n\n")
 
     return r
 

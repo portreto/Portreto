@@ -37,9 +37,10 @@ def has_permission(user,requsername=None,requserid=None,cud=False):
     has_view_rights = has_view_rights or is_owner
 
     # Check Permissions and return
-    return has_view_rights or (cud and is_owner)
+    return (not cud and has_view_rights) or is_owner
 
 #Basic API Views
+
 class GalleryView(viewsets.ModelViewSet):
     queryset = Gallery.objects.all()
     serializer_class = GallerySerializer
@@ -59,7 +60,7 @@ class GalleryView(viewsets.ModelViewSet):
             user = User.objects.get(id=userid)
         if username is not None:
             queryset = queryset.filter(GalleryOwner__username=username)
-            user = User.objects.get(id=username)
+            user = User.objects.get(username=username)
         # Check Permissions
         if user is not None and not has_permission(user, requsername, requserid, cud=False):
             queryset = queryset.none()
@@ -78,6 +79,22 @@ class GalleryView(viewsets.ModelViewSet):
             print("\n\n\n\nNO PERMISSIONS" + "*" * 80 + str(has_permission) + "\n\n\n\n")
             raise AuthenticationFailed
         return
+
+    def create(self, request, *args, **kwargs):
+
+        data = request.data
+        gallert_owner_data = data.pop("GalleryOwner")
+
+        user = User.objects.get(username=gallert_owner_data[1])
+
+        data["GalleryOwner"]=user.id
+        serializer = GallerySerializerNoFk(data=data)
+
+
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
 class GalleryReactionView(viewsets.ModelViewSet):
     queryset = GalleryReaction.objects.all()
@@ -246,6 +263,9 @@ class GalleryCommentView(viewsets.ModelViewSet):
     def check_object_permissions(self, request, obj):
         #request parameters
         cud= request.method != 'GET'
+
+        print("\n\nCUD :"+"="*60+str(cud))
+
         requserid = request.query_params.get('requserid', None)
         requsername = request.query_params.get('requsername', None)
         # Get gallery owner

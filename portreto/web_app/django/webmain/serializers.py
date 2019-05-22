@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from webmain.models import *
+from django.conf.global_settings import MEDIA_URL
 
 class GalleryReactionSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(validators=None)
@@ -26,6 +27,10 @@ class GalleryCommentSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def create(self, validated_data = None):
+
+        self.is_valid()
+        print("\n\n\n\nGCOMMENT SERIALIZER ERRORS" + "*" * 80 + str(self.errors) + "\n\n\n\n")
+
         return GalleryComment(**self.validated_data)
 
 class PhotoCommentSerializer(serializers.ModelSerializer):
@@ -61,7 +66,7 @@ class UserSerializer(serializers.ModelSerializer):
         return User(**self.validated_data)
 
 class ProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer()
+    user = UserSerializer(read_only=False)
     # user = UserSerializer()
     # id = serializers.IntegerField(validators=None)
 
@@ -70,27 +75,49 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def create(self, validated_data = None):
-        return Profile(**self.validated_data)
+        self.is_valid()
+
+        image = self.validated_data.pop("ProfilePhoto")
+        if image == None:
+            image = '/media/profile_pics/default.jpg'
+
+
+        return Profile(ProfilePhoto = image,**self.validated_data)
 
 class ProfileDeserializer(serializers.ModelSerializer):
-    ProfilePhoto = serializers.CharField()
+    ProfilePhoto = serializers.CharField(allow_null=True)
     user = UserSerializer()
 
-    id = serializers.IntegerField(validators=None)
     class Meta:
         model = Profile
         fields = '__all__'
 
     def create(self, validated_data = None):
-        # print ("VALIDATED_DATA"+"="*40+"\n"+str(self.validated_data))
-        user_data = self.validated_data.pop('user')
-        user = User(**user_data)
-        return Profile(user = user, **self.validated_data)
 
+        self.is_valid()
+        print ("\n\nVALIDATED_DATA"+"="*40+"\n"+str(self.validated_data))
+        print ("\n\nERRORS"+"="*40+"\n"+str(self.errors))
+
+        user_dt = self.validated_data.pop("user")
+        user_serializer = UserSerializer(data=user_dt)
+        user_serializer.is_valid()
+
+        user = user_serializer.create()
+
+        image = self.validated_data.pop("ProfilePhoto")
+
+        if image == None:
+            image = '/media/profile_pics/default.jpg'
+
+
+        return Profile(ProfilePhoto = image, user = user, **self.validated_data)
 
 class GallerySerializer(serializers.ModelSerializer):
     # AlbumCover = serializers.CharField()
     # id = serializers.IntegerField()
+
+    GalleryOwner = UserSerializer()
+
     class Meta:
         model = Gallery
         fields = '__all__'
@@ -101,13 +128,24 @@ class GallerySerializer(serializers.ModelSerializer):
 class GalleryDeserializer(serializers.ModelSerializer):
     AlbumCover = serializers.CharField()
     id = serializers.IntegerField()
+    GalleryOwner = UserSerializer()
+
 
     class Meta:
         model = Gallery
         fields = '__all__'
 
     def create(self, validated_data = None):
-        return Gallery(**self.validated_data)
+        self.is_valid()
+
+        user_dt = self.validated_data.pop("GalleryOwner")
+        user_serializer = UserSerializer(data=user_dt)
+        user_serializer.is_valid()
+
+        GalleryOwner = user_serializer.create()
+
+
+        return Gallery(GalleryOwner = GalleryOwner, **self.validated_data)
 
 class PhotoSerializer(serializers.ModelSerializer):
     # id = serializers.IntegerField(validators=None)
@@ -121,7 +159,7 @@ class PhotoSerializer(serializers.ModelSerializer):
 
 class PhotoDeserializer(serializers.ModelSerializer):
     Photo = serializers.CharField()
-    id = serializers.IntegerField(validators=None)
+    id = serializers.IntegerField(validators=None,)
     # PhotoUrl = serializers.URLField(read_only=True,source='Photo.url')
     class Meta:
         model = Photo

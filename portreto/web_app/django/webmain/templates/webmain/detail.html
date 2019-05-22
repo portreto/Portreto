@@ -59,9 +59,7 @@
             </div>
 
         {% for comment in comments %}
-            {% if gallery.id == comment.Gallery.id %}
-                <p><strong>&nbsp;<a href="{% url 'webmain:index'%}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }} &nbsp;<a href="{% url 'webmain:delete_comment_gallery' comment_id=comment.id gallery_id=gallery.id %}" class="link">DELETE COMM</a></p>
-            {% endif %}
+            <p><strong>&nbsp;<a href="{% url 'webmain:index'%}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }} &nbsp;<a href="{% url 'webmain:delete_comment_gallery' comment_id=comment.id gallery_id=gallery.id %}" class="link">DELETE COMM</a></p>
         {% endfor %}
 
             <div class="panel panel-default">

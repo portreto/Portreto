@@ -17,14 +17,14 @@
             <div class="row-lg-6">
                 <div class="col-lg-4">
                     <a class="" href="{% url 'webmain:index' %}">
-                            <img class="" style="height: 120px; width: 120px; border-radius: 100% " src="{{ user.profile.ProfilePhoto.url }}" alt="">
+                            <img class="" style="height: 120px; width: 120px; border-radius: 100% " src="{{ profile.ProfilePhoto }}" alt="">
                     </a>
                     <br/>
                     <h2>{{ user.username }}
                     </h2>
                 </div>
 
-                {% if user.username == request.user.username %}
+                {% if user.username == requsername %}
 
                     <div class="row in-profile-header">
 
@@ -45,11 +45,11 @@
                         <div class="col">
                             <h7>Username: <strong>{{ user.username }}</strong></h7>
                             </br><h7>Email:<strong>{{ user.email }}</strong></h7>
-                            </br><h7>First Name: <strong>{{ user.profile.FirstName }}</strong></h7>
-                            </br><h7>Last Name: <strong>{{ user.profile.LastName }}</strong></h7>
-                            </br><h7>Bio: <strong>{{ user.profile.Bio }}</strong></h7>
-                            </br><h7>Date of birth: <strong>{{ user.profile.BirthDate }}</strong></h7>
-                            </br><h7>Sex: <strong>{{ user.profile.Sex }}</strong></h7>
+                            </br><h7>First Name: <strong>{{ profile.FirstName }}</strong></h7>
+                            </br><h7>Last Name: <strong>{{ profile.LastName }}</strong></h7>
+                            </br><h7>Bio: <strong>{{ profile.Bio }}</strong></h7>
+                            </br><h7>Date of birth: <strong>{{ profile.BirthDate }}</strong></h7>
+                            </br><h7>Sex: <strong>{{ profile.Sex }}</strong></h7>
 
                         </div>
                         <form action="{% url 'webmain:follow' user.id%}" method="post" style="display: inline;">
@@ -67,7 +67,7 @@
 
                             <div class="ImgBody">
                                 <a href="{% url 'webmain:detail' gallery.id%}">
-                                <img class="proPic" src="{{ gallery.AlbumCover.url }}" alt="epicodus logo">
+                                <img class="proPic" src="{{ gallery.AlbumCover }}" alt="epicodus logo">
                                 </a>
                             </div>
 

@@ -24,7 +24,7 @@
                         <div class="card ">
                             <br>
 
-                            <span>&nbsp;<img src ="{{ MEDIA_URL }}{{ gallery.GalleryOwner.profile.ProfilePhoto.url }}" class="" style="height: 35px; width: 35px; border-radius: 100%"
+                            <span>&nbsp;<img src ="{{ gallery.GalleryOwner.profile.ProfilePhoto }}" class="" style="height: 35px; width: 35px; border-radius: 100%"
                         alt="Profile Picture">&nbsp;
                             <strong><a href="{% url 'users:getProfile' gallery.GalleryOwner %}" class="link">{{ gallery.GalleryOwner }}</a></strong></span>
                             <p>&nbsp;&nbsp;&nbsp;{{ gallery.Description }}</p>

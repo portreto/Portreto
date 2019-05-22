@@ -6,8 +6,16 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from webmain.models import Gallery
 from webmain.views import is_friend
+from webmain import api_client
+from django.http import Http404
+
 
 # Create your views here.
+def get_api_objects_or_404(objects):
+
+    if len(objects) == 0:
+        raise Http404('No matches the given query.')
+    return objects
 
 
 def register(request):
@@ -26,19 +34,30 @@ def register(request):
 #We will specify something that it is different in each user
 @login_required(login_url='users:login')     #@ declarator adds extra functionality on an extisting function
 def profile(request):
-    user = request.user
-    my_galleries = Gallery.objects.filter(GalleryOwner=user).all()
+    requsername = request.user.username
+
+    user = get_api_objects_or_404(api_client.get_user(username=requsername))[0]
+    profile = get_api_objects_or_404(api_client.get_profile(username=requsername))[0]
+
+
+    my_galleries = api_client.get_gallery(requsername=requsername,username=requsername)
+
     if request.method == 'POST':
 
-        user_form = UserUpdateForm(request.POST, instance=request.user)
-        profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)    #request.files for images
+        user_form = UserUpdateForm(request.POST, instance=user)
+        profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=profile)    #request.files for images
 
         if user_form.is_valid() and profile_form.is_valid():
-            user_form.save()
-            profile_form.save()
+            tuser = user_form.save(commit=False)
+            tprofile = profile_form.save(commit=False)
+
+            api_client.post_user(tuser,requsername)
+            api_client.post_profile(tprofile,requsername)
+
             messages.success(request, f'Your account has been successfully updated')
             return redirect('users:profile')
     else:
+
         user_form = UserUpdateForm(instance=request.user)
         profile_form = ProfileUpdateForm(instance=request.user.profile)
 
@@ -53,37 +72,24 @@ def profile(request):
 #TODO ADD CHECKS
 @login_required(login_url='users:login')
 def getProfile(request,username):
-    #value = request.POST.get('uname', None)
-    #profile = Profile.objects.get(user=user_id)
-    user = get_object_or_404(User, username=username)
+    requsername = request.user.username
 
-    my_galleries = {}
+    user = get_api_objects_or_404(api_client.get_user(username=username))[0]
 
-    if is_friend(request,user.id):
-        my_galleries = Gallery.objects.filter(GalleryOwner=user)
+    profile = get_api_objects_or_404(api_client.get_profile(username=username))[0]
 
-    # return redirect('/' + str(instance.username))
-
-    # if request.method == 'POST':
-    #
-    #     user_form = UserUpdateForm(request.POST, instance=request.user)
-    #     profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)    #request.files for images
-    #
-    #     if user_form.is_valid() and profile_form.is_valid():
-    #         user_form.save()
-    #         profile_form.save()
-    #         messages.success(request, f'Your account has been successfully updated')
-    #         return redirect('users:profile')
-    # else:
+    my_galleries = api_client.get_gallery(requsername=requsername,username=username)
 
     user_form = UserUpdateForm(instance=user)
-    profile_form = ProfileUpdateForm(instance=user.profile)
+    profile_form = ProfileUpdateForm(instance=profile)
 
     context = {
         'user': user,
+        'profile' : profile,
         'user_form': user_form,
         'profile_form' : profile_form,
         'my_galleries': my_galleries,
+        'requsername' : requsername
     }
     return render(request,'users/profile.html',context)
     #return redirect('users:profile')

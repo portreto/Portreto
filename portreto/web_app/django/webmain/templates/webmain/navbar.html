@@ -40,7 +40,7 @@
         <ul class="navbar-nav navbar-right ml-auto">
                 <li class="nav-item avatar">
                     <a class="nav-link p-0" href="{% url 'users:profile' %}">
-                        <img src ="{{ request.user.profile.ProfilePhoto.url }}" class="" style="height: 35px; width: 35px; border-radius: 100%"
+                        <img src ="{{ my_prof.ProfilePhoto }}" class="" style="height: 35px; width: 35px; border-radius: 100%"
                         alt="Profile Picture">&nbsp;
                         </a>
                 </li>
@@ -54,7 +54,6 @@
                         &nbsp; Logout &nbsp;
                     </a>
                 </li>
-
         </ul>
 
         {% else %}

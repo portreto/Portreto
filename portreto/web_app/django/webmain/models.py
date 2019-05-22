@@ -25,7 +25,7 @@ GENDER = (
 
 # Create your models here.
 class Gallery(models.Model):
-    GalleryOwner = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    GalleryOwner = models.ForeignKey(User, on_delete=models.CASCADE, default=1, null=True, blank=True)
     AlbumCover = models.ImageField(default='album_cover/default.jpeg', storage=ExternalStorage(),blank=True,null=True)
     Name = models.CharField(max_length=50, null=False, blank=False)
     Description = models.CharField(default='', null=True, blank=True, max_length=1024)
@@ -44,14 +44,14 @@ class Gallery(models.Model):
     def __str__(self): return str(self.Name) + " - " + str(self.GalleryOwner) + "ID: " + str(self.id)
 
 class GalleryReaction(models.Model):
-    User = models.ForeignKey(User, on_delete=models.CASCADE, default=1) #CHECK WITH DEFAULT.USER MUST CHANGE EVERY TIME
-    Gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, default=1)
+    User = models.IntegerField(null=True, blank=True)
+    Gallery = models.IntegerField(null=True, blank=True)
     UpdateDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
 
     def __str__(self): return str(User) + " - " + str(self.Gallery)
 
 class Photo(models.Model):
-    Gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, default=1, null=True, blank=True)  #REMINDER. CAN A PHOTO BE BLANK?
+    Gallery = models.IntegerField(null=True, blank=True)  #TODO is this corrent ?
     Photo = models.ImageField(default='photos/default.jpg',storage=ExternalStorage(),blank=True, null=True)
     UploadDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
     Location = models.CharField(default='', blank=True, null=True, max_length=50)   #INIT AS START.CHECK IF WE WANT LONGTITUDE, LATITUDE
@@ -61,16 +61,16 @@ class Photo(models.Model):
         return str(self.Gallery)
 
 class PhotoReaction(models.Model):
-    User = models.ForeignKey(User, on_delete=models.CASCADE, default=1) #CHECK WITH DEFAULT.USER MUST CHANGE EVERY TIME
-    Photo = models.ForeignKey(Photo, on_delete=models.CASCADE, default=1)
+    User = models.IntegerField(null=True, blank=True)
+    Photo = models.IntegerField(null=True, blank=True)
     UpdateDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
 
     def __str__(self): return str(User) + " - " + str(self.Photo)
 
 ##TODO MAYBE ADD GALLERY OWNER
 class GalleryComment(models.Model):
-    User = models.ForeignKey(User, on_delete=models.DO_NOTHING, default=1)
-    Gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, default=1)
+    User = models.IntegerField(null=True, blank=True)
+    Gallery = models.IntegerField(null=True, blank=True)
     UploadDateTime = models.DateTimeField(default=None, null=True, editable=False)
     Comment = models.CharField(max_length=1024, blank=True, null=True)
     #NOTIFICATIONS NOT ADDED
@@ -78,8 +78,8 @@ class GalleryComment(models.Model):
     def __str__(self): return str(self.Gallery) + " - " + str(self.UploadDateTime)
 
 class PhotoComment(models.Model):
-    User = models.ForeignKey(User, on_delete=models.DO_NOTHING, default=1)
-    Photo = models.ForeignKey(Photo, on_delete=models.CASCADE, default=1)
+    User = models.IntegerField(null=True, blank=True)
+    Photo = models.IntegerField(null=True, blank=True)
     UpdateDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
     Comment = models.CharField(max_length=1024, blank=True, null=True)
 
@@ -87,8 +87,9 @@ class PhotoComment(models.Model):
     def __str__(self): return str(self.Photo) + " - " + str(self.Comment)
 
 class Follow(models.Model): # authorize maybe?
-    FollowCond1 = models.ForeignKey(User, default=1, on_delete=models.CASCADE, related_name='followed')
-    FollowCond2 = models.ForeignKey(User, default=1, on_delete=models.CASCADE, related_name='follower')
+    FollowCond1 = models.IntegerField(null=True, blank=True)
+    FollowCond2 = models.IntegerField(null=True, blank=True)
+
 
     # Cond2 can view Cond1
     # Follower can view followed
@@ -98,7 +99,7 @@ class Follow(models.Model): # authorize maybe?
 class Profile(models.Model):    # authorization demanded for sure
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     #TODO CHECK THAT ProfilePhoto = models.ForeignKey(Photo, default='', on_delete=models.CASCADE, null=True, blank=True) #!!!WE NEED TO ADD DEFAULT PROFILE PIC TODO ADD ON DELETE
-    ProfilePhoto = models.ImageField(default='/profile_pics/default.jpg',storage=ExternalStorage())
+    ProfilePhoto = models.ImageField(default='/profile_pics/default.jpg',storage=ExternalStorage(), null=True, blank=True)
     RegisterDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
     BirthDate = models.DateField(null=True, blank=True, editable=True)
     Bio = models.CharField(default='', max_length=500, blank=True, null=True)

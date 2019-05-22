@@ -21,7 +21,7 @@ GENDER = (
 
 # Create your models here.
 class Gallery(models.Model):
-    GalleryOwner = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    GalleryOwner = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True, blank=True)
     AlbumCover = models.ImageField(storage=ExternalStorage())
     Name = models.CharField(max_length=50, null=False, blank=False)
     Description = models.CharField(default='', null=True, blank=True, max_length=1024)
