@@ -7,8 +7,8 @@ app_name = 'users'
 
 urlpatterns = [
     url(r'^register/$', views.register, name='register'),
-    url(r'^login/$', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
-    url(r'^logout/$', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    url(r'^login/$', views.login, name='login'),
+    url(r'^logout/$', views.logout, name='logout'),
     url(r'^profile/$', views.profile, name='profile'),
     url(r'^profile/(?P<username>[\w\-]+)/$', views.getProfile, name='getProfile'),
     # url(r'^search/', views.search , name='search'),
@@ -25,6 +25,10 @@ urlpatterns = [
 
     #path('accounts/profile/view/<int:photo_id>/', views.view_photo, name="view_photo"),
     #path('accounts/profile/add/<int:photo_id>/', views.add_photo, name='add_photo'),
+
+    url(r'^homepage/$', views.homepage, name='homepage'), #TODO : DELETE
+    url(r'^page1/(?P<number1>[0-9]+)/$', views.page1, name='page1'), #TODO : DELETE
+    url(r'^page2/(?P<number1>[0-9]+)/(?P<number2>[0-9]+)/$', views.page2, name='page2'), #TODO : DELETE
 ]
 """
 path('', views.index_page, name='index_page'),

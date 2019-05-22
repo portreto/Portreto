@@ -4,13 +4,16 @@ dataclasses==0.6
 Django==2.2.1
 django-bootstrap4==0.0.8
 django-crispy-forms==1.7.2
+django-forms-bootstrap==3.1.0
 djangorestframework==3.9.4
 djangorestframework-stubs==0.4.2
 djongo==1.2.32
 idna==2.8
 kazoo==2.6.1
 Pillow==6.0.0
+pycrypto==2.6.1
 pymongo==3.8.0
+PyJWT==1.7.1
 pytz==2019.1
 PyYAML==5.1
 requests==2.21.0

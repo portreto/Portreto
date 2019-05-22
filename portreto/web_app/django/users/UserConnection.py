@@ -17,7 +17,7 @@ TOKEN_COOKIE = "portreto-auth-token"
 USERNAME_COOKIE = "portreto-user-username"
 
 AUTH_DOMAIN_NAME = 'auth'
-AUTH_PORT = '8000'
+AUTH_PORT = '8010'
 
 APP_DOMAIN_NAME = 'app'
 APP_PORT = '8001'
