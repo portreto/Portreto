@@ -2,50 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b66d2f42-88c5-463b-87dd-402db6e95ced" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/PORTRETO/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/PORTRETO/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/init.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/api_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0002_auto_20190513_2014.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0003_auto_20190513_2020.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0004_auto_20190513_2021.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0005_auto_20190513_2033.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0006_auto_20190514_0030.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0007_auto_20190514_0032.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0008_auto_20190514_0138.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0009_auto_20190514_0140.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0010_auto_20190514_0148.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0011_auto_20190514_0936.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0012_auto_20190514_0956.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0013_auto_20190515_0016.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0014_auto_20190515_0033.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0015_auto_20190515_1455.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0016_photo_photourl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0017_auto_20190516_0607.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0018_auto_20190516_0949.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0019_auto_20190518_1356.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0020_auto_20190518_1357.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/migrations/0021_auto_20190519_0052.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/photo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/photo_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +52,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="-864">
               <caret line="82" column="47" selection-start-line="82" selection-start-column="47" selection-end-line="82" selection-end-column="47" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -251,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="1969" />
     <option name="y" value="64" />
     <option name="width" value="1872" />
@@ -364,16 +322,15 @@
       <workItem from="1557845451350" duration="25019000" />
       <workItem from="1557933617681" duration="36653000" />
       <workItem from="1558105097645" duration="15433000" />
-      <workItem from="1558190479036" duration="103185000" />
+      <workItem from="1558190479036" duration="103784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180290000" />
+    <option name="totallyTimeSpent" value="180889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1969" y="64" width="1872" height="941" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.119386636" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -675,7 +632,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="-864">
           <caret line="82" column="47" selection-start-line="82" selection-start-column="47" selection-end-line="82" selection-end-column="47" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />

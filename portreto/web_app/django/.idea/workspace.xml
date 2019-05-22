@@ -3,49 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="756a196a-dc82-470a-9b8f-6552f5312f1b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PORTRETO/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PORTRETO/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/init.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/api_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0002_auto_20190513_2014.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0003_auto_20190513_2020.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0004_auto_20190513_2021.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0005_auto_20190513_2033.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0006_auto_20190514_0030.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0007_auto_20190514_0032.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0008_auto_20190514_0138.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0009_auto_20190514_0140.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0010_auto_20190514_0148.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0011_auto_20190514_0936.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0012_auto_20190514_0956.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0013_auto_20190515_0016.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0014_auto_20190515_0033.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0015_auto_20190515_1455.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0016_photo_photourl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0017_auto_20190516_0607.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0018_auto_20190516_0949.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0019_auto_20190518_1356.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0020_auto_20190518_1357.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0021_auto_20190519_0052.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/photo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/photo_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker-compose.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,10 +28,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webmain/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4973">
-              <caret line="191" column="53" lean-forward="true" selection-start-line="191" selection-start-column="53" selection-end-line="191" selection-end-column="53" />
+            <state relative-caret-position="6969">
+              <caret line="423" column="36" lean-forward="true" selection-start-line="423" selection-start-column="36" selection-end-line="423" selection-end-column="36" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
+                <element signature="e#1301#1760#0" />
+                <element signature="e#1701#2320#0" />
+                <element signature="e#2454#3172#0" />
+                <element signature="e#3583#5404#0" />
+                <element signature="e#5435#6311#0" />
               </folding>
             </state>
           </provider>
@@ -436,18 +399,17 @@
       <updated>1557735128416</updated>
       <workItem from="1558312416816" duration="752000" />
       <workItem from="1558313247203" duration="733000" />
-      <workItem from="1558314117920" duration="91436000" />
+      <workItem from="1558314117920" duration="92292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92921000" />
+    <option name="totallyTimeSpent" value="93777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="52" width="1857" height="954" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14254144" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14254144" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -458,7 +420,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2617284" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2617284" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32962963" />
       <window_info anchor="bottom" id="Docker" order="11" />
@@ -833,10 +795,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webmain/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4973">
-          <caret line="191" column="53" lean-forward="true" selection-start-line="191" selection-start-column="53" selection-end-line="191" selection-end-column="53" />
+        <state relative-caret-position="6969">
+          <caret line="423" column="36" lean-forward="true" selection-start-line="423" selection-start-column="36" selection-end-line="423" selection-end-column="36" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
+            <element signature="e#1301#1760#0" />
+            <element signature="e#1701#2320#0" />
+            <element signature="e#2454#3172#0" />
+            <element signature="e#3583#5404#0" />
+            <element signature="e#5435#6311#0" />
           </folding>
         </state>
       </provider>

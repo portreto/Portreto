@@ -59,6 +59,22 @@ services:
       - zoo
       - storage
 
+  auth:
+    build:
+      context: ./auth
+      network: host
+    hostname: auth
+    command: sh init.sh
+    volumes:
+      - ./auth/django:/app
+    ports:
+      # host:client
+      - '8010:8000'
+    depends_on:
+      - web
+    # networks:
+    #   - main    
+
 # Storage Servers
   storage1:
     build:
