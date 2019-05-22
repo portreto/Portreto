@@ -63,13 +63,15 @@ services:
     build:
       context: ./auth
       network: host
+    deploy:
+      replicas: 3  
     hostname: auth
     command: sh init.sh
     volumes:
       - ./auth/django:/app
-    ports:
+    # ports:
       # host:client
-      - '8010:8000'
+      # - '8010:8000'
     depends_on:
       - web
     # networks:

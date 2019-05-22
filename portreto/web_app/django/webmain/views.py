@@ -36,7 +36,7 @@ def detail(request, gallery_id, username=None, token=None):
 
     user = get_api_objects_or_404(api_client.get_user(username=requsername))[0]
     gallery = get_api_objects_or_404(api_client.get_gallery(id=gallery_id, requsername=requsername))[0]
-    comments = api_client.get_gallery_comment(requsername=requsername)
+    comments = api_client.get_gallery_comment(requsername=requsername,galleryid=gallery_id)
     photos = api_client.get_photo(requsername=requsername,galleryid=gallery_id)
 
     # print("\n\nDETAILS\n  "+str(gallery.GalleryOwner.username)+"\n  "+str(user.username))
@@ -240,7 +240,9 @@ def follow(request, user_id, username=None, token=None):
     requsername = username
 
     user_follow = get_api_objects_or_404(api_client.get_user(id=user_id))[0]
-    if user_follow.id == request.user.id:
+    user = get_api_objects_or_404(api_client.get_user(username=requsername))[0]
+
+    if user_follow.id == user.id:
         messages.error(request, 'You cannot follow yourself')
 
     else:
@@ -256,11 +258,8 @@ def follow(request, user_id, username=None, token=None):
 
         # no friendship existed
         else:
-            follow = Follow(FollowCond1=request.user, FollowCond2=user_follow,)
-            # print("\n\nFOLLOWING" + "=" * 30 + str(follow))
-
-            # api_client.post_follow(follow,requsername)
-            # print("\n\nRESPNCE" + "=" * 30 + str(api_client.post_follow(follow,requsername)))
+            follow = Follow(FollowCond1=user.id, FollowCond2=user_follow.id,)
+            api_client.post_follow(follow,requsername)
             messages.success(request, 'Shared Content')
 
     # return redirect('/' + str(id))
@@ -379,12 +378,19 @@ def comment_photo(request, photo_id, username=None, token=None):
 def delete_comment_photo(request, comment_id, photo_id, username=None, token=None):
     requsername = username
 
-    api_client.delete_photo_comment(id=comment_id,requsername=requsername)
+    responce = api_client.delete_photo_comment(id=comment_id,requsername=requsername)
+
+    print("\n\nPHOTO COMMENT DELETE RESPONSE"+"="*60+"\n"+str(responce))
+
     return redirect('webmain:index')
 
 @my_login_required()
 def delete_comment_gallery(request, comment_id, gallery_id, username=None, token=None):
     requsername = username
 
-    api_client.delete_gallery_comment(id=comment_id,requsername=requsername)
+    responce = api_client.delete_gallery_comment(id=comment_id,requsername=requsername)
+
+    print("\n\nGALLERY COMMENT DELETE RESPONSE"+"="*60+"\n"+str(responce))
+
+
     return redirect('webmain:index')

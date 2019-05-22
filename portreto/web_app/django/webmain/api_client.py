@@ -444,9 +444,9 @@ def post_photo_comment(object,requsername):
 def post_follow(object,requsername):
     params = {}
     params["requsername"] = requsername
-    object
     serializer = FollowSerializer(object)
-    return requests.post(base_url + '/basic/follows/', data=serializer.data, params=params)
+    response = requests.post(base_url + '/basic/follows/', data=serializer.data, params=params)
+    return response
 
 def post_profile(object,requsername):
     params = {}

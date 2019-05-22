@@ -2,7 +2,7 @@
 {% block title %}{{ gallery }}{% endblock %}
 
 {% block body %}
-
+{% include 'webmain/navbar.html' %}
 {% if messages %}
             <ul class="messages">
                 {% for message in messages %}

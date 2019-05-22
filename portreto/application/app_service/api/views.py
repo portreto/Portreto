@@ -273,8 +273,8 @@ class GalleryCommentView(viewsets.ModelViewSet):
 
         requserid = request.query_params.get('requserid', None)
         requsername = request.query_params.get('requsername', None)
-        # Get gallery owner
-        user = obj.Gallery.GalleryOwner
+        # Get comment owner
+        user = obj.User
         # Check Permissions
         if not has_permission(user, requsername, requserid, cud):
             raise AuthenticationFailed
@@ -314,8 +314,8 @@ class PhotoCommentView(viewsets.ModelViewSet):
         cud= request.method != 'GET'
         requserid = request.query_params.get('requserid', None)
         requsername = request.query_params.get('requsername', None)
-        # Get gallery owner
-        user = obj.Photo.Gallery.GalleryOwner
+        # Get comment owner
+        user = obj.User
         # Check Permissions
         if not has_permission(user, requsername, requserid, cud):
             raise AuthenticationFailed
