@@ -9,10 +9,10 @@ import requests, json
 DEBUG = True
 
 AUTH_DOMAIN_NAME = 'auth'
-AUTH_PORT = '8010'
+AUTH_PORT = '8000'
 
 APP_DOMAIN_NAME = 'app'
-APP_PORT = '8001'
+APP_PORT = '8000'
 
 class UserRegistrationForm(UserCreationForm):
     email = forms.EmailField()
