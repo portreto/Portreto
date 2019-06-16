@@ -19,7 +19,8 @@ GENDER = (
     (NOTANSWER, 'NA'),
 )
 
-# Create your models here.
+# Application Models
+
 class Gallery(models.Model):
     GalleryOwner = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True, blank=True)
     AlbumCover = models.ImageField(storage=ExternalStorage())

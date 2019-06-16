@@ -3,18 +3,296 @@
   <component name="ChangeListManager">
     <list default="true" id="756a196a-dc82-470a-9b8f-6552f5312f1b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../application/app_service/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/init.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../auth/django/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/django/zkclient/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/zkclient/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/cvhoeitaddebgxymevwx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/ddrlavpgzgmhqbmfcmdr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/egoarbkoasasrltsajkv.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/fkxhduxdglihfvnemcum.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/fmumsvpkzsddbjfgtmbs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/jrhenzycpmewqmemltpk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/kvppujsmugtgteeblzpy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/kxpmlbxshddahxwlovcp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/lqhgxpphmxprikvlgwmh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/nkfttznxplsltizauhpx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/pnlmnuogvnhwtfuzxdio.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/rohqloiuynloxewbmepm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/trjtttoqmgpuuwzgoqdp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/wpobmkdulmzbfykrlleb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/xpxdzuuyeywkilmgdkmx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/ylzhqglgjydyhnvardln.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/aayhxsmpbvyodqmnkrib.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/agckxpgsnsbisfoohofn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/azlasnibdwhorlytrcsf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/bkofgougwibgqykmcpye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/cgcgskmfpokntknmbsjy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/cpkyezugdendvxbzsgdp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/cvhoeitaddebgxymevwx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/cvkfypchmwcairlelwhf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/czroscyrdeakztfndsvw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_2/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/ddrlavpgzgmhqbmfcmdr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/deidlqmcclcihhpuwkck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/dfhpfjluajeyvgxtkbmt.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/dlqlrtytmxluxejazzcw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/duqkdpueviyquxqutvqk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/eiwtsgoqyfyinthyegqu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/ertmhhjnnkipqqhuqsnv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/evbaaaoalllsumztiokv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/eygidvvtiojnvzuhxgnk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/fabpmjkucuednhqgjdip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/fifsttezyygeszjrmldy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/fowpeuzezxvoiivaabzz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/fwirhejygiardjiansfu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/gjuzucmqyztlowwqwirl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/hasubnpomtfdkcguvoml.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/havsaeyvmdyasypgabky.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/himhfsvxrhdsmwguvigj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/hogcbkcagmrarfztosgq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/icsjzpddyiptiineqebx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/itjoyqvpdwrxnwtbfwdf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/ivligogozduzaermzbkr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/kjxaysogmygdxarmcofw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/klqicwravgeyauxgwlpw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/kmkuvvybtiewjlmwilly.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/ksampyupbvbizbjlbosv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/lesywhvlurkxsuqgexvh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/lievpirngbvhmhffevsz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/ljawrjxyxdgzfouqkodb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/ljeoybzxnicevzrcdcso.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/ljpuuykjtorarwqxhufd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/ljsozzlozhghcfkmeqrw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/ljstczshebzpcskaostr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/lmpnjeyhlvzdnlxcwqyb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/lnpfkvjdopjsudyeohjl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/lqhgxpphmxprikvlgwmh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/miafbskppjybdnswdyqj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/mkztfckjdznnistwhbeg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/mmygjacrxjcjwgybjiuj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/naetralpxflexccwarke.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/puuwjxgelsimnplsfsgb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/slwdtuamelwgsurzmwdv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/tsrgznxanzzsxzqslywn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/uawmuonevefhhnkkfmyd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/usxezsrzgxjahoobvkrk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/utckeobdmiuuthnmhrxc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/uulgiguuvkmgusyruxef.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/vbidvuytpvxnkjyzhjwx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/vmwautpxsrjmizgxqgfu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/wdfaptqxqngjrdnryxvb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/wemlxsiwwpxupmvakqfo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/wixqnxcducbxcvjaoihh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/xaqdqnrjvgonurcfqstw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/xcbniavajslthjykuoyu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/xpveqqlufkkdulqlugcc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/xpxdzuuyeywkilmgdkmx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/xqpjipueqocjxxsvfcsn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/yiniumllqtxmjugrkpex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/yywkgypnftgfzzwaipxl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/ziioisrziknpzvockkyg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/zsladfsaecitmpelmjhe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/aayqngnmbroylklkrkns.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/ashmfunaoopcghojcynp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/bhzwbtfymwrjyszmtwxz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/bmpzmdhmvysvlnynatsx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/bzcffvkqepfxrxdjqznn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/culkkglschgvjkrvukmc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/ekhbilgybgezqoavwmsq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/ersqsjsmzfokstkixxpl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/evbaaaoalllsumztiokv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/ewsrlntlqjmgmlrcoodh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/fbiihtvhhhtmcuisfvqb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/fifsttezyygeszjrmldy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/fwpjhbtqnauljtyjadnu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/havsaeyvmdyasypgabky.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/ibyokogquosjdfvztuhc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/kepaixqtbinnssjhmwdt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/kmkuvvybtiewjlmwilly.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/ljeoybzxnicevzrcdcso.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/mthhdkovxldippzyjmnt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/mtkumlphmzazgcqslqij.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/nbfgrsnpvmgtqgvlypqx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/opaexxswmtwukwwmixac.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/poyyvrddwgacjwbljjjl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/pwpuutvsxpwwzlfzihuq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/pyovzkteuzhovhqubnib.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/ralmallnnulgquclrqds.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/rohqloiuynloxewbmepm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/slwdtuamelwgsurzmwdv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/svpqqjepylxsspzsxogn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/trjtttoqmgpuuwzgoqdp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/tsggtugyicxjvahccjpu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/txqbczdinlbviesfbstj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/utckeobdmiuuthnmhrxc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/vajirmqxerwkootbgbbc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/wbfkjuaugzxpsjwmkplq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/weawludxffxtclmopflx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/wixqnxcducbxcvjaoihh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/xctzousioyxlpzsljbqi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/xoydciepmslxvbtujjut.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/xtzenvkmbydpgcdhpexi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/ycbrixoprridhmtiyohv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/ylzhqglgjydyhnvardln.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/zhdpqpblwivipsjgnaix.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/zvzjagoiwhitckjjfwrx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/aayhxsmpbvyodqmnkrib.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/aayqngnmbroylklkrkns.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/agckxpgsnsbisfoohofn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/azlasnibdwhorlytrcsf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/bhzwbtfymwrjyszmtwxz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/bkofgougwibgqykmcpye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/btnmynigqlfgpqgnwgkx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/cpkyezugdendvxbzsgdp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/culkkglschgvjkrvukmc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/cwjlbmexppluhtkfmlut.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/deidlqmcclcihhpuwkck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/duqkdpueviyquxqutvqk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/ertmhhjnnkipqqhuqsnv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/eygidvvtiojnvzuhxgnk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/fabpmjkucuednhqgjdip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/fowpeuzezxvoiivaabzz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/fwpjhbtqnauljtyjadnu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/gfpaszcoamvrraaujdcc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/gjuzucmqyztlowwqwirl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/hasubnpomtfdkcguvoml.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/himhfsvxrhdsmwguvigj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/hogcbkcagmrarfztosgq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/inixbbemzpuqnplwmyii.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/isrloyzckysfhjnydllj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/itjoyqvpdwrxnwtbfwdf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/izztinsyytxwsrlsrzwj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/jrhenzycpmewqmemltpk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/jxendczllgluzggoktwa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/kjxaysogmygdxarmcofw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/klqicwravgeyauxgwlpw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/lesywhvlurkxsuqgexvh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/ljpuuykjtorarwqxhufd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/ljsozzlozhghcfkmeqrw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/lmpnjeyhlvzdnlxcwqyb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/lnpfkvjdopjsudyeohjl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/miafbskppjybdnswdyqj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/mkztfckjdznnistwhbeg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/mmygjacrxjcjwgybjiuj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/naetralpxflexccwarke.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/nagnfvanningzbalarqm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/nbfgrsnpvmgtqgvlypqx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/niaejcxqgpvlwhaxbgoy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/nlgwoqsgfazarvehwehg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/nmcjoegftrrpxxbjspjh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/nwhadybntclahvhgtbbf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/nzpkvhqhldywvlizddjs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/opaexxswmtwukwwmixac.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/pnlmnuogvnhwtfuzxdio.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/poyyvrddwgacjwbljjjl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/puuwjxgelsimnplsfsgb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/pwpuutvsxpwwzlfzihuq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/rbwqhcoqkxptrzftxjqi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/rnyvmuvqjbnnosoqveee.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/tsrgznxanzzsxzqslywn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/txqbczdinlbviesfbstj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/uhjzblhptqobyfxfsnjb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/usxezsrzgxjahoobvkrk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/uulgiguuvkmgusyruxef.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/uznsrhiywkrdaelsfcnq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/vbidvuytpvxnkjyzhjwx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/vmwautpxsrjmizgxqgfu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/weawludxffxtclmopflx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/wemlxsiwwpxupmvakqfo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/wixdgiugohurktyratzy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/wpobmkdulmzbfykrlleb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/xaqdqnrjvgonurcfqstw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/xcbniavajslthjykuoyu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/xctzousioyxlpzsljbqi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/xobvcgnnpiiqjharooct.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/xoydciepmslxvbtujjut.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/xpveqqlufkkdulqlugcc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/xqpjipueqocjxxsvfcsn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/ycbrixoprridhmtiyohv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/yiniumllqtxmjugrkpex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/yywkgypnftgfzzwaipxl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/ziioisrziknpzvockkyg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/zsladfsaecitmpelmjhe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/ashmfunaoopcghojcynp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/bmpzmdhmvysvlnynatsx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/bzcffvkqepfxrxdjqznn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/cvkfypchmwcairlelwhf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/cwjlbmexppluhtkfmlut.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/czroscyrdeakztfndsvw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/dfhpfjluajeyvgxtkbmt.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/ersqsjsmzfokstkixxpl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/ewsrlntlqjmgmlrcoodh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/fbiihtvhhhtmcuisfvqb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/fkxhduxdglihfvnemcum.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/fmumsvpkzsddbjfgtmbs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/fwirhejygiardjiansfu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/gfpaszcoamvrraaujdcc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/ibyokogquosjdfvztuhc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/icsjzpddyiptiineqebx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/inixbbemzpuqnplwmyii.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/isrloyzckysfhjnydllj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/izztinsyytxwsrlsrzwj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/jubcxagidnrrkbxjvqkk.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/jxendczllgluzggoktwa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/khpiodeutruihharzvkg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/ksampyupbvbizbjlbosv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/kxpmlbxshddahxwlovcp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/ljawrjxyxdgzfouqkodb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/mtkumlphmzazgcqslqij.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/nagnfvanningzbalarqm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/ndxwfmdirshhgxzkthbr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/niaejcxqgpvlwhaxbgoy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/nixsozanifrxccvisvvt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/nkfttznxplsltizauhpx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/nlgwoqsgfazarvehwehg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/nzpkvhqhldywvlizddjs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/pyovzkteuzhovhqubnib.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/ralmallnnulgquclrqds.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/rnyvmuvqjbnnosoqveee.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/svpqqjepylxsspzsxogn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/tsggtugyicxjvahccjpu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/uawmuonevefhhnkkfmyd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/uhjzblhptqobyfxfsnjb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/vajirmqxerwkootbgbbc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/wdfaptqxqngjrdnryxvb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/xobvcgnnpiiqjharooct.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/xtzenvkmbydpgcdhpexi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/zhdpqpblwivipsjgnaix.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/btnmynigqlfgpqgnwgkx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/cgcgskmfpokntknmbsjy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/dlqlrtytmxluxejazzcw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/egoarbkoasasrltsajkv.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/eiwtsgoqyfyinthyegqu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/ekhbilgybgezqoavwmsq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/ivligogozduzaermzbkr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/jubcxagidnrrkbxjvqkk.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/kepaixqtbinnssjhmwdt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/khpiodeutruihharzvkg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/kvppujsmugtgteeblzpy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/lievpirngbvhmhffevsz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/ljstczshebzpcskaostr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/mthhdkovxldippzyjmnt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/ndxwfmdirshhgxzkthbr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/nixsozanifrxccvisvvt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/nmcjoegftrrpxxbjspjh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/nwhadybntclahvhgtbbf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/rbwqhcoqkxptrzftxjqi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/uznsrhiywkrdaelsfcnq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/wbfkjuaugzxpsjwmkplq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/wixdgiugohurktyratzy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/zvzjagoiwhitckjjfwrx.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/api_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/add_photo.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/add_photo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/create_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/create_gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/photo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/photo_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,15 +302,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webmain/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="377" column="83" lean-forward="true" selection-start-line="377" selection-start-column="83" selection-end-line="377" selection-end-column="83" />
-              <folding>
-                <element signature="e#9123#10240#0" />
-                <element signature="e#10459#11047#0" />
-              </folding>
+            <state relative-caret-position="8510">
+              <caret line="377" column="83" selection-start-line="377" selection-start-column="83" selection-end-line="377" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -50,10 +324,66 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/UserConnection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1426">
+              <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webmain/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#472#689#0" />
+                <element signature="e#756#1098#0" />
+                <element signature="e#1164#1380#0" />
+                <element signature="e#1439#1642#0" />
+                <element signature="e#1700#1962#0" />
+                <element signature="e#2022#2487#0" />
+                <element signature="e#2549#3308#0" />
+                <element signature="e#3368#3641#0" />
+                <element signature="e#3703#4225#0" />
+                <element signature="e#4283#4524#0" />
+                <element signature="e#4584#4895#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmain/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="99" column="90" selection-start-line="99" selection-start-column="90" selection-end-line="99" selection-end-column="90" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webmain/api_client.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="235">
-              <caret line="542" column="39" lean-forward="true" selection-start-line="542" selection-start-column="39" selection-end-line="542" selection-end-column="39" />
+              <caret line="542" column="39" selection-start-line="542" selection-start-column="39" selection-end-line="542" selection-end-column="39" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -73,8 +403,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>inde</find>
-      <find>href</find>
       <find>def us</find>
       <find>get_user</find>
       <find>gallery_com</find>
@@ -103,6 +431,8 @@
       <find>follow</find>
       <find>share</find>
       <find>delete_comm</find>
+      <find>post</find>
+      <find>logout_user</find>
     </findStrings>
     <replaceStrings>
       <replace>(base_url + '/basic/gallery'</replace>
@@ -149,7 +479,6 @@
         <option value="$PROJECT_DIR$/users/static/css/navbar.css" />
         <option value="$PROJECT_DIR$/PORTRETO/settings.py" />
         <option value="$PROJECT_DIR$/init.sh" />
-        <option value="$PROJECT_DIR$/webmain/models.py" />
         <option value="$PROJECT_DIR$/users/forms.py" />
         <option value="$PROJECT_DIR$/users/UserConnection.py" />
         <option value="$PROJECT_DIR$/webmain/templates/webmain/navbar.html" />
@@ -157,7 +486,6 @@
         <option value="$PROJECT_DIR$/webmain/storage.py" />
         <option value="$PROJECT_DIR$/users/BusinessLogic/Tokens.py" />
         <option value="$PROJECT_DIR$/users/urls.py" />
-        <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/webmain/templates/webmain/detail.html" />
         <option value="$PROJECT_DIR$/webmain/templates/webmain/index.html" />
         <option value="$PROJECT_DIR$/webmain/templates/webmain/photo_detail.html" />
@@ -168,12 +496,14 @@
         <option value="$PROJECT_DIR$/users/templates/users/profile.html" />
         <option value="$PROJECT_DIR$/webmain/api_client.py" />
         <option value="$PROJECT_DIR$/webmain/views.py" />
+        <option value="$PROJECT_DIR$/users/views.py" />
+        <option value="$PROJECT_DIR$/webmain/models.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="33" />
-    <option name="y" value="45" />
+    <option name="x" value="18" />
+    <option name="y" value="85" />
     <option name="width" value="1857" />
     <option name="height" value="954" />
   </component>
@@ -183,6 +513,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,48 +524,17 @@
             <path>
               <item name="django" type="b2602c69:ProjectViewProjectNode" />
               <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="webmain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="webmain" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="webmain" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="webmain" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -279,18 +579,19 @@
       <updated>1557735128416</updated>
       <workItem from="1558312416816" duration="752000" />
       <workItem from="1558313247203" duration="733000" />
-      <workItem from="1558314117920" duration="103336000" />
+      <workItem from="1558314117920" duration="107112000" />
+      <workItem from="1560559911845" duration="1801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104821000" />
+    <option name="totallyTimeSpent" value="110398000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="33" y="45" width="1857" height="954" extended-state="0" />
+    <frame x="18" y="85" width="1857" height="954" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14254144" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1441989" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -445,39 +746,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmain/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#11#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/UserConnection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="165" column="82" selection-start-line="165" selection-start-column="82" selection-end-line="165" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webmain/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -608,22 +882,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/views.py">
+    <entry file="file://$PROJECT_DIR$/webmain/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1357">
-          <caret line="59" column="121" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="121" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="8510">
+          <caret line="377" column="83" selection-start-line="377" selection-start-column="83" selection-end-line="377" selection-end-column="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmain/api_client.py">
+    <entry file="file://$PROJECT_DIR$/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="542" column="39" lean-forward="true" selection-start-line="542" selection-start-column="39" selection-end-line="542" selection-end-column="39" />
+        <state relative-caret-position="214">
+          <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -638,13 +909,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmain/views.py">
+    <entry file="file://$PROJECT_DIR$/users/UserConnection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="377" column="83" lean-forward="true" selection-start-line="377" selection-start-column="83" selection-end-line="377" selection-end-column="83" />
+        <state relative-caret-position="1426">
+          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmain/api_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="542" column="39" selection-start-line="542" selection-start-column="39" selection-end-line="542" selection-end-column="39" />
           <folding>
-            <element signature="e#9123#10240#0" />
-            <element signature="e#10459#11047#0" />
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmain/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="99" column="90" selection-start-line="99" selection-start-column="90" selection-end-line="99" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmain/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#472#689#0" />
+            <element signature="e#756#1098#0" />
+            <element signature="e#1164#1380#0" />
+            <element signature="e#1439#1642#0" />
+            <element signature="e#1700#1962#0" />
+            <element signature="e#2022#2487#0" />
+            <element signature="e#2549#3308#0" />
+            <element signature="e#3368#3641#0" />
+            <element signature="e#3703#4225#0" />
+            <element signature="e#4283#4524#0" />
+            <element signature="e#4584#4895#0" />
           </folding>
         </state>
       </provider>

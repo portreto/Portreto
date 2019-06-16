@@ -44,8 +44,11 @@ def zklistener(state):
         finally:
             zk.create("/storage/storage_"+str(settings.FS_ID),dict_to_bytes(zkdata), ephemeral=True)
         print("Zookeeper Connected AND UPDATED")
-zk.add_listener(zklistener)
 
+# Make sure path exists
+zk.ensure_path("/storage")
+# Add listener
+zk.add_listener(zklistener)
 # Add watcher for hashing key
 @zk.DataWatch("/storage")
 def watch_node(data, stat):
@@ -60,8 +63,6 @@ zkdata = {
     "EXT_URL" : settings.EXT_URL
 }
 
-# Make sure path exists
-zk.ensure_path("/storage")
 # Update Hash Key
 zk.set("/storage", randomString(30))
 #Create personal ZNode

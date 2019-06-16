@@ -2,6 +2,7 @@ from django.urls import path, include
 from . import views
 from rest_framework import routers
 
+# API_URLS
 basic_router = routers.DefaultRouter()
 basic_router.register('gallery', views.GalleryView)
 basic_router.register('gallery_reactions', views.GalleryReactionView)
@@ -12,7 +13,7 @@ basic_router.register('photo_comments', views.PhotoCommentView)
 basic_router.register('follows', views.FollowView)
 basic_router.register('profiles', views.ProfileView)
 basic_router.register('users', views.UserView)
-
+# SPECIAL API URLS
 advanced_router = routers.DefaultRouter()
 advanced_router.register('shared_galleries', views.SharedGalleriesView)
 advanced_router.register('followers', views.FollowersView)

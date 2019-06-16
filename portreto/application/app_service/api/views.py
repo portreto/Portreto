@@ -13,8 +13,6 @@ from rest_framework import status
 
 #checks if "requser" can view "user" data
 def has_permission(user,requsername=None,requserid=None,cud=False):
-
-
     # permission flags
     is_owner = False
     has_view_rights = False
@@ -23,8 +21,6 @@ def has_permission(user,requsername=None,requserid=None,cud=False):
     queryset = user.followed.all()
     s = queryset.values_list('FollowCond2', flat=True)
     followers = User.objects.filter(id__in=list(s))
-
-    # print("\n\nFOLLOWERS"+"="*80+str(queryset))
 
     #  Populate flags
     if requserid is not None:

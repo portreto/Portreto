@@ -31,16 +31,6 @@ class Gallery(models.Model):
     Description = models.CharField(default='', null=True, blank=True, max_length=1024)
     UploadDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
 
-    # def save(self, *args, **kwargs):
-    #     super(Gallery, self).save(*args, **kwargs)
-    #     pf = Image.open(self.AlbumCover)
-    #
-    #
-    #     if pf.height > 800 or pf.width > 800:   # overwriting existing images in specific size
-    #         output_size = (800, 800)
-    #         pf.thumbnail(output_size)
-    #         pf.save(self.AlbumCover.path)
-
     def __str__(self): return str(self.Name) + " - " + str(self.GalleryOwner) + "ID: " + str(self.id)
 
 class GalleryReaction(models.Model):
@@ -108,12 +98,3 @@ class Profile(models.Model):    # authorization demanded for sure
     Sex = models.CharField(default=NOTANSWER, null=False, blank=False, max_length=2, choices=GENDER)
 
     def __str__(self): return str(self.user.username)   # this is what it is going to show
-
-    # def save(self, *args, **kwargs):
-    #     imageTemproary = Image.open(self.ProfilePhoto)
-    #     outputIoStream = BytesIO()
-    #     imageTemproaryResized = imageTemproary.resize( (300,300) )
-    #     imageTemproaryResized.save(outputIoStream , format='PNG', quality=85)
-    #     outputIoStream.seek(0)
-    #     self.ProfilePhoto = InMemoryUploadedFile(outputIoStream,'ImageField', "%s.png" %self.ProfilePhoto.name.split('.')[0], 'image/png', sys.getsizeof(outputIoStream), None)
-    #     super(Profile, self).save(*args, **kwargs)
