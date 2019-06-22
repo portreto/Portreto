@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b66d2f42-88c5-463b-87dd-402db6e95ced" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_service/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_service/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/api_client.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_2/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/api_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="b66d2f42-88c5-463b-87dd-402db6e95ced" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,12 +360,12 @@
       <workItem from="1560903671509" duration="599000" />
       <workItem from="1561072384823" duration="11000" />
       <workItem from="1561072415653" duration="11720000" />
-      <workItem from="1561156330261" duration="7339000" />
+      <workItem from="1561156330261" duration="7630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211574000" />
+    <option name="totallyTimeSpent" value="211865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="33" y="66" width="1872" height="941" extended-state="0" />

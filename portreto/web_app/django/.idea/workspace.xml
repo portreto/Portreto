@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="756a196a-dc82-470a-9b8f-6552f5312f1b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/app_service/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/app_service/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/api_client.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_2/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/api_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="756a196a-dc82-470a-9b8f-6552f5312f1b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,12 +363,12 @@
       <workItem from="1560903671923" duration="164000" />
       <workItem from="1561072397547" duration="18250000" />
       <workItem from="1561156330016" duration="296000" />
-      <workItem from="1561156649531" duration="6770000" />
+      <workItem from="1561156649531" duration="7060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135878000" />
+    <option name="totallyTimeSpent" value="136168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1905" y="78" width="1857" height="954" extended-state="0" />
