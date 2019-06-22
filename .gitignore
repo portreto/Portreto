@@ -4,4 +4,4 @@ portreto/mongo-rs0-2/data/**
 portreto/mongo-rs0-3/data/**
 
 #ignore storage files
-portreto/storage/storage_*
+portreto/storage/storage_*/**
