@@ -64,8 +64,7 @@ class UserUpdateForm(forms.ModelForm):
 
     class Meta:     #Meta is used to specify which model will change(In this case User)
         model = User
-        fields = ['username', 'email']
-
+        fields = ['email']
 
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:

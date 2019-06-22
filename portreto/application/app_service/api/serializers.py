@@ -75,10 +75,9 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 class ProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer()
+    user = UserSerializer(validators=None)
     # user = UserSerializer()
     # id = serializers.IntegerField(validators=None)
-
     class Meta:
         model = Profile
         fields = '__all__'
@@ -90,20 +89,14 @@ class ProfileSerializer(serializers.ModelSerializer):
 
         return prof
 
-class ProfileDeserializer(serializers.ModelSerializer):
-    ProfilePhoto = serializers.CharField()
-    user = UserSerializer()
-    id = serializers.IntegerField(validators=None)
+    # def update(self, validated_data = None):
+    #     print("\n\n UPDATING !!!!!!!!!!!! :  \n\n")
 
+#Special Serializer for updating profile
+class ProfileUpdateDeserializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
-        fields = '__all__'
-
-    def create(self, validated_data = None):
-        # print ("VALIDATED_DATA"+"="*40+"\n"+str(self.validated_data))
-        user_data = self.validated_data.pop('user')
-        user = User(**user_data)
-        return Profile(user = user, **self.validated_data)
+        exclude = ('user',)
 
 class GallerySerializer(serializers.ModelSerializer):
     GalleryOwner = UserSerializer(read_only=False)
@@ -111,45 +104,31 @@ class GallerySerializer(serializers.ModelSerializer):
     class Meta:
         model = Gallery
         fields = '__all__'
+        # depth = 1
 
     def create(self, validated_data = None):
         gall = Gallery(**self.validated_data)
-
         #check for duplicates
-
         galleryName = gall.Name
-        print("\n\n\n\nGALLERY NAME" + "*" * 80 + str(galleryName) + "\n\n\n\n")
-
         user_galleries = Gallery.objects.filter(GalleryOwner__username= gall.GalleryOwner, Name = galleryName)
-
-        print("\n\n\n\nUSER GALLERIES" + "*" * 80 + str(user_galleries) + "\n\n\n\n")
-
         if len(user_galleries)>0:
             raise NotAcceptable
             return
-
+        # Save Gallery
         gall.save()
         return gall
 
     def destroy(self):
         gall = Gallery(**self.validated_data)
 
-        #check for duplicates
-
-        galleryName = gall.Name
-
-        user_galleries = Gallery.objects.filter(GalleryOwner__username= gall.GalleryOwner, Name = galleryName)
-
-
-        if len(user_galleries)>0:
-            raise NotAcceptable
-            return
-
-        gall.save()
+        #get gallery
+        gallery = Gallery.objects.get(GalleryOwner__username= gall.GalleryOwner, Name = gall.Name)
+        gallery.delete()
 
         return gall
 
-class GallerySerializerNoFk(serializers.ModelSerializer):
+#Special Serializer for creating galleries
+class GalleryDeserializer(serializers.ModelSerializer):
     class Meta:
         model = Gallery
         fields = '__all__'
@@ -158,32 +137,13 @@ class GallerySerializerNoFk(serializers.ModelSerializer):
         gall = Gallery(**self.validated_data)
         #check for duplicates
         galleryName = gall.Name
-        print("\n\n\n\nGALLERY NAME" + "*" * 80 + str(galleryName) + "\n\n\n\n")
         user_galleries = Gallery.objects.filter(GalleryOwner__username= gall.GalleryOwner, Name = galleryName)
-        print("\n\n\n\nUSER GALLERIES" + "*" * 80 + str(user_galleries) + "\n\n\n\n")
         if len(user_galleries)>0:
             raise NotAcceptable
             return
         gall.save()
         return gall
 
-    def destroy(self):
-        gall = Gallery(**self.validated_data)
-
-        #check for duplicates
-
-        galleryName = gall.Name
-
-        user_galleries = Gallery.objects.filter(GalleryOwner__username= gall.GalleryOwner, Name = galleryName)
-
-
-        if len(user_galleries)>0:
-            raise NotAcceptable
-            return
-
-        gall.save()
-
-        return gall
 
 class PhotoSerializer(serializers.ModelSerializer):
     # id = serializers.IntegerField(validators=None)
@@ -197,13 +157,3 @@ class PhotoSerializer(serializers.ModelSerializer):
         photo.save()
 
         return photo
-
-class PhotoDeserializer(serializers.ModelSerializer):
-    Photo = serializers.CharField()
-
-    class Meta:
-        model = Photo
-        fields = '__all__'
-
-    def create(self, validated_data = None):
-        return Photo(**self.validated_data)

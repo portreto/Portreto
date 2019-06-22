@@ -74,7 +74,6 @@ def register(request):
         form = UserRegistrationForm()
     return render(request,'users/register.html', {'form': form}) #Again create a template file again to access everything we want
 
-
 def login(request, next=None):
     token = my_cookie_get(request, TOKEN_COOKIE)
     username = my_cookie_get(request, USERNAME_COOKIE)
@@ -116,27 +115,12 @@ def logout(request):
     return logout_user(request)
 
 @my_login_required()
-def homepage(request, username=None, token=None):
-    print(username)
-    return HttpResponse("<p>Username: " + username + "</p>")
-
-@my_login_required()
-def page2(request, number1, number2, username=None, token=None):
-    #number2 = 2
-    print(username + " | number1: " + number1 + " | number2: " + number2)
-    return HttpResponse("<p>Username: " + username  + " | number1: " + number1 + " | number2: " + number2 +"</p>")
-
-@my_login_required()
-def page1(request, number1, username=None, token=None):
-    print(username + " | number1: " + number1 )
-    return HttpResponse("<p>Username: " + username  + " | number1: " + number1 + "</p>")
-
-#We will specify something that it is different in each user
-@my_login_required()
 def profile(request, username=None, token=None):
     requsername = username
     user = get_api_objects_or_404(api_client.get_user(username=requsername))[0]
     profile = get_api_objects_or_404(api_client.get_profile(username=requsername))[0]
+
+
     my_galleries = api_client.get_gallery(requsername=requsername,username=requsername)
 
     if request.method == 'POST':
@@ -153,7 +137,6 @@ def profile(request, username=None, token=None):
             messages.success(request, f'Your account has been successfully updated')
             return redirect('users:profile')
     else:
-
         user_form = UserUpdateForm(instance=user)
         profile_form = ProfileUpdateForm(instance=profile)
 

@@ -80,7 +80,6 @@ class Follow(models.Model): # authorize maybe?
     FollowCond1 = models.IntegerField(null=True, blank=True)
     FollowCond2 = models.IntegerField(null=True, blank=True)
 
-
     # Cond2 can view Cond1
     # Follower can view followed
     # NOTIFICATIONS NOT ADDED
@@ -88,7 +87,6 @@ class Follow(models.Model): # authorize maybe?
 
 class Profile(models.Model):    # authorization demanded for sure
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    #TODO CHECK THAT ProfilePhoto = models.ForeignKey(Photo, default='', on_delete=models.CASCADE, null=True, blank=True) #!!!WE NEED TO ADD DEFAULT PROFILE PIC TODO ADD ON DELETE
     ProfilePhoto = models.ImageField(default='/profile_pics/default.jpg',storage=ExternalStorage(), null=True, blank=True)
     RegisterDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
     BirthDate = models.DateField(null=True, blank=True, editable=True)
@@ -97,4 +95,4 @@ class Profile(models.Model):    # authorization demanded for sure
     LastName = models.CharField(default='', max_length=30, blank=True, null=False)
     Sex = models.CharField(default=NOTANSWER, null=False, blank=False, max_length=2, choices=GENDER)
 
-    def __str__(self): return str(self.user.username)   # this is what it is going to show
+    def __str__(self): return("User:" + str(self.user.username) + "Profile ID:" + str(self.id))    # this is what it is going to show

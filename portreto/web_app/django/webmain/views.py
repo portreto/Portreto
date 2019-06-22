@@ -51,7 +51,7 @@ def detail(request, gallery_id, username=None, token=None):
 
     return render(request, 'webmain/detail.html', context)
 
-# Shows details of a specific gallery
+# Shows details of a specific photo
 @my_login_required()
 def photo_detail(request, gallery_id, photo_id, username=None, token=None):
     requsername = username
@@ -72,8 +72,6 @@ def photo_detail(request, gallery_id, photo_id, username=None, token=None):
     return render(request, 'webmain/photo_detail.html', context)
 
 # Create a new gallery. NOTE: You cannot add two galleries with the same name
-import base64
-
 @my_login_required()
 def create_gallery(request, username=None, token=None):
     requsername = username
@@ -320,20 +318,10 @@ def is_friend(request, user_id, username=None, token=None):
 
     return True
 
-# Something like a like counter on photos. Not tested yet
-# def num_photo_like(id):
-#     like = PhotoReaction.objects.filter(p=id).count()
-#     return like
 
-# TODO ADD MORE FUNCTIONALITY. CURRENTY SUPPORTS ONLY SEARCH BASED ON USERNAME
 # This is our search function
 @my_login_required()
 def search(request, username=None, token=None):
-
-    # instance = User.objects.get(username=)
-    # albums = Album.objects.filter(user=request.user)
-    # song_results = Song.objects.all()
-
     query = request.GET.get("q")
 
     profiles = api_client.get_search_profiles(query=query)
@@ -345,7 +333,6 @@ def search(request, username=None, token=None):
         return render(request, 'webmain/search.html', {
             'profiles': profiles,
         })
-
 
 
 @my_login_required()
@@ -360,7 +347,6 @@ def comment_gallery(request, gallery_id, username=None, token=None):
     responce = api_client.post_gallery_comment(comment,requsername=requsername)
 
     return redirect('webmain:detail', gallery_id)
-
 
 @my_login_required()
 def comment_photo(request, photo_id, username=None, token=None):

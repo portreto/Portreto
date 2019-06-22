@@ -40,7 +40,6 @@ def has_permission(user,requsername=None,requserid=None,cud=False):
 class GalleryView(viewsets.ModelViewSet):
     queryset = Gallery.objects.all()
     serializer_class = GallerySerializer
-
     def get_queryset(self):
         queryset = self.queryset
         # Requesting User
@@ -81,18 +80,18 @@ class GalleryView(viewsets.ModelViewSet):
         data = request.data
         gallert_owner_data = data.pop("GalleryOwner")
 
-        user = User.objects.get(username=gallert_owner_data[1])
+        print("\n\n GALLERY OWNER DATA :  " + str(gallert_owner_data) + "\n\n")
 
-        print("\n\n OWNER" + str(user) + "\n\n")
-
+        user = User.objects.get(username=gallert_owner_data[0])
         data["GalleryOwner"]=user.id
 
-        print("\n\n SERIALIZER DATA" + str(data) + "\n\n")
+        serializer = GalleryDeserializer(data=data)
+        serializer.is_valid(raise_exception=False)
 
-        serializer = GallerySerializerNoFk(data=data)
+        print("\n\n OWNER :  " + str(user) + "\n\n")
+        print("\n\n SERIALIZER DATA :  " + str(data) + "\n\n")
+        print("\n\n SERIALIZER ERRORS :  " + str(serializer.errors) + "\n\n")
 
-
-        serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
@@ -372,6 +371,9 @@ class ProfileView(viewsets.ModelViewSet):
         if not cud:
             return
 
+        if request.method == "PUT" :
+            print("\n\n PUUUUUUUUUUUUUUUUUUUUUUUUUUUUT :  \n\n")
+
         requserid = request.query_params.get('requserid', None)
         requsername = request.query_params.get('requsername', None)
         # Get Profile Owner
@@ -380,6 +382,25 @@ class ProfileView(viewsets.ModelViewSet):
         if not has_permission(user, requsername, requserid, cud):
             raise AuthenticationFailed
         return
+
+    def update(self, request, *args, **kwargs):
+        partial = kwargs.pop('partial', False)
+        data = request.data
+        instance = self.get_object()
+        serializer = ProfileUpdateDeserializer(instance, data=data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+
+
+        self.perform_update(serializer)
+
+
+        if getattr(instance, '_prefetched_objects_cache', None):
+            # If 'prefetch_related' has been applied to a queryset, we need to
+            # forcibly invalidate the prefetch cache on the instance.
+            instance._prefetched_objects_cache = {}
+
+        return Response(serializer.data)
+
 
 class UserView(viewsets.ModelViewSet):
     queryset = User.objects.all()

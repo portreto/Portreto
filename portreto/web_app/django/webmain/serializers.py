@@ -78,6 +78,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         self.is_valid()
 
         image = self.validated_data.pop("ProfilePhoto")
+        # TODO Default image
         if image == None:
             image = '/media/profile_pics/default.jpg'
 
@@ -87,6 +88,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 class ProfileDeserializer(serializers.ModelSerializer):
     ProfilePhoto = serializers.CharField(allow_null=True)
     user = UserSerializer()
+    id = serializers.IntegerField(validators=None)
 
     class Meta:
         model = Profile
@@ -95,14 +97,15 @@ class ProfileDeserializer(serializers.ModelSerializer):
     def create(self, validated_data = None):
 
         self.is_valid()
-        # print ("\n\nVALIDATED_DATA"+"="*40+"\n"+str(self.validated_data))
-        # print ("\n\nERRORS"+"="*40+"\n"+str(self.errors))
+        print ("\n\nVALIDATED_DATA"+"="*40+"\n"+str(self.validated_data))
+        print ("\n\nERRORS"+"="*40+"\n"+str(self.errors))
 
         user_dt = self.validated_data.pop("user")
         user_serializer = UserSerializer(data=user_dt)
         user_serializer.is_valid()
 
         user = user_serializer.create()
+        print("\n\n INCOMING PROFILE VALIDATED DATA :  " + str(self.validated_data) + "\n\n")
 
         image = self.validated_data.pop("ProfilePhoto")
 
@@ -129,7 +132,6 @@ class GalleryDeserializer(serializers.ModelSerializer):
     AlbumCover = serializers.CharField()
     id = serializers.IntegerField()
     GalleryOwner = UserSerializer()
-
 
     class Meta:
         model = Gallery

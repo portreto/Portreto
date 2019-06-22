@@ -83,7 +83,7 @@ class PhotoComment(models.Model):
     # NOTIFICATIONS NOT ADDED
     def __str__(self): return str(self.Photo) + " - " + str(self.Comment)
 
-class Follow(models.Model): # authorize maybe?
+class Follow(models.Model):
     FollowCond1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='followed')
     FollowCond2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='follower')
 
@@ -95,7 +95,6 @@ class Follow(models.Model): # authorize maybe?
 
 class Profile(models.Model):    # authorization demanded for sure
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    #TODO CHECK THAT ProfilePhoto = models.ForeignKey(Photo, default='', on_delete=models.CASCADE, null=True, blank=True) #!!!WE NEED TO ADD DEFAULT PROFILE PIC TODO ADD ON DELETE
     ProfilePhoto = models.ImageField(default='profile_pics/default.jpg',upload_to='profile_pics/',storage=ExternalStorage())
     RegisterDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
     BirthDate = models.DateField(null=True, blank=True, editable=True)
