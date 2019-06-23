@@ -24,11 +24,12 @@ class UserRegistrationForm(UserCreationForm):
     def save(self, commit=True):
         try:
             if DEBUG is True: print("=" * 40 + "\nRegister Data:")
-            # TODO : Change domain and port based on online Auth server
+
             protocol = 'http://'
             domain = AUTH_DOMAIN_NAME  # '127.0.0.1'
             port = AUTH_PORT
             location = '/api/create/user/'
+
             url = str(protocol) + str(domain) + ':' + str(port) + str(location)
             if DEBUG is True: print(url)
             data = {
@@ -61,8 +62,7 @@ class UserRegistrationForm(UserCreationForm):
 
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
-
-    class Meta:     #Meta is used to specify which model will change(In this case User)
+    class Meta:
         model = User
         fields = ['email']
 

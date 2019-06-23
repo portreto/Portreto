@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <form class="form" method="get" action="{% url 'webmain:comment_gallery' gallery.id %}">
+            <form class="form" method="get" action="{% url 'webmain:comment_gallery' gallery.id 'detail' %}">
                                 <div class="input-group" >
                                     <input type="text" name="comment" class="form-control" aria-label="Add a comment…" placeholder="Add a comment…">
                                     <span class="input-group-btn">
@@ -42,13 +42,9 @@
 
             <ul class="nav nav-pills" style="margin-bottom: 10px;">
                 {% if is_liked %}
-                    <!--Action buttons gallery-->
-                        &nbsp;&nbsp;<li role="presentation" class="active"><a href="{% url 'webmain:like_gallery' gallery.id %}">Unlike <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </a></li>
-    <!--                </ul>-->
+                        &nbsp;&nbsp;<li role="presentation" class="active"><a href="{% url 'webmain:like_gallery' gallery.id 'detail' %}">Unlike <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> </a></li>
                 {% else %}
-    <!--                <ul class="nav nav-pills" style="margin-bottom: 10px;">-->
-                        &nbsp;&nbsp;<li role="presentation" ><a href="{% url 'webmain:like_gallery' gallery.id %}">Like <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></a></li>
-    <!--                </ul>-->
+                        &nbsp;&nbsp;<li role="presentation" ><a href="{% url 'webmain:like_gallery' gallery.id 'detail' %}">Like <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></a></li>
                 {% endif %}
 
                 {% if like_count == 1 %}
@@ -62,7 +58,7 @@
                 {% if gallery.id == gallery.id %}
                     {% if comment.User.username == user.username or user.username == gallery.GalleryOwner.username%}
                         <p><strong>&nbsp;<a href="{% url 'users:profile'%}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }}
-                                     <a href="{% url 'webmain:delete_comment_gallery' comment_id=comment.id gallery_id=gallery.id %}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></p>
+                                     <a href="{% url 'webmain:delete_comment_gallery' comment_id=comment.id gallery_id=gallery.id redirect_target='detail' %}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></p>
                     {% else %}
                         <p><strong>&nbsp;<a href="{%url 'users:getProfile' comment.User %}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }}</p>
                     {% endif%}

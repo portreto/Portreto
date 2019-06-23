@@ -1,7 +1,6 @@
 
 
 {%extends "webmain/base.html"%}
-{% load bootstrap4 %}
 {% load crispy_forms_tags %}
 {% block body %}
 
@@ -11,7 +10,7 @@
             <!-- Empty div -->
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="panel panel-default">
 
                     <div class="card-heading">
                         <h1 class="text-center my-font">Portreto</h1>
@@ -26,7 +25,7 @@
                             </fieldset>
 
                             <div class="form-group">
-                                <input type="submit" class="btn btn-outline-info" value="Login">
+                                <input type="submit" class="btn btn-default" value="Login">
                             </div>
 
 <!--                            <input type="hidden" name="next" value="/">-->

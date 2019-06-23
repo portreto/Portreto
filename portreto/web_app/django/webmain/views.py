@@ -24,10 +24,14 @@ def home_view(request, username=None, token=None):
     # Add gallery owner photos
     for gallery in galleries:
         gallery.GalleryOwnerPhoto = get_api_objects_or_404(api_client.get_profile(username=gallery.GalleryOwner.username))[0].ProfilePhoto
+        gallery.isLiked = len(api_client.get_gallery_reaction(requsername=requsername,galleryid=gallery.id))>0
+        gallery.comments = api_client.get_gallery_comment(requsername=requsername,galleryid=gallery.id)
+
 
     context = {
         'all_galleries': galleries,
         'comments': comments,
+        'requsername':requsername,
         'my_prof': get_api_objects_or_404(api_client.get_profile(username=requsername))[0]
     }
 
@@ -287,12 +291,9 @@ def follow(request, user_id, username=None, token=None):
 # TODO ADD LIKE COUNTER
 # Like and unlike a gallery content. NOTE: ONLY friends of current user or the user himself can like
 @my_login_required()
-def like_gallery(request, gallery_id, username=None, token=None):
+def like_gallery(request, gallery_id,redirect_target, username=None, token=None):
     requsername = username
-
-
     responce = api_client.gallery_reaction_toggle(requsername, gallery_id)
-
     status_code = responce.status_code
 
     if status_code == 302 :
@@ -304,8 +305,11 @@ def like_gallery(request, gallery_id, username=None, token=None):
         'like_gallery': like_gallery,
         'my_prof': get_api_objects_or_404(api_client.get_profile(username=requsername))[0]
     }
-    # return JsonResponse(data, safe=False)
-    return redirect('webmain:detail', gallery_id)   #TODO CHECK REDIRECTION
+    # Redirect to proper url
+    if(redirect_target=='index'):
+        return redirect('webmain:'+redirect_target)
+    else:
+        return redirect('webmain:'+redirect_target, gallery_id)
 
 # TODO ADD LIKE COUNTER
 # Like and unlike a photo content. NOTE: ONLY friends of current user or the user himself can like
@@ -343,7 +347,7 @@ def search(request, username=None, token=None):
 
 
 @my_login_required()
-def comment_gallery(request, gallery_id, username=None, token=None):
+def comment_gallery(request, redirect_target, gallery_id, username=None, token=None):
     requsername = username
 
     # if user cant access gallery this will return 404
@@ -353,7 +357,11 @@ def comment_gallery(request, gallery_id, username=None, token=None):
     comment = GalleryComment(User=user, Gallery=gallery_id, Comment=request.GET['comment'])
     response = api_client.post_gallery_comment(comment,requsername=requsername)
 
-    return redirect('webmain:detail', gallery_id)
+    if(redirect_target=='index'):
+        return redirect('webmain:'+redirect_target)
+    else:
+        return redirect('webmain:'+redirect_target, gallery_id)
+
 
 @my_login_required()
 def comment_photo(request, photo_id, username=None, token=None):
@@ -375,7 +383,10 @@ def delete_comment_photo(request, comment_id, photo_id, username=None, token=Non
     return redirect('webmain:photo_detail', photo.Gallery, photo_id)
 
 @my_login_required()
-def delete_comment_gallery(request, comment_id, gallery_id, username=None, token=None):
+def delete_comment_gallery(request, comment_id, gallery_id, redirect_target, username=None, token=None):
     requsername = username
     responce = api_client.delete_gallery_comment(id=comment_id,requsername=requsername)
-    return redirect('webmain:detail', gallery_id)
+    if (redirect_target == 'index'):
+        return redirect('webmain:' + redirect_target)
+    else:
+        return redirect('webmain:' + redirect_target, gallery_id)

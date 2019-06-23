@@ -2,33 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b66d2f42-88c5-463b-87dd-402db6e95ced" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../web_app/django/webmain/new_templates/webmain/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/navbar_new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_service/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_service/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/PORTRETO/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/PORTRETO/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/users/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/templates/users/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/templates/users/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/api_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/add_photo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/add_photo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/new_templates/webmain/add_photo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/new_templates/webmain/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/new_templates/webmain/create_gallery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/new_templates/webmain/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/new_templates/webmain/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/new_templates/webmain/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/new_templates/webmain/photo_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/new_templates/webmain/search.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/create_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/create_gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/photo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/photo_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/navbar_new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -280,8 +275,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="54" />
+    <option name="x" value="17" />
+    <option name="y" value="47" />
     <option name="width" value="1872" />
     <option name="height" value="941" />
   </component>
@@ -400,12 +395,12 @@
       <workItem from="1560903671509" duration="599000" />
       <workItem from="1561072384823" duration="11000" />
       <workItem from="1561072415653" duration="11720000" />
-      <workItem from="1561156330261" duration="24188000" />
+      <workItem from="1561156330261" duration="24787000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228423000" />
+    <option name="totallyTimeSpent" value="229022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="54" width="1872" height="941" extended-state="0" />

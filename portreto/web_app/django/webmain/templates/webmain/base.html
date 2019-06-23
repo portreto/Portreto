@@ -20,7 +20,22 @@
 
 </head>
 <body>
-{% include 'webmain/navbar_new.html' %}
+{% include 'webmain/navbar.html' %}
+
+<div class="topStick" >
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                    <ul{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                    {{ message }}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <br>
 
     {% block body %}
     {% endblock %}

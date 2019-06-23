@@ -37,19 +37,9 @@ def register(request):
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             message, data = form.save()
-            if DEBUG is True: print()
+            if DEBUG is True: print(message)
             if message == "DONE" :    #save the new user created. In the background hashes password
-
-                # TODO:
-                # Send token for the first time to Application Service in order to create user
-                protocol = 'http://'
-                domain = AUTH_DOMAIN_NAME  # '127.0.0.1'
-                port = AUTH_PORT
-                location = '/api/create/user/'
-                url = str(protocol) + str(domain) + ':' + str(port) + str(location)
-                #response = requests.post(url=url, data=data["token"])
-
-                # TODO: POST THIS USERNAME TO APP LOGIC
+                # POST THIS USER TO APP LOGIC
                 username = form.cleaned_data.get('username')
                 messages.success(request,f'Your account has been successfully created {username}')
 
@@ -59,9 +49,7 @@ def register(request):
                 response = redirect(PORTRETO)    #This is used to redirect in our home page after successful update of form
                 my_cookie_set(response, TOKEN_COOKIE, data["token"])
 
-                return my_cookie_set(response,
-                                     USERNAME_COOKIE,
-                                     encryption().decrypt(UserIdentity().decode_token( data["token"], "app")["username"]))
+                return my_cookie_set(response, USERNAME_COOKIE, encryption().decrypt(UserIdentity().decode_token( data["token"], "app")["username"]))
             elif message == 400:
                 messages.error(request, message)
                 return render(request, 'register/', {'form': form})
@@ -108,7 +96,7 @@ def login(request, next=None):
 
     else:
         form = AuthenticationForm()
-    return render(request,'users/login.html', {'form': form}) #Again create a template file again to access everything we want
+    return render(request,'users/login.html', {'form': form}) #Again create a template file to access everything we want
 
 def logout(request):
     return logout_user(request)

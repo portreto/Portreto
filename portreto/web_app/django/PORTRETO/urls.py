@@ -24,8 +24,8 @@ urlpatterns = [
     #path('admin/', admin.site.urls),
     url(r'^admin/', admin.site.urls),
     #url(r'^', include('users.urls')),
-    url(r'^', include('users.urls')),
-    url(r'^portreto/', include('webmain.urls')),
+    url(r'^user/', include('users.urls')),
+    url(r'^', include('webmain.urls')),
 ]
 
 if settings.DEBUG:

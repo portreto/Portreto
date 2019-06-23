@@ -1,63 +1,95 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-<html lang="en">
-<head>
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
-    {% block styles %}
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    {% endblock %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
 
+        <!-- Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'webmain:index' %}">
+                <span class="logo-container">
+                    <img class="img-circle" src="{% static 'images/portreto.png' %}" alt="">
+                </span>
+                <span class="logo-font">Portreto</span></a></span></a>
 
-<nav class="navbar fixed-top navbar-expand-md navbar-light bg-dark fixed-top sticky-top">
-    <span class="site-brand-container"><a class="navbar-brand " style="color: white" href="{% url 'webmain:index' %}" ><span class="logo-container"><img class="logo" src="{% static 'images/portreto.png' %}" alt="" style="width: 40px"></span> <span class="vr">|</span><span class="my-font" >Portreto</span></a></span>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        </div>
 
-    <div class="collapse navbar-collapse order-3 order-sm-2" id="navbarNav">
+        <!-- Items -->
+        <div class="collapse navbar-collapse" id="topNavBar">
 
-        <span class="navbar-nav mx-auto navbar-fixed-top">
-            <form class=" navbar-form "  role="search" action="{% url 'webmain:search' %}">
+            <!-- If User Is Logged In -->
+            {% if my_prof is not None %}
 
-                <div class="input-group ">
-                    <input type="text" class="form-control" placeholder="Search" name="q" value="{{ request.GET.q }}">
+            <form class=" navbar-form navbar-left search_group" role="search" method="get" action="{% url 'webmain:search' %}">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="q" value="{{ request.GET.q }}">
                 </div>
-
+                <button type="submit" class="btn btn-default">Search</button>
             </form>
-        </span>
 
-        <ul class="navbar-nav navbar-right ml-auto">
-                <li class="nav-item avatar">
-                    <a class="nav-link p-0" href="{% url 'users:profile' %}">
-                        <img src ="{{ my_prof.ProfilePhoto }}" class="" style="height: 35px; width: 35px; border-radius: 100%"
-                        alt="Profile Picture">&nbsp;
-                        </a>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="navbar-brand" href="{% url 'users:profile' %}">
+                        <span >
+                        <img class="img-circle"  src ="{{ my_prof.ProfilePhoto }}" alt="Profile Picture">
+                    </span>
+                    </a>
                 </li>
                 <li>
                     <a href="{% url 'webmain:create_gallery' %}">
-                        &nbsp; Add Gallery &nbsp;
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Gallery
                     </a>
                 </li>
                 <li>
                     <a href="{% url 'users:logout' %}">
-                        &nbsp; Logout &nbsp;
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Logout
                     </a>
                 </li>
-        </ul>
+            </ul>
+            {% else %}
+
+             <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a href="{% url 'users:login' %}">
+<!--                            &nbsp; Login &nbsp;-->
+                            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp; Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{%  url 'users:register' %}">
+<!--                            &nbsp; Register &nbsp;-->
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp; Register
+                        </a>
+                    </li>
+
+            </ul>
+            {% endif %}
+        </div>
 
     </div>
 </nav>
 
+<div class="topStick" >
 
-</body>
-</html>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+        <!--    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>-->
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                    <ul{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                    {{ message }}
+                    </ul>
+                {% endif %}
+        <!--        {{ message }} {{ message.tags }}-->
+        <!--    </li>-->
+            {% endfor %}
+        </ul>
+    {% endif %}
 
+    <br>
+</div>
