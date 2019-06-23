@@ -3,6 +3,23 @@ from webmain.models import *
 
 from rest_framework.exceptions import AuthenticationFailed, NotAcceptable
 
+# Depth 0 Serializers ############################################################
+class UserSerializer(serializers.ModelSerializer):
+
+    # username = serializers.CharField(validators=None)
+    # id = serializers.IntegerField(validators=None)
+
+    class Meta:
+        model = User
+        fields = ['id','username','email']
+
+    def create(self, validated_data = None):
+
+        user = User(**self.validated_data)
+        user.save()
+
+        return user
+
 class GalleryReactionSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(validators=None)
     class Meta:
@@ -21,31 +38,6 @@ class PhotoReactionSerializer(serializers.ModelSerializer):
     def create(self, validated_data = None):
         return PhotoReaction(**self.validated_data)
 
-class GalleryCommentSerializer(serializers.ModelSerializer):
-    # id = serializers.IntegerField(validators=None)
-    class Meta:
-        model = GalleryComment
-        fields = '__all__'
-
-    def create(self, validated_data = None):
-        self.is_valid()
-        comment = GalleryComment(**self.validated_data)
-        comment.save()
-
-        return comment
-
-class PhotoCommentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PhotoComment
-        fields = '__all__'
-
-    def create(self, validated_data = None):
-
-        photo_comment = PhotoComment(**self.validated_data)
-        photo_comment.save()
-
-        return photo_comment
-
 class FollowSerializer(serializers.ModelSerializer):
     class Meta:
         model = Follow
@@ -58,46 +50,20 @@ class FollowSerializer(serializers.ModelSerializer):
 
         return follow
 
-class UserSerializer(serializers.ModelSerializer):
-
-    # username = serializers.CharField(validators=None)
-    # id = serializers.IntegerField(validators=None)
-
-    class Meta:
-        model = User
-        fields = ['id','username']
-
-    def create(self, validated_data = None):
-
-        user = User(**self.validated_data)
-        user.save()
-
-        return user
-
-class ProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer(validators=None)
-    # user = UserSerializer()
+class PhotoSerializer(serializers.ModelSerializer):
     # id = serializers.IntegerField(validators=None)
     class Meta:
-        model = Profile
+        model = Photo
         fields = '__all__'
 
     def create(self, validated_data = None):
 
-        prof = Profile(**self.validated_data)
-        prof.save()
+        photo = Photo(**self.validated_data)
+        photo.save()
 
-        return prof
+        return photo
 
-    # def update(self, validated_data = None):
-    #     print("\n\n UPDATING !!!!!!!!!!!! :  \n\n")
-
-#Special Serializer for updating profile
-class ProfileUpdateDeserializer(serializers.ModelSerializer):
-    class Meta:
-        model = Profile
-        exclude = ('user',)
-
+# Depth 1 Serializers ###########################################################
 class GallerySerializer(serializers.ModelSerializer):
     GalleryOwner = UserSerializer(read_only=False)
 
@@ -127,7 +93,7 @@ class GallerySerializer(serializers.ModelSerializer):
 
         return gall
 
-#Special Serializer for creating galleries
+## Special Serializer for creating galleries
 class GalleryDeserializer(serializers.ModelSerializer):
     class Meta:
         model = Gallery
@@ -144,16 +110,63 @@ class GalleryDeserializer(serializers.ModelSerializer):
         gall.save()
         return gall
 
-
-class PhotoSerializer(serializers.ModelSerializer):
+class ProfileSerializer(serializers.ModelSerializer):
+    user = UserSerializer(validators=None)
+    # user = UserSerializer()
     # id = serializers.IntegerField(validators=None)
     class Meta:
-        model = Photo
+        model = Profile
         fields = '__all__'
 
     def create(self, validated_data = None):
 
-        photo = Photo(**self.validated_data)
-        photo.save()
+        prof = Profile(**self.validated_data)
+        prof.save()
 
-        return photo
+        return prof
+
+    # def update(self, validated_data = None):
+    #     print("\n\n UPDATING !!!!!!!!!!!! :  \n\n")
+
+## Special Serializer for updating profile
+class ProfileUpdateDeserializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile
+        exclude = ('user',)
+
+class GalleryCommentSerializer(serializers.ModelSerializer):
+    # id = serializers.IntegerField(validators=None)
+    User = UserSerializer(read_only=False)
+    class Meta:
+        model = GalleryComment
+        fields = '__all__'
+
+## Special Serializer for creating gallery comments
+class GalleryCommentDeserializer(serializers.ModelSerializer):
+    class Meta:
+        model = GalleryComment
+        fields = '__all__'
+
+    def create(self, validated_data = None):
+        self.is_valid()
+        comment = GalleryComment(**self.validated_data)
+        comment.save()
+        return comment
+
+class PhotoCommentSerializer(serializers.ModelSerializer):
+    User = UserSerializer(read_only=True)
+    class Meta:
+        model = PhotoComment
+        fields = '__all__'
+
+## Special Serializer for creating photo comments
+class PhotoCommentDeserializer(serializers.ModelSerializer):
+    class Meta:
+        model = PhotoComment
+        fields = '__all__'
+
+    def create(self, validated_data = None):
+        self.is_valid()
+        photo_comment = PhotoComment(**self.validated_data)
+        photo_comment.save()
+        return photo_comment

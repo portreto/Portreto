@@ -1,14 +1,7 @@
 {%extends 'webmain/base.html'%}
 {% block body %}
-{% include 'webmain/navbar.html' %}
 
-{% if messages %}
-            <ul class="messages">
-                {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+
 
     <div class="container feed">
         <div class="row">
@@ -17,42 +10,59 @@
             <div class="col-md-10">
                 {% for profile in profiles %}
                     <div class="feed">
-                        <div class="card ">
+                        <br>
+                        <div class="search_card">
 
-                            <span>&nbsp;<img src ="{{ profile.ProfilePhoto }}" class="" style="height: 65px; width: 65px; border-radius: 100%"
-                        alt="Profile Picture">
-                            <strong><a href="{% url 'users:getProfile' profile.user.username %}" class="link">{{ profile }}</a></strong>
-
+                            <span>&nbsp;<img src ="{{ MEDIA_URL }}{{ profile.ProfilePhoto }}" class="search_img" alt="Profile Picture">
+                            <strong><a href="{% url 'users:getProfile' profile.user.username %}" class="link">{{ profile.user }}</a></strong>
                             </span>
-                            <p>&nbsp;&nbsp;&nbsp;
+                            <div class="search_marg">
+                            <p>
                                <font size=2>
                                    <strong>Email:</strong> {{ profile.user.email }}
                                </font>
-                                <br>&nbsp;&nbsp;&nbsp;
+                                <br>
+                                {% if profile.LastName != "" %}
                                 <font size=2>
-                                   <strong>Full name:</strong> {{ profile.LastName }} {{ profile.FirstName }}
+                                   <strong>Last name:</strong> {{ profile.LastName }}
                                </font>
-                                <br>&nbsp;&nbsp;&nbsp;
+                                <br>
+                                {% endif %}
+                                {% if profile.FirstName != "" %}
+                                <font size=2>
+                                   <strong>First name:</strong> {{ profile.FirstName }}
+                               </font>
+                                <br>
+                                {% endif %}
+
+                                {% if profile.Bio != "" %}
                                 <font size=2>
                                    <strong>Bio:</strong> {{ profile.Bio }}
                                </font>
-                            </p>
+                                {%endif%}
+                                <br>
 
-
-                            <form action="{% url 'webmain:follow' profile.user.id%}" method="post" style="display: inline;">
+                                {% if not profile.is_friend %}
+                                <form action="{% url 'webmain:follow' profile.user.id%}" method="post" style="display: inline;">
                                         {% csrf_token %}
                                         <button type="submit" class="btn btn-outline-info">
                                             Share Content
                                         </button>
-                                    </form>
-
+                                </form>
+                                {% else %}
+                                <font size=2>
+                                   <strong>You are sharing content with this user</strong>
+                                </font>
+                                {% endif %}
+                            </p>
+                            </div>
                         </div>
+
                     </div>
 
                 {% empty %}
                     <div>
                         <h1>Could not find any user with that username. Please try again</h1>
-
                     </div>
                 {% endfor %}
             </div>

@@ -1,14 +1,181 @@
-@font-face {
-font-family: 'Billabong';
-font-style: normal;
-font-weight: normal;
-src: local('Billabong'), url('Billabong.woff') format('woff');
+
+/*Base.html file*/
+
+/*
+.vr{
+    color: #FFFFFF;
+}
+*/
+.my-font{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 32px;
+    /*margin-top: 7px;*/
+    vertical-align: middle;
 }
 
-.my-font {
-    font-family: Billabong;
+
+.index_img{
+    min-width: 600px;
+    min-height: 600px;
+    background-size: contain;
+
 }
 
-body{
-    background-color: #f8f9fa;
+.topStick{
+    margin-top:55px;
+}
+
+.img-circle{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+
+}
+
+.search_group{
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hyperlink{
+    color: #FFFFFF;
+    height: auto;
+
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
+@media only screen and (min-device-width: 450px) {
+    .navbar .navbar-brand {
+        padding: 8px 5px;
+    }
+
+    .navbar-form {
+        margin-top: 7px;
+    }
+}
+
+
+/*profile.html file*/
+
+.profile_img{
+    height: 120px;
+    width: 120px;
+    border-radius: 100%
+}
+
+.proPic {
+  width:350px;
+  height:350px;
+  margin: 3px;
+}
+
+.ImgBody {
+    display: flex;
+    flex-wrap: wrap;
+    width :1950px;
+    max-width:100%;
+    max-height:100%;
+    /*border-style: solid;*/
+}
+
+/*
+.ImgBody {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.ImgBody > div {
+  background-color: #f1f1f1;
+  width: 300px;
+  margin: 5px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}*/
+
+
+/*detail.html*/
+
+/*
+.panel{
+    border: 0;
+}*/
+
+.input-group {
+    float:left;
+}
+
+.albPic {
+  width:370px;
+  height:370px;
+  margin: 3px;
+}
+
+
+.AlbBody {
+    display: flex;
+    flex-wrap: wrap;
+    width :1200px;
+    max-width:100%;
+    max-height:100%;
+    /*border-style: solid;*/
+}
+
+.albCov{
+    /*min-width: 450px;
+    min-height: 450px*/
+    width:auto;
+    height:auto;
+    background-size: contain;
+}
+
+/*search.html*/
+
+.search_img{
+    height: 65px;
+    width: 65px;
+    border-radius: 100%
+}
+
+.search_card{
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+.search_marg{
+    margin-left: 13px;
+}
+
+
+.error {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 20px;
+    margin: auto;
+    max-width: 810px;
+    /* margin-top: 50px; */
+}
+
+
+.PhotDet{
+    min-width: 450px;
+    min-height: 450px;
+    max-width: 1024px;
+    max-height: 1024px;
+    background-size: contain;
+
 }

@@ -59,7 +59,7 @@ class PhotoReaction(models.Model):
 
 ##TODO MAYBE ADD GALLERY OWNER
 class GalleryComment(models.Model):
-    User = models.IntegerField(null=True, blank=True)
+    User = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     Gallery = models.IntegerField(null=True, blank=True)
     UploadDateTime = models.DateTimeField(default=None, null=True, editable=False)
     Comment = models.CharField(max_length=1024, blank=True, null=True)
@@ -68,7 +68,7 @@ class GalleryComment(models.Model):
     def __str__(self): return str(self.Gallery) + " - " + str(self.UploadDateTime)
 
 class PhotoComment(models.Model):
-    User = models.IntegerField(null=True, blank=True)
+    User = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     Photo = models.IntegerField(null=True, blank=True)
     UpdateDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
     Comment = models.CharField(max_length=1024, blank=True, null=True)
@@ -77,8 +77,8 @@ class PhotoComment(models.Model):
     def __str__(self): return str(self.Photo) + " - " + str(self.Comment)
 
 class Follow(models.Model): # authorize maybe?
-    FollowCond1 = models.IntegerField(null=True, blank=True)
-    FollowCond2 = models.IntegerField(null=True, blank=True)
+    FollowCond1 = models.IntegerField(null=False, blank=False)
+    FollowCond2 = models.IntegerField(null=False, blank=False)
 
     # Cond2 can view Cond1
     # Follower can view followed

@@ -2,6 +2,18 @@ from rest_framework import serializers
 from webmain.models import *
 from django.conf.global_settings import MEDIA_URL
 
+class UserSerializer(serializers.ModelSerializer):
+
+    username = serializers.CharField(validators=None)
+    id = serializers.IntegerField(validators=None)
+
+    class Meta:
+        model = User
+        fields = ['id','username','email']
+
+    def create(self, validated_data = None):
+        return User(**self.validated_data)
+
 class GalleryReactionSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(validators=None)
     class Meta:
@@ -20,50 +32,70 @@ class PhotoReactionSerializer(serializers.ModelSerializer):
     def create(self, validated_data = None):
         return PhotoReaction(**self.validated_data)
 
-class GalleryCommentSerializer(serializers.ModelSerializer):
+class GalleryCommentDeserializer(serializers.ModelSerializer):
     id = serializers.IntegerField(validators=None)
+    User = UserSerializer(validators=None)
+
     class Meta:
         model = GalleryComment
         fields = '__all__'
 
     def create(self, validated_data = None):
-
         self.is_valid()
-        # print("\n\n\n\nGCOMMENT SERIALIZER ERRORS" + "*" * 80 + str(self.errors) + "\n\n\n\n")
 
-        return GalleryComment(**self.validated_data)
+        user_dt = self.validated_data.pop("User")
+        user_serializer = UserSerializer(data=user_dt)
+        user_serializer.is_valid()
 
-class PhotoCommentSerializer(serializers.ModelSerializer):
+        user = user_serializer.create()
+        return GalleryComment(User = user, **self.validated_data)
 
+class GalleryCommentSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(validators=None)
+    User = serializers.CharField()
+
+    class Meta:
+        model = GalleryComment
+        fields = '__all__'
+
+class PhotoCommentDeserializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(validators=None)
+    User = UserSerializer()
 
     class Meta:
         model = PhotoComment
         fields = '__all__'
 
     def create(self, validated_data = None):
-        return PhotoComment(**self.validated_data)
+        self.is_valid()
+
+        user_dt = self.validated_data.pop("User")
+        user_serializer = UserSerializer(data=user_dt)
+        user_serializer.is_valid()
+
+        user = user_serializer.create()
+
+
+        return PhotoComment(User = user, **self.validated_data)
+
+class PhotoCommentSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(validators=None)
+    User = serializers.CharField()
+
+    class Meta:
+        model = PhotoComment
+        fields = '__all__'
 
 class FollowSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(validators=None)
+
     class Meta:
         model = Follow
         fields = '__all__'
 
     def create(self, validated_data = None):
+        self.validate(self)
         return Follow(**self.validated_data)
-
-class UserSerializer(serializers.ModelSerializer):
-
-    username = serializers.CharField(validators=None)
-    id = serializers.IntegerField(validators=None)
-
-    class Meta:
-        model = User
-        fields = ['id','username']
-
-    def create(self, validated_data = None):
-        return User(**self.validated_data)
 
 class ProfileSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=False)
@@ -97,15 +129,12 @@ class ProfileDeserializer(serializers.ModelSerializer):
     def create(self, validated_data = None):
 
         self.is_valid()
-        print ("\n\nVALIDATED_DATA"+"="*40+"\n"+str(self.validated_data))
-        print ("\n\nERRORS"+"="*40+"\n"+str(self.errors))
 
         user_dt = self.validated_data.pop("user")
         user_serializer = UserSerializer(data=user_dt)
         user_serializer.is_valid()
 
         user = user_serializer.create()
-        print("\n\n INCOMING PROFILE VALIDATED DATA :  " + str(self.validated_data) + "\n\n")
 
         image = self.validated_data.pop("ProfilePhoto")
 
@@ -139,14 +168,10 @@ class GalleryDeserializer(serializers.ModelSerializer):
 
     def create(self, validated_data = None):
         self.is_valid()
-
         user_dt = self.validated_data.pop("GalleryOwner")
         user_serializer = UserSerializer(data=user_dt)
         user_serializer.is_valid()
-
         GalleryOwner = user_serializer.create()
-
-
         return Gallery(GalleryOwner = GalleryOwner, **self.validated_data)
 
 class PhotoSerializer(serializers.ModelSerializer):

@@ -1,3 +1,4 @@
+from django.http.request import QueryDict
 from django.shortcuts import render
 from rest_framework import viewsets
 from webmain.models import *
@@ -36,6 +37,243 @@ def has_permission(user,requsername=None,requserid=None,cud=False):
     return (not cud and has_view_rights) or is_owner
 
 #Basic API Views
+
+# Depth 0 Objects
+class PhotoView(viewsets.ModelViewSet):
+    queryset = Photo.objects.all()
+    serializer_class = PhotoSerializer
+
+    def get_queryset(self):
+        queryset = self.queryset
+
+        # Filter by gallery
+        galleryid = self.request.query_params.get('galleryid', None)
+        if galleryid is not None:
+            queryset = queryset.filter(Gallery__id=galleryid)
+
+        # Requesting User
+        requserid = self.request.query_params.get('requserid', None)
+        requsername = self.request.query_params.get('requsername', None)
+        # Owner of gallery
+        userid = self.request.query_params.get('userid', None)
+        username = self.request.query_params.get('username', None)
+
+        user = None
+        if userid is not None:
+            queryset = queryset.filter(Gallery__GalleryOwner__id=userid)
+            user = User.objects.get(id=userid)
+        if username is not None:
+            queryset = queryset.filter(Gallery__GalleryOwner__username=username)
+            user = User.objects.get(id=username)
+        # Check Permissions
+        if user is not None and not has_permission(user, requsername, requserid, cud=False):
+            queryset = queryset.none()
+        return queryset
+
+    def check_object_permissions(self, request, obj):
+
+        print("\n\n\n\nREQUEST" + "*" * 80 + str(request.method) + "\n\n\n\n")
+
+        #request parameters
+        cud= request.method != 'GET'
+        requserid = request.query_params.get('requserid', None)
+        requsername = request.query_params.get('requsername', None)
+        # Get gallery owner
+        user = obj.Gallery.GalleryOwner
+        # Check Permissions
+        if not has_permission(user, requsername, requserid, cud):
+            print("\n\n\n\nNO PERMISSION" + "*" * 80 +  "\n\n\n\n")
+            raise AuthenticationFailed
+        return
+
+class GalleryReactionView(viewsets.ModelViewSet):
+    queryset = GalleryReaction.objects.all()
+    serializer_class = GalleryReactionSerializer
+
+    def get_queryset(self):
+        queryset = self.queryset
+
+        # Filter by gallery
+        galleryid = self.request.query_params.get('galleryid', None)
+        if galleryid is not None:
+            queryset = queryset.filter(Gallery__id=galleryid)
+
+        # Requesting User
+        requserid = self.request.query_params.get('requserid', None)
+        requsername = self.request.query_params.get('requsername', None)
+        # Owner of gallery
+        userid = self.request.query_params.get('userid', None)
+        username = self.request.query_params.get('username', None)
+
+        user = None
+        if userid is not None:
+            queryset = queryset.filter(Gallery__GalleryOwner__id=userid)
+            user = User.objects.get(id=userid)
+        if username is not None:
+            queryset = queryset.filter(Gallery__GalleryOwner__username=username)
+            user = User.objects.get(id=username)
+
+        # Check Permissions
+        if user is not None and not has_permission(user, requsername, requserid, cud=False):
+            queryset = queryset.none()
+        return queryset
+
+    def check_object_permissions(self, request, obj):
+        # request parameters
+        cud = request.method != 'GET'
+        requserid = request.query_params.get('requserid', None)
+        requsername = request.query_params.get('requsername', None)
+        # Get gallery owner
+        user = obj.Gallery.GalleryOwner
+        # Check Permissions
+        if not has_permission(user, requsername, requserid, cud):
+            print("CHECKING PERMISSIONS" + "=" * 40 + str(requsername) + " " + str(requserid) + "  cud==" + str(cud))
+            raise AuthenticationFailed
+        return
+
+class PhotoReactionView(viewsets.ModelViewSet):
+    queryset = PhotoReaction.objects.all()
+    serializer_class = PhotoReactionSerializer
+
+    def get_queryset(self):
+        queryset = self.queryset
+
+        # Filter by photo
+        photoid = self.request.query_params.get('photoid', None)
+        if photoid is not None:
+            queryset = queryset.filter(Photo__id=photoid)
+
+        # Requesting User
+        requserid = self.request.query_params.get('requserid', None)
+        requsername = self.request.query_params.get('requsername', None)
+        # Owner of gallery
+        userid = self.request.query_params.get('userid', None)
+        username = self.request.query_params.get('username', None)
+
+        user = None
+        # Filter by gallery owner
+        if userid is not None:
+            queryset = queryset.filter(Photo__Gallery__GalleryOwner__id=userid)
+            user = User.objects.get(id=userid)
+        if username is not None:
+            queryset = queryset.filter(Photo__Gallery__GalleryOwner__username=username)
+            user = User.objects.get(id=username)
+        # Check Permissions
+        if user is not None and not has_permission(user, requsername, requserid, cud=False):
+            queryset = queryset.none()
+        return queryset
+
+    def check_object_permissions(self, request, obj):
+        # request parameters
+        cud = request.method != 'GET'
+        requserid = request.query_params.get('requserid', None)
+        requsername = request.query_params.get('requsername', None)
+        # Get gallery owner
+        user = obj.Photo.Gallery.GalleryOwner
+        # Check Permissions
+        if not has_permission(user, requsername, requserid, cud):
+            raise AuthenticationFailed
+        return
+
+class FollowView(viewsets.ModelViewSet):
+    queryset = Follow.objects.all()
+    serializer_class = FollowSerializer
+
+    def get_queryset(self):
+        queryset = self.queryset
+
+        FC1 = self.request.query_params.get('fc1username', None)
+        FC2 = self.request.query_params.get('fc2username', None)
+
+        if FC1 is not None:
+            user = get_object_or_404(User,username=FC1)
+            queryset = queryset.filter(FollowCond1__id=user.id )
+
+        if FC2 is not None:
+            user = get_object_or_404(User,username=FC2)
+            queryset = queryset.filter(FollowCond2__id=user.id )
+
+        print("\n\nQUERYSET-----------------")
+        print(str(queryset))
+
+        return queryset
+
+    def check_object_permissions(self, request, obj):
+        #request parameters
+        cud= request.method != 'GET'
+        requserid = request.query_params.get('requserid', None)
+        requsername = request.query_params.get('requsername', None)
+        # Get gallery owner
+        user = obj.FollowCond1
+        # Check Permissions
+        if not has_permission(user, requsername, requserid, cud):
+            raise AuthenticationFailed
+        return
+
+class UserView(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    def get_queryset(self):
+        queryset = self.queryset
+
+        id = self.request.query_params.get('id', None)
+        if id is not None:
+            queryset = queryset.filter(id=id)
+
+        username = self.request.query_params.get('username', None)
+        if username is not None:
+            queryset = queryset.filter(username=username)
+
+        return queryset
+
+# Depth 1 objects
+class ProfileView(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+
+    def get_queryset(self):
+        queryset = self.queryset
+
+        userid = self.request.query_params.get('userid', None)
+        if userid is not None:
+            queryset = queryset.filter(user__id=userid)
+
+        username = self.request.query_params.get('username', None)
+        if username is not None:
+            queryset = queryset.filter(user__username=username)
+        return queryset
+
+    def check_object_permissions(self, request, obj):
+        # request parameters
+        cud = request.method != 'GET'
+        # Proceed with checks only on cud operations
+        if not cud:
+            return
+
+        requserid = request.query_params.get('requserid', None)
+        requsername = request.query_params.get('requsername', None)
+        # Get Profile Owner
+        user = obj.user
+        # Check Permissions
+        if not has_permission(user, requsername, requserid, cud):
+            raise AuthenticationFailed
+        return
+
+    def update(self, request, *args, **kwargs):
+        data = request.data
+        instance = self.get_object()
+        # Use ProfileUpdateDeserializer for updating
+        serializer = ProfileUpdateDeserializer(instance, data=data, partial=True)
+        serializer.is_valid(raise_exception=True)
+
+        self.perform_update(serializer)
+        if getattr(instance, '_prefetched_objects_cache', None):
+            # If 'prefetch_related' has been applied to a queryset, we need to
+            # forcibly invalidate the prefetch cache on the instance.
+            instance._prefetched_objects_cache = {}
+
+        return Response(serializer.data)
 
 class GalleryView(viewsets.ModelViewSet):
     queryset = Gallery.objects.all()
@@ -88,148 +326,9 @@ class GalleryView(viewsets.ModelViewSet):
         serializer = GalleryDeserializer(data=data)
         serializer.is_valid(raise_exception=False)
 
-        print("\n\n OWNER :  " + str(user) + "\n\n")
-        print("\n\n SERIALIZER DATA :  " + str(data) + "\n\n")
-        print("\n\n SERIALIZER ERRORS :  " + str(serializer.errors) + "\n\n")
-
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
-
-class GalleryReactionView(viewsets.ModelViewSet):
-    queryset = GalleryReaction.objects.all()
-    serializer_class = GalleryReactionSerializer
-
-    def get_queryset(self):
-        queryset = self.queryset
-
-        # Filter by gallery
-        galleryid = self.request.query_params.get('galleryid', None)
-        if galleryid is not None:
-            queryset = queryset.filter(Gallery__id=galleryid)
-
-        # Requesting User
-        requserid = self.request.query_params.get('requserid', None)
-        requsername = self.request.query_params.get('requsername', None)
-        # Owner of gallery
-        userid = self.request.query_params.get('userid', None)
-        username = self.request.query_params.get('username', None)
-
-        user = None
-        if userid is not None:
-            queryset = queryset.filter(Gallery__GalleryOwner__id=userid)
-            user = User.objects.get(id=userid)
-        if username is not None:
-            queryset = queryset.filter(Gallery__GalleryOwner__username=username)
-            user = User.objects.get(id=username)
-
-        # Check Permissions
-        if user is not None and not has_permission(user, requsername, requserid, cud=False):
-            queryset = queryset.none()
-        return queryset
-
-    def check_object_permissions(self, request, obj):
-        #request parameters
-        cud= request.method != 'GET'
-        requserid = request.query_params.get('requserid', None)
-        requsername = request.query_params.get('requsername', None)
-        # Get gallery owner
-        user = obj.Gallery.GalleryOwner
-        # Check Permissions
-        if not has_permission(user, requsername, requserid, cud):
-            print("CHECKING PERMISSIONS"+"="*40+str(requsername)+" "+str(requserid)+"  cud=="+str(cud))
-            raise AuthenticationFailed
-        return
-
-class PhotoView(viewsets.ModelViewSet):
-    queryset = Photo.objects.all()
-    serializer_class = PhotoSerializer
-
-    def get_queryset(self):
-        queryset = self.queryset
-
-        # Filter by gallery
-        galleryid = self.request.query_params.get('galleryid', None)
-        if galleryid is not None:
-            queryset = queryset.filter(Gallery__id=galleryid)
-
-        # Requesting User
-        requserid = self.request.query_params.get('requserid', None)
-        requsername = self.request.query_params.get('requsername', None)
-        # Owner of gallery
-        userid = self.request.query_params.get('userid', None)
-        username = self.request.query_params.get('username', None)
-
-        user = None
-        if userid is not None:
-            queryset = queryset.filter(Gallery__GalleryOwner__id=userid)
-            user = User.objects.get(id=userid)
-        if username is not None:
-            queryset = queryset.filter(Gallery__GalleryOwner__username=username)
-            user = User.objects.get(id=username)
-        # Check Permissions
-        if user is not None and not has_permission(user, requsername, requserid, cud=False):
-            queryset = queryset.none()
-        return queryset
-
-    def check_object_permissions(self, request, obj):
-
-        print("\n\n\n\nREQUEST" + "*" * 80 + str(request.method) + "\n\n\n\n")
-
-        #request parameters
-        cud= request.method != 'GET'
-        requserid = request.query_params.get('requserid', None)
-        requsername = request.query_params.get('requsername', None)
-        # Get gallery owner
-        user = obj.Gallery.GalleryOwner
-        # Check Permissions
-        if not has_permission(user, requsername, requserid, cud):
-            print("\n\n\n\nNO PERMISSION" + "*" * 80 +  "\n\n\n\n")
-            raise AuthenticationFailed
-        return
-
-class PhotoReactionView(viewsets.ModelViewSet):
-    queryset = PhotoReaction.objects.all()
-    serializer_class = PhotoReactionSerializer
-
-    def get_queryset(self):
-        queryset = self.queryset
-
-        # Filter by photo
-        photoid = self.request.query_params.get('photoid', None)
-        if photoid is not None:
-            queryset = queryset.filter(Photo__id=photoid)
-
-        # Requesting User
-        requserid = self.request.query_params.get('requserid', None)
-        requsername = self.request.query_params.get('requsername', None)
-        # Owner of gallery
-        userid = self.request.query_params.get('userid', None)
-        username = self.request.query_params.get('username', None)
-
-        user = None
-        if userid is not None:
-            queryset = queryset.filter(Photo__Gallery__GalleryOwner__id=userid)
-            user = User.objects.get(id=userid)
-        if username is not None:
-            queryset = queryset.filter(Photo__Gallery__GalleryOwner__username=username)
-            user = User.objects.get(id=username)
-        # Check Permissions
-        if user is not None and not has_permission(user, requsername, requserid, cud=False):
-            queryset = queryset.none()
-        return queryset
-
-    def check_object_permissions(self, request, obj):
-        #request parameters
-        cud= request.method != 'GET'
-        requserid = request.query_params.get('requserid', None)
-        requsername = request.query_params.get('requsername', None)
-        # Get gallery owner
-        user = obj.Photo.Gallery.GalleryOwner
-        # Check Permissions
-        if not has_permission(user, requsername, requserid, cud):
-            raise AuthenticationFailed
-        return
 
 class GalleryCommentView(viewsets.ModelViewSet):
     queryset = GalleryComment.objects.all()
@@ -264,16 +363,43 @@ class GalleryCommentView(viewsets.ModelViewSet):
         #request parameters
         cud= request.method != 'GET'
 
-        print("\n\nCUD :"+"="*60+str(cud))
-
         requserid = request.query_params.get('requserid', None)
         requsername = request.query_params.get('requsername', None)
         # Get comment owner
         user = obj.User
         # Check Permissions
+        ## Special case: gallery owner can always delete
+        galleryOwner = obj.Gallery.GalleryOwner
+        if requsername is not None and galleryOwner.username == requsername and request.method == 'DELETE':
+            return
+
         if not has_permission(user, requsername, requserid, cud):
             raise AuthenticationFailed
         return
+
+    def create(self, request, *args, **kwargs):
+        data = QueryDict.dict(request.data)
+        print("\n\nREQUEST DATA" + "=" * 60)
+        print(data)
+        print("REQUEST DATA" + "=" * 60)
+        print('\n\n')
+
+        comment_user = data.get("User")
+
+        print("\n\nCOMMENT USER" + "=" * 60)
+        print(comment_user)
+        print("COMMENT USER" + "=" * 60)
+        print('\n\n')
+
+        user = User.objects.get(username=comment_user)
+        data["User"]=user.id
+
+
+        serializer = GalleryCommentDeserializer(data=data)
+        serializer.is_valid(raise_exception=False)
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
 class PhotoCommentView(viewsets.ModelViewSet):
     queryset = PhotoComment.objects.all()
@@ -312,112 +438,27 @@ class PhotoCommentView(viewsets.ModelViewSet):
         # Get comment owner
         user = obj.User
         # Check Permissions
-        if not has_permission(user, requsername, requserid, cud):
-            raise AuthenticationFailed
-        return
-
-class FollowView(viewsets.ModelViewSet):
-    queryset = Follow.objects.all()
-    serializer_class = FollowSerializer
-
-    def get_queryset(self):
-        queryset = self.queryset
-
-        FC1 = self.request.query_params.get('fc1username', None)
-        FC2 = self.request.query_params.get('fc2username', None)
-
-        if FC1 is not None:
-            user = get_object_or_404(User,username=FC1)
-            queryset = queryset.filter(FollowCond1__id=user.id )
-
-        if FC2 is not None:
-            user = get_object_or_404(User,username=FC2)
-            queryset = queryset.filter(FollowCond2__id=user.id )
-
-        return queryset
-
-    def check_object_permissions(self, request, obj):
-        #request parameters
-        cud= request.method != 'GET'
-        requserid = request.query_params.get('requserid', None)
-        requsername = request.query_params.get('requsername', None)
-        # Get gallery owner
-        user = obj.FollowCond1
-        # Check Permissions
-        if not has_permission(user, requsername, requserid, cud):
-            raise AuthenticationFailed
-        return
-
-class ProfileView(viewsets.ModelViewSet):
-    queryset = Profile.objects.all()
-    serializer_class = ProfileSerializer
-
-    def get_queryset(self):
-        queryset = self.queryset
-
-        userid = self.request.query_params.get('userid', None)
-        if userid is not None:
-            queryset = queryset.filter(user__id=userid)
-
-        username = self.request.query_params.get('username', None)
-        if username is not None:
-            queryset = queryset.filter(user__username=username)
-        return queryset
-
-    def check_object_permissions(self, request, obj):
-        # request parameters
-        cud = request.method != 'GET'
-        # Proceed with checks only on cud operations
-        if not cud:
+        ## Special case: gallery owner can always delete
+        galleryOwner = obj.Photo.Gallery.GalleryOwner
+        if requsername is not None and galleryOwner.username == requsername and request.method == 'DELETE':
             return
 
-        if request.method == "PUT" :
-            print("\n\n PUUUUUUUUUUUUUUUUUUUUUUUUUUUUT :  \n\n")
-
-        requserid = request.query_params.get('requserid', None)
-        requsername = request.query_params.get('requsername', None)
-        # Get Profile Owner
-        user = obj.user
-        # Check Permissions
         if not has_permission(user, requsername, requserid, cud):
             raise AuthenticationFailed
         return
 
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.pop('partial', False)
-        data = request.data
-        instance = self.get_object()
-        serializer = ProfileUpdateDeserializer(instance, data=data, partial=partial)
-        serializer.is_valid(raise_exception=True)
+    def create(self, request, *args, **kwargs):
+        data = QueryDict.dict(request.data)
+        comment_user = data.get("User")
+        user = User.objects.get(username=comment_user)
+        data["User"]=user.id
 
+        serializer = PhotoCommentDeserializer(data=data)
+        serializer.is_valid(raise_exception=False)
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
-        self.perform_update(serializer)
-
-
-        if getattr(instance, '_prefetched_objects_cache', None):
-            # If 'prefetch_related' has been applied to a queryset, we need to
-            # forcibly invalidate the prefetch cache on the instance.
-            instance._prefetched_objects_cache = {}
-
-        return Response(serializer.data)
-
-
-class UserView(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
-    def get_queryset(self):
-        queryset = self.queryset
-
-        id = self.request.query_params.get('id', None)
-        if id is not None:
-            queryset = queryset.filter(id=id)
-
-        username = self.request.query_params.get('username', None)
-        if username is not None:
-            queryset = queryset.filter(username=username)
-
-        return queryset
 
 # Advanced API views
 class SharedGalleriesView(viewsets.ReadOnlyModelViewSet):

@@ -57,7 +57,6 @@ def get_gallery_reaction(requsername=None,id=None,galleryid=None):
 
 def get_photo(requsername=None,id=None,galleryid=None):
     params = append_params(requsername=requsername, galleryid=galleryid)
-    params={}
     url = base_url+'/basic/photos'
     if id is not None:
         url += "/" + str(id)
@@ -105,12 +104,18 @@ def get_gallery_comment(requsername=None,id=None,galleryid=None):
     r = requests.get(url,params=params)
     data = r.json()
 
+
+
     # Data is a single object, make it iterable
     if id is not None: data = [data]
     objects=[]
 
+
+
     for dt in data:
-        serializer = GalleryCommentSerializer(data=dt)
+
+        serializer = GalleryCommentDeserializer(data=dt)
+
         serializer.is_valid()
         obj = serializer.create()
         objects.append(obj)
@@ -129,14 +134,14 @@ def get_photo_comment(requsername=None, id=None, photoid=None):
     objects=[]
 
     for dt in data:
-        serializer = PhotoCommentSerializer(data=dt)
+        serializer = PhotoCommentDeserializer(data=dt)
         serializer.is_valid()
         obj = serializer.create()
         objects.append(obj)
     return objects
 
-def get_follow(id=None,requsername=None,FC_1_Username=None,FC_2_Username=None):
-    params = append_params(requsername=requsername, FC_1_Username=FC_1_Username,FC_2_Username=FC_2_Username)
+def get_follow(id=None,FC_1_Username=None,FC_2_Username=None):
+    params = append_params(fc1username=FC_1_Username,fc2username=FC_2_Username)
 
     url = base_url+'/basic/follows'
     if id is not None:
@@ -145,7 +150,6 @@ def get_follow(id=None,requsername=None,FC_1_Username=None,FC_2_Username=None):
     r = requests.get(url,params=params)
     data = r.json()
 
-    # Data is a single object, make it iterable
     if id is not None: data = [data]
     objects=[]
 
@@ -168,6 +172,7 @@ def get_profile(id=None,username=None):
     # Data is a single object, make it iterable
     if id is not None: data = [data]
     objects=[]
+
 
     for dt in data:
         serializer = ProfileDeserializer(data=dt)
@@ -381,12 +386,12 @@ def put_photo_reaction(object,requsername):
 
 def put_gallery_comment(object,requsername):
     params = append_params(requsername=requsername)
-    serializer = GalleryCommentSerializer(object)
+    serializer = GalleryCommentDeserializer(object)
     return requests.put(base_url + '/basic/gallery_comments/'+str(object.id)+"/", data=serializer.data, params=params)
 
 def put_photo_comment(object,requsername):
     params = append_params(requsername=requsername)
-    serializer = PhotoCommentSerializer(object)
+    serializer = PhotoCommentDeserializer(object)
     return requests.put(base_url + '/basic/photo_comments/'+str(object.id)+"/", data=serializer.data, params=params)
 
 def put_follow(object,requsername):
@@ -397,15 +402,26 @@ def put_follow(object,requsername):
 def put_profile(object,requsername):
     params = append_params(requsername=requsername)
     serializer = ProfileSerializer(object)
-    response = requests.put(base_url + '/basic/profiles/'+str(object.id)+"/", data=serializer.data, params=params,files=dict(ProfilePhoto=object.ProfilePhoto))
-    print("\n\n PUUUUUUUUUUUUUUUUUUUUUUUUUUUUT :  \n\n")
-    print("\n\nRESPONSE" + "=" * 80+"\n"+str(response))
+    data = serializer.data
+
+
+    # Remove user field
+    data.pop('user')
+    # Remove profile photo field if none is given
+    files = None
+    if data['ProfilePhoto'] is not None:
+        files = dict(ProfilePhoto=object.ProfilePhoto)
+    else:
+        data.pop('ProfilePhoto')
+
+    response = requests.put(base_url + '/basic/profiles/'+str(object.id)+"/", data=data, params=params,files=files)
     return response
 
 def put_user(object,requsername):
     params = append_params(requsername=requsername)
     serializer = UserSerializer(object)
-    return requests.post(base_url + '/basic/users/'+str(object.id)+"/", data=serializer.data, params=params)
+    data = serializer.data
+    return requests.put(base_url + '/basic/users/'+str(object.id)+"/", data=data, params=params)
 
 # Delete API
 def delete_gallery(id,requsername):

@@ -2,6 +2,25 @@
 {% load staticfiles %}
 {% block body %}
 
+
+
+<!--    <h3>ALL PHOTOS</h3>-->
+<!--    <ul>-->
+<!--        {% for gallery in all_galleries %}-->
+<!--        <li><a href="{% url 'webmain:detail' gallery.id %}">{{ gallery.Name }} - {{ gallery.Visibility }} - {{ gallery.Description }}</a></li>-->
+<!--             <input type="hidden" name="photo" value="{{ gallery.id }}" />-->
+
+<!--        {% endfor %}-->
+<!--    </ul>-->
+
+<!--{% if messages %}-->
+<!--            <ul class="messages">-->
+<!--                {% for message in messages %}-->
+<!--                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>-->
+<!--                {% endfor %}-->
+<!--            </ul>-->
+<!--        {% endif %}-->
+
     <div class="container feed">
         <div class="row">
             <div class="col-md-1">
@@ -13,12 +32,13 @@
                         <div class="panel panel-default ">
                             <br>
 
-                            <span>&nbsp;<img src ="{{ gallery.GalleryOwnerPhoto }}" class="" style="height: 35px; width: 35px; border-radius: 100%" alt=" ">&nbsp;
+                            <span>&nbsp;<img src ="{{ gallery.GalleryOwner.profile.ProfilePhoto }}" class="" style="height: 35px; width: 35px; border-radius: 100%"
+                        alt="Profile Picture">&nbsp;
                             <strong><a href="{% url 'users:getProfile' gallery.GalleryOwner %}" class="link">{{ gallery.GalleryOwner }}</a></strong></span>
 
                             <p> &nbsp;&nbsp;{{ gallery.Description }}</p>
                             <a href="{% url 'webmain:detail' gallery.id %}">
-                                <img src="{{ MEDIA_URL }}{{ gallery.AlbumCover }}" class="img-responsive center-block index_img">
+                                <img src="{{ MEDIA_URL }}{{ gallery.AlbumCover.url }}" class="img-responsive center-block index_img">
                             </a>
                             <br>
 <!--        REMOVED LIKE SECTION FROM HERE-->
@@ -57,9 +77,19 @@
                             </form>
                             <br>
 
+<!--                            <form class="form-inline" role="form" >-->
+<!--                                <div class="form-group comForm">-->
+<!--                                    <input class="form-control" type="text" style="width=10px" placeholder="Your comments" />-->
+<!--                                </div>-->
+<!--                                <div class="form-group comForm">-->
+<!--                                    <button class="btn btn-default">Add</button>-->
+<!--                                </div>-->
+<!--                            </form>-->
+<!--                            <img src="{{ MEDIA_URL }}{{ gallery.GalleryOwner.profile.ProfilePhoto.url }}"  alt="Avatar">-->
+<!--                            <img class="rounded-circle article-img" src="{{ MEDIA_URL }}{{ gallery.AlbumCover.url }}"  alt="img"></h2>-->
                             {% for comment in comments %}
-                                {% if gallery.id == comment.Gallery %}
-                                    {% if comment.User.username == user.username%}
+                                {% if gallery.id == comment.Gallery.id %}
+                                    {% if comment.User == request.user%}
                                         <p><strong>&nbsp;<a href="{% url 'users:profile'%}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }}</p>
                                     {% else %}
                                         <p><strong>&nbsp;<a href="{% url 'users:getProfile' comment.User%}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }}</p>

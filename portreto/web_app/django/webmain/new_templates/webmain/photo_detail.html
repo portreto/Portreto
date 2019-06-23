@@ -3,20 +3,35 @@
 
 {% block body %}
 
+<!--        {% if messages %}-->
+<!--            <ul class="messages">-->
+<!--                {% for message in messages %}-->
+<!--                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>-->
+<!--                {% endfor %}-->
+<!--            </ul>-->
+<!--        {% endif %}-->
     <div class="container-fluid">
+
     <div class="row">
+
         <div class=" col-sm-7">
-            <img class="img-responsive center-block PhotDet" src="{{ phot.Photo }}">
+
+            <img class="img-responsive center-block PhotDet" src="{{ phot.Photo.url }}">
 
             <ul class="nav nav-pills" style="margin-bottom: 10px;">
                 <li role="presentation"><a href="{% url 'webmain:detail' gallery.id %}">View Gallery</a></li>
-                {% if gallery.GalleryOwner.username == requsername %}
+                {% if gallery.GalleryOwner.username == request.user.username %}
+                    <li role="presentation"><a href="{% url 'webmain:update_photo' gallery_id=gallery.id photo_id=phot.id %}">Update Photo</a></li>
                     <li role="presentation"><a href="{% url 'webmain:delete_photo' gallery_id=gallery.id photo_id=phot.id %}">Delete Photo</a></li>
                 {% endif %}
 
             </ul>
+<!--            <ul class="nav nav-pills" style="margin-bottom: 10px;">-->
+<!--                <li role="presentation"><a href="{% url 'webmain:like_photo' gallery_id=gallery.id photo_id=phot.id %} ">Like</a></li>-->
+<!--            </ul>-->
 
-                <form class="form" method="get" action="{% url 'webmain:comment_photo' phot.id %}">
+
+                <form class="form" method="get" action="{% url 'webmain:comment_gallery' gallery.id %}">
                     <div class="input-group" >
                         <input type="text" name="comment" class="form-control" aria-label="Add a comment…" placeholder="Add a comment…">
                         <span class="input-group-btn">
@@ -43,11 +58,27 @@
                 <h3>{{like_count}} people like this photo</h3>
             {% endif %}
 
+<!--                <div class="row">-->
+<!--                    <form class="form-inline" method="get" action="{% url 'webmain:comment_photo' phot.id %}">-->
+<!--                        <div class="input-group">-->
+<!--                            <input type="text" name="comment" class="form-control" style="resize: none" aria-label="Add a comment…" placeholder="Add a comment…">-->
+<!--                            <div class="input-group-append">-->
+<!--                                <button class="btn btn-default" type="submit">-->
+<!--                                    <i class="far fa-comment"></i>-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
         {% for comment in comments %}
-            {% if phot.id == comment.Photo %}
-                {% if comment.User.username == user.username or user.username == gallery.GalleryOwner.username%}
+            {% if phot.id == comment.Photo.id %}
+                {% if comment.User == request.user%}
                         <p><strong>&nbsp;<a href="{% url 'users:profile'%}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }}
                                      <a href="{% url 'webmain:delete_comment_photo' comment_id=comment.id photo_id=phot.id%}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></p>
+                {% elif request.user == comment.Photo.Gallery.GalleryOwner %}
+                        <p><strong>&nbsp;<a href="{%url 'users:getProfile' comment.User %}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }}
+                                    <a href="{% url 'webmain:delete_comment_gallery' comment_id=comment.id gallery_id=gallery.id %}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></p>
+
                 {% else %}
                     <p><strong>&nbsp;<a href="{%url 'users:getProfile' comment.User %}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }}</p>
                 {% endif%}

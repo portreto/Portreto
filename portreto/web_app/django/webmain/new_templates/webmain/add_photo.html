@@ -20,7 +20,7 @@
                 <div class="panel-body">
                     <a href="{% url 'webmain:detail' gallery.id %}">
                         {% if gallery.AlbumCover %}
-                            <img src="{{ gallery.AlbumCover }}" class="img-responsive">
+                            <img src="{{ gallery.AlbumCover.url }}" class="img-responsive">
                         {% else %}
                             <h3>No gallery to display</h3>
                         {% endif %}
@@ -30,8 +30,11 @@
             </div>
 
             {% for comment in comments %}
-                <p><strong>&nbsp;<a href="{% url 'webmain:index'%}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }}
-                    <a href="{% url 'webmain:delete_comment_gallery' comment_id=comment.id gallery_id=gallery.id %}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></p>
+                {% if gallery.id == comment.Gallery.id %}
+                    <p><strong>&nbsp;<a href="{% url 'webmain:index'%}" class="link">{{ comment.User }}</a></strong> &nbsp; {{ comment.Comment }}
+                        <a href="{% url 'webmain:delete_comment_gallery' comment_id=comment.id gallery_id=gallery.id %}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></p>
+
+                {% endif %}
             {% endfor %}
 
         </div>
@@ -39,7 +42,7 @@
                 <div class="col-sm-4 col-md-8">
                     <ul class="nav nav-pills" style="margin-bottom: 10px;">
                         <li role="presentation" ><a href="{% url 'webmain:detail' gallery.id %}">View All</a></li>
-                        {% if gallery.GalleryOwner.username == requsername %}
+                        {% if gallery.GalleryOwner.username == request.user.username %}
                             <li role="presentation" class="active"><a href="{% url 'webmain:add_photo' gallery.id %}">Add New Photo</a></li>
                             <li role="presentation"><a href="{% url 'webmain:update_gallery' gallery.id %}">Update Gallery</a></li>
                             <li role="presentation"><a href="{% url 'webmain:delete_gallery' gallery.id %}">Delete Gallery</a></li>
@@ -57,7 +60,7 @@
                             <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                                 <div class="form-group ">
                                     <div class="control-label col-sm-7 ">
-                                        <h3>Add a Photo</h3>
+                                        <h3>Add or Update a Photo</h3>
                                     </div>
                                 </div>
                                 {% csrf_token %}

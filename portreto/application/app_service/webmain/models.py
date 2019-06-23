@@ -62,12 +62,11 @@ class PhotoReaction(models.Model):
     Photo = models.ForeignKey(Photo, on_delete=models.CASCADE, default=1)
     UpdateDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
 
-    def __str__(self): return str(User) + " - " + str(self.Photo)
+    def __str__(self): return str(User) + " likes " + str(self.Photo)
 
-##TODO MAYBE ADD GALLERY OWNER
 class GalleryComment(models.Model):
-    User = models.ForeignKey(User, on_delete=models.DO_NOTHING, default=1)
-    Gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, default=1)
+    User = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    Gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE)
     UploadDateTime = models.DateTimeField(default=None, null=True, editable=False)
     Comment = models.CharField(max_length=1024, blank=True, null=True)
     #NOTIFICATIONS NOT ADDED

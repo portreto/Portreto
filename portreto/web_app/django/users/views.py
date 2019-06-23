@@ -19,7 +19,6 @@ AUTH_PORT = '8000'
 APP_DOMAIN_NAME = 'app'
 APP_PORT = '8000'
 
-
 # Create your views here.
 def get_api_objects_or_404(objects):
 
@@ -128,11 +127,12 @@ def profile(request, username=None, token=None):
         profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=profile)    #request.files for images
 
         if user_form.is_valid() and profile_form.is_valid():
+
             tuser = user_form.save(commit=False)
             tprofile = profile_form.save(commit=False)
 
-            api_client.put_user(tuser,requsername)
             api_client.put_profile(tprofile,requsername)
+            api_client.put_user(tuser,requsername)
 
             messages.success(request, f'Your account has been successfully updated')
             return redirect('users:profile')
@@ -146,7 +146,8 @@ def profile(request, username=None, token=None):
         'user_form': user_form,
         'profile_form' : profile_form,
         'my_galleries': my_galleries,
-        'requsername' : requsername
+        'requsername' : requsername,
+        'my_prof': profile
     }
     return render(request,'users/profile.html',context)
 
@@ -170,7 +171,9 @@ def getProfile(request, profile_username, username=None, token=None):
         'user_form': user_form,
         'profile_form' : profile_form,
         'my_galleries': my_galleries,
-        'requsername' : requsername
+        'requsername' : requsername,
+        'my_prof': get_api_objects_or_404(api_client.get_profile(username=requsername))[0]
+
     }
     return render(request,'users/profile.html',context)
     #return redirect('users:profile')

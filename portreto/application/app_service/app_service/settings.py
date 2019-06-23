@@ -118,6 +118,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# LOGGING = {
+#     'version': 1,
+#     'loggers': {
+#         'django.db.backends': {
+#             'handlers': ['null'],  # Quiet by default!
+#             'propagate': False,
+#             'level':'DEBUG',
+#         }
+#     }
+# }
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
