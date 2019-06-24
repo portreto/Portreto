@@ -479,16 +479,13 @@ def put_profile(object,requsername,token=None):
     # print("\n\n" + "=" * 160 + "\nPUT PROFILE DATA \n" + str(data) + "\n" + "=" * 160)
     # print("\n\n" + "=" * 160 + "\nPUT PROFILE IMAGE FILE TYPE \n" + str(type(object.ProfilePhoto)) + "\n" + "=" * 160)
 
-
     if len(str(object.ProfilePhoto))>1:
         files = dict(ProfilePhoto=object.ProfilePhoto)
     else:
         files = None
     headers = {"TOKEN": token}
 
-
     response = requests.put(base_url + '/basic/profiles/'+str(object.id)+"/", data=data, params=params,headers=headers,files=files)
-
     return response
 
 def put_user(object,requsername,token=None):

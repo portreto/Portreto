@@ -2,312 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="756a196a-dc82-470a-9b8f-6552f5312f1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../application/app_service/users/BusinessLogic/Security.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../application/app_service/users/BusinessLogic/Services.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../application/app_service/users/BusinessLogic/Tokens.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../application/app_service/users/BusinessLogic/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../application/app_service/users/BusinessLogic/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../application/app_service/users/BusinessLogic/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../application/app_service/users/auth_token_middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/portreto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/portreto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/app_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/app_service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/app_service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/app_service/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/app_service/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/app_service/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/app_service/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/app_service/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/app_service/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/app_service/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/init.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/album_cover/100_0606.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/album_cover/100_0606.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/album_cover/Bowl_Eyes_DONE.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/album_cover/Bowl_Eyes_DONE.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/album_cover/EYEs_Cream_DONE.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/album_cover/EYEs_Cream_DONE.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/album_cover/default.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/album_cover/default.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/album_cover/delta_gmo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/album_cover/delta_gmo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/album_cover/takis.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/album_cover/takis.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/album_cover/xios.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/album_cover/xios.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/100_0604.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/100_0604.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/Screenshot_from_2019-04-01_02-58-23.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/Screenshot_from_2019-04-01_02-58-23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/beautiful_places_to_visit_in_europe-wallpaper-1920x1080.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/beautiful_places_to_visit_in_europe-wallpaper-1920x1080.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/default.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/default.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/takis.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/takis.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/takis_A5S3VxW.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/takis_A5S3VxW.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/takis_CUU9Gc8.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/takis_CUU9Gc8.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/takis_HbIgSej.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/takis_HbIgSej.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/takis_WJJF9Yy.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/takis_WJJF9Yy.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/takis_gv3iwfr.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/takis_gv3iwfr.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/xios.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/xios.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/xios_5nnf4vy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/xios_5nnf4vy.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/xios_PvZ82qZ.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/xios_PvZ82qZ.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/photos/xios_svMhPRR.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/photos/xios_svMhPRR.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/arch_linux_logo_by_idrgskywalker-d32v5ce.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/arch_linux_logo_by_idrgskywalker-d32v5ce.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/beautiful_places_to_visit_in_europe-wallpaper-1920x1080.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/beautiful_places_to_visit_in_europe-wallpaper-1920x1080.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/default.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/default.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/default_B5pkqPh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/default_B5pkqPh.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/takis.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/takis.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/takis_L99v7gJ.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/takis_L99v7gJ.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/takis_boJKb54.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/takis_boJKb54.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/takis_qkCgSiY.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/takis_qkCgSiY.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/xios.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/xios.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/xios_2JcqOcg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/xios_2JcqOcg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/xios_BLeJTd1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/media/profile_pics/xios_BLeJTd1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/posts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/posts/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/posts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/posts/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/posts/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/posts/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/posts/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/posts/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/posts/migrations/0002_delete_fileentry.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/posts/migrations/0002_delete_fileentry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/posts/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/posts/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/posts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/posts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/posts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/posts/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/posts/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/posts/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/posts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/posts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/templates/users/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/templates/users/logout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/templates/users/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0002_photo_photourl.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0002_photo_photourl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0003_auto_20190518_1640.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0003_auto_20190518_1640.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0004_auto_20190518_1736.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0004_auto_20190518_1736.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0005_remove_photo_photourl.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0005_remove_photo_photourl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0006_auto_20190518_1847.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0006_auto_20190518_1847.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0007_auto_20190518_1851.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0007_auto_20190518_1851.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0008_auto_20190519_1941.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0008_auto_20190519_1941.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0009_auto_20190520_2047.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0009_auto_20190520_2047.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0010_auto_20190520_2147.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0010_auto_20190520_2147.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0011_auto_20190521_1347.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0011_auto_20190521_1347.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0012_auto_20190522_0015.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0012_auto_20190522_0015.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0013_auto_20190522_0041.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0013_auto_20190522_0041.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0014_auto_20190623_0000.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0014_auto_20190623_0000.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/storage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/add_photo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/add_photo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/create_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/create_gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/new_comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/new_comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/templates/webmain/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/.idea/Authentication_Service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/.idea/Authentication_Service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/API/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/API/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/API/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/API/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/API/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/API/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/API/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/API/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/API/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/API/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/API/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/API/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/API/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/API/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/API/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/API/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Authentication_Service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Authentication_Service/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Authentication_Service/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Authentication_Service/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Authentication_Service/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Authentication_Service/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Authentication_Service/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Authentication_Service/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/Security.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/Security.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/Services.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/Services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/Tokens.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/Tokens.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/BusinessLogic/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/Service/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/Service/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/init.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mongo-rs0-1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../mongo-rs0-1/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mongo-rs0-2/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../mongo-rs0-2/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mongo-rs0-3/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../mongo-rs0-3/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../setup-rs/dbInit.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../setup-rs/dbInit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/.idea/storage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/.idea/storage.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/init.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage_api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage_api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage_api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage_api/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage_api/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage_api/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage_api/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage_api/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage_api/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage_api/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage_api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage_api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage_api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage_api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage_api/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage_api/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage_api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage_api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/storage_api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/storage_api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/zkclient/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/zkclient/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/zkclient/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/zkclient/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/zkclient/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/zkclient/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/zkclient/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/zkclient/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/zkclient/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/zkclient/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/zkclient/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/zkclient/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/zkclient/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/zkclient/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/django/zkclient/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/zkclient/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/llwhvbkvzseqxammtbyo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_1/llwhvbkvzseqxammtbyo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_2/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/ffgtbjwdmdalwukobbxw.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_4/ffgtbjwdmdalwukobbxw.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/ffgtbjwdmdalwukobbxw.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_5/ffgtbjwdmdalwukobbxw.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/mmafprdfsboknbilfvmo.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_5/mmafprdfsboknbilfvmo.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/llwhvbkvzseqxammtbyo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_6/llwhvbkvzseqxammtbyo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/mmafprdfsboknbilfvmo.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_6/mmafprdfsboknbilfvmo.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PORTRETO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PORTRETO/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PORTRETO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PORTRETO.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PORTRETO/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PORTRETO/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PORTRETO/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PORTRETO/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PORTRETO/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PORTRETO/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PORTRETO/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/PORTRETO/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme" beforeDir="false" afterPath="$PROJECT_DIR$/Readme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/init.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/Screenshot_from_2019-05-08_14-21-24.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/Screenshot_from_2019-05-08_14-21-24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/beautiful_places_to_visit_in_europe-wallpaper-1920x1080.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/beautiful_places_to_visit_in_europe-wallpaper-1920x1080.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/beautiful_places_to_visit_in_europe-wallpaper-1920x1080_0wRft2I.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/beautiful_places_to_visit_in_europe-wallpaper-1920x1080_0wRft2I.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/beautiful_places_to_visit_in_europe-wallpaper-1920x1080_B1xPLTx.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/beautiful_places_to_visit_in_europe-wallpaper-1920x1080_B1xPLTx.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/beautiful_places_to_visit_in_europe-wallpaper-1920x1080_CZa4VIw.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/beautiful_places_to_visit_in_europe-wallpaper-1920x1080_CZa4VIw.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/beautiful_places_to_visit_in_europe-wallpaper-1920x1080_OhmHPMP.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/beautiful_places_to_visit_in_europe-wallpaper-1920x1080_OhmHPMP.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/default.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/default.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/default.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/default.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/takis.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/takis.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/takis_MwFYYJn.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/takis_MwFYYJn.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/takis_pzbjT3S.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/takis_pzbjT3S.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/xios.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/xios.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/album_cover/xios_aF4OosO.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/album_cover/xios_aF4OosO.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/Screenshot_from_2019-04-01_02-58-23.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/Screenshot_from_2019-04-01_02-58-23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/Screenshot_from_2019-05-08_14-21-24.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/Screenshot_from_2019-05-08_14-21-24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/Screenshot_from_2019-05-08_14-21-24_albfxQo.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/Screenshot_from_2019-05-08_14-21-24_albfxQo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/Screenshot_from_2019-05-08_14-21-24_lVcwIvJ.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/Screenshot_from_2019-05-08_14-21-24_lVcwIvJ.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/Screenshot_from_2019-05-13_20-46-12.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/Screenshot_from_2019-05-13_20-46-12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/beautiful_places_to_visit_in_europe-wallpaper-1920x1080.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/beautiful_places_to_visit_in_europe-wallpaper-1920x1080.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/default.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/default.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/default_IM3hTXl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/default_IM3hTXl.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/takis.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/takis.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/takis_A5S3VxW.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/takis_A5S3VxW.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/takis_CUU9Gc8.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/takis_CUU9Gc8.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/takis_HbIgSej.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/takis_HbIgSej.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/takis_WJJF9Yy.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/takis_WJJF9Yy.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/takis_gv3iwfr.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/takis_gv3iwfr.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/xios.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/xios.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/xios_5nnf4vy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/xios_5nnf4vy.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/xios_PvZ82qZ.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/xios_PvZ82qZ.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/xios_svMhPRR.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/xios_svMhPRR.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/photos/xios_tOutBtz.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/photos/xios_tOutBtz.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/beautiful_places_to_visit_in_europe-wallpaper-1920x1080.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/beautiful_places_to_visit_in_europe-wallpaper-1920x1080.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/default.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/default.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/default_B5pkqPh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/default_B5pkqPh.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/takis.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/takis.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/takis_2ZBi238.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/takis_2ZBi238.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/takis_L99v7gJ.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/takis_L99v7gJ.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/takis_boJKb54.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/takis_boJKb54.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/takis_qkCgSiY.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/takis_qkCgSiY.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/xios.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/xios.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/xios_2JcqOcg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/xios_2JcqOcg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/xios_BLeJTd1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/xios_BLeJTd1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/xios_HXack29.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/profile_pics/xios_HXack29.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkztfckjdznnistwhbeg.png" beforeDir="false" afterPath="$PROJECT_DIR$/mkztfckjdznnistwhbeg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/BusinessLogic/Security.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/BusinessLogic/Security.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/BusinessLogic/Services.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/BusinessLogic/Services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/BusinessLogic/Tokens.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/BusinessLogic/Tokens.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/BusinessLogic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/BusinessLogic/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/BusinessLogic/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/BusinessLogic/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/BusinessLogic/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/BusinessLogic/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/UserConnection.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/UserConnection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/users/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/static/images/portreto.png" beforeDir="false" afterPath="$PROJECT_DIR$/users/static/images/portreto.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/logout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmain/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/api_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0002_auto_20190522_0013.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/migrations/0002_auto_20190522_0013.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0003_auto_20190522_0017.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/migrations/0003_auto_20190522_0017.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/storage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/add_photo.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/add_photo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/create_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/create_gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/photo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/photo_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -318,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webmain/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="112" column="34" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="34" />
+            <state relative-caret-position="472">
+              <caret line="248" column="28" selection-start-line="248" selection-start-column="28" selection-end-line="248" selection-end-column="28" />
               <folding>
                 <element signature="e#350#443#0" />
               </folding>
@@ -333,10 +29,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="123" column="26" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
+            <state relative-caret-position="92">
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding>
                 <element signature="e#644#737#0" />
+                <element signature="e#4228#5550#0" />
               </folding>
             </state>
           </provider>
@@ -366,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webmain/api_client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="489" column="133" selection-start-line="489" selection-start-column="133" selection-end-line="489" selection-end-column="133" />
+            <state relative-caret-position="242">
+              <caret line="405" column="100" selection-start-line="405" selection-start-column="100" selection-end-line="405" selection-end-column="100" />
               <folding>
                 <element signature="e#111#280#0" />
                 <element signature="e#158#260#0" />
@@ -404,7 +101,6 @@
                 <element signature="e#10441#10675#0" />
                 <element signature="e#10738#10974#0" />
                 <element signature="e#11035#11267#0" />
-                <element signature="e#11321#11564#0" />
                 <element signature="e#11619#11886#0" />
                 <element signature="e#11938#12153#0" />
                 <element signature="e#12560#12816#0" />
@@ -413,10 +109,10 @@
                 <element signature="e#13510#13766#0" />
                 <element signature="e#13826#14078#0" />
                 <element signature="e#14131#14368#0" />
+                <element signature="e#14680#15659#0" />
                 <element signature="e#15005#15240#0" />
                 <element signature="e#15306#15488#0" />
                 <element signature="e#15550#15742#0" />
-                <element signature="e#15793#15974#0" />
                 <element signature="e#16034#16224#0" />
                 <element signature="e#16285#16476#0" />
                 <element signature="e#16535#16724#0" />
@@ -490,9 +186,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>GalleryComment</find>
-      <find>pro</find>
-      <find>user</find>
       <find>Share</find>
       <find>print</find>
       <find>navbar_new.html</find>
@@ -520,6 +213,9 @@
       <find>put_pro</find>
       <find>api_client</find>
       <find>Cha</find>
+      <find>del</find>
+      <find>respo</find>
+      <find>delete</find>
     </findStrings>
     <replaceStrings>
       <replace>(base_url + '/basic/gallery'</replace>
@@ -545,8 +241,8 @@
       <replace>headers= {&quot;TOKEN&quot;:token}</replace>
       <replace>headers=headers</replace>
       <replace>headers = {&quot;TOKEN&quot;: token}</replace>
-      <replace>url += str(id) + '/'</replace>
       <replace>params=params,headers=headers</replace>
+      <replace>url += str(id) + '/'</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -599,11 +295,11 @@
         <option value="$PROJECT_DIR$/webmain/urls.py" />
         <option value="$PROJECT_DIR$/webmain/templates/webmain/detail.html" />
         <option value="$PROJECT_DIR$/webmain/templates/webmain/index.html" />
-        <option value="$PROJECT_DIR$/webmain/views.py" />
         <option value="$PROJECT_DIR$/webmain/models.py" />
         <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/webmain/serializers.py" />
         <option value="$PROJECT_DIR$/webmain/api_client.py" />
+        <option value="$PROJECT_DIR$/webmain/views.py" />
       </list>
     </option>
   </component>
@@ -697,12 +393,12 @@
       <workItem from="1561072397547" duration="18250000" />
       <workItem from="1561156330016" duration="296000" />
       <workItem from="1561156649531" duration="60962000" />
-      <workItem from="1561312021367" duration="26299000" />
+      <workItem from="1561312021367" duration="27500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216369000" />
+    <option name="totallyTimeSpent" value="217570000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="77" width="1857" height="954" extended-state="0" />
@@ -980,16 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmain/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="112" column="34" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="34" />
-          <folding>
-            <element signature="e#350#443#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webmain/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1034,16 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="123" column="26" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
-          <folding>
-            <element signature="e#644#737#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webmain/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -1061,8 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webmain/api_client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="489" column="133" selection-start-line="489" selection-start-column="133" selection-end-line="489" selection-end-column="133" />
+        <state relative-caret-position="242">
+          <caret line="405" column="100" selection-start-line="405" selection-start-column="100" selection-end-line="405" selection-end-column="100" />
           <folding>
             <element signature="e#111#280#0" />
             <element signature="e#158#260#0" />
@@ -1096,7 +772,6 @@
             <element signature="e#10441#10675#0" />
             <element signature="e#10738#10974#0" />
             <element signature="e#11035#11267#0" />
-            <element signature="e#11321#11564#0" />
             <element signature="e#11619#11886#0" />
             <element signature="e#11938#12153#0" />
             <element signature="e#12560#12816#0" />
@@ -1105,14 +780,35 @@
             <element signature="e#13510#13766#0" />
             <element signature="e#13826#14078#0" />
             <element signature="e#14131#14368#0" />
+            <element signature="e#14680#15659#0" />
             <element signature="e#15005#15240#0" />
             <element signature="e#15306#15488#0" />
             <element signature="e#15550#15742#0" />
-            <element signature="e#15793#15974#0" />
             <element signature="e#16034#16224#0" />
             <element signature="e#16285#16476#0" />
             <element signature="e#16535#16724#0" />
             <element signature="e#16776#16958#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding>
+            <element signature="e#644#737#0" />
+            <element signature="e#4228#5550#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmain/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="248" column="28" selection-start-line="248" selection-start-column="28" selection-end-line="248" selection-end-column="28" />
+          <folding>
+            <element signature="e#350#443#0" />
           </folding>
         </state>
       </provider>

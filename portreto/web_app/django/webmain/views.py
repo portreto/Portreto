@@ -241,19 +241,14 @@ def delete_gallery(request, gallery_id, username=None, token=None):
 @my_login_required()
 def delete_photo(request, gallery_id, photo_id, username=None, token=None):
     requsername = username
-    gallery = get_api_objects_or_404(api_client.get_gallery(requsername=requsername, id=gallery_id,token=token))[0]
+    responce = api_client.delete_photo(requsername=requsername, id=photo_id,token=token)
 
-    if request.user == gallery.GalleryOwner:
-        messages.success(request, 'You can delete this photo')
-
-        api_client.delete_photo(requsername=requsername, id=photo_id,token=token)
-
+    if responce.status_code == 204:
         messages.success(request, 'Photo successfully deleted ')
-
     else:
         messages.error(request, 'You cannot delete this photo')
 
-    return redirect('webmain:detail',gallery_id)            # TODO REDIRECT ANYWHERE YOU WISH
+    return redirect('webmain:detail',gallery_id)
 
 
 # Follow and unfollow users. NOTE: Added condition so that you cannot follow or unfollow yourself
