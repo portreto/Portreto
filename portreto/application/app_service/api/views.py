@@ -194,7 +194,6 @@ class FollowView(viewsets.ModelViewSet):
             queryset = queryset.filter(FollowCond2__id=user.id )
 
         print("\n\nQUERYSET-----------------")
-        print(str(queryset))
 
         return queryset
 

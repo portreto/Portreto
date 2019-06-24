@@ -98,7 +98,8 @@ class FollowSerializer(serializers.ModelSerializer):
         return Follow(**self.validated_data)
 
 class ProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=False)
+    user = serializers.CharField(allow_null=False)
+
     # user = UserSerializer()
     # id = serializers.IntegerField(validators=None)
 
@@ -106,16 +107,16 @@ class ProfileSerializer(serializers.ModelSerializer):
         model = Profile
         fields = '__all__'
 
-    def create(self, validated_data = None):
-        self.is_valid()
-
-        image = self.validated_data.pop("ProfilePhoto")
-        # TODO Default image
-        if image == None:
-            image = '/media/profile_pics/default.jpg'
-
-
-        return Profile(ProfilePhoto = image,**self.validated_data)
+    # def create(self, validated_data = None):
+    #     self.is_valid()
+    #
+    #     image = self.validated_data.pop("ProfilePhoto")
+    #     # TODO Default image
+    #     if image == None:
+    #         image = '/media/profile_pics/default.jpg'
+    #
+    #
+    #     return Profile(ProfilePhoto = image,**self.validated_data)
 
 class ProfileDeserializer(serializers.ModelSerializer):
     ProfilePhoto = serializers.CharField(allow_null=True)

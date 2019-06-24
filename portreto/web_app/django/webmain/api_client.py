@@ -1,4 +1,6 @@
 import requests
+from rest_framework.utils import json
+
 from .serializers import *
 
 base_url="http://appservice/api"
@@ -13,14 +15,16 @@ def append_params(**kwargs):
     return params;
 
 # Basic API
-def get_gallery(requsername=None,id=None,username=None):
-    url = base_url+'/basic/gallery'
+def get_gallery(requsername=None,id=None,username=None,token=None):
+    url = base_url+'/basic/gallery/'
     params = append_params(requsername=requsername, username=username)
-
+    
     if id is not None:
-        url += "/" + str(id)
+        url += str(id) + '/'
 
-    r = requests.get(url,params=params)
+    headers= {"TOKEN":token}
+    r = requests.get(url, params=params, data='token='+token,headers=headers)
+
     data = r.json()
 
     # Data is a single object, make it iterable
@@ -35,13 +39,15 @@ def get_gallery(requsername=None,id=None,username=None):
 
     return objects
 
-def get_gallery_reaction(requsername=None,id=None,galleryid=None):
+def get_gallery_reaction(requsername=None,id=None,galleryid=None,token=None):
     params = append_params(requsername=requsername, galleryid=galleryid)
-    url = base_url+'/basic/gallery_reactions'
+    url = base_url+'/basic/gallery_reactions/'
     if id is not None:
-        url += "/" + str(id)
+        url += str(id) + '/'
 
-    r = requests.get(url,params=params)
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     # Data is a single object, make it iterable
@@ -55,13 +61,15 @@ def get_gallery_reaction(requsername=None,id=None,galleryid=None):
         objects.append(obj)
     return objects
 
-def get_photo(requsername=None,id=None,galleryid=None):
+def get_photo(requsername=None,id=None,galleryid=None,token=None):
     params = append_params(requsername=requsername, galleryid=galleryid)
-    url = base_url+'/basic/photos'
+    url = base_url+'/basic/photos/'
     if id is not None:
-        url += "/" + str(id)
+        url += str(id) + '/'
 
-    r = requests.get(url,params=params)
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     # Data is a single object, make it iterable
@@ -75,13 +83,15 @@ def get_photo(requsername=None,id=None,galleryid=None):
         objects.append(obj)
     return objects
 
-def get_photo_reaction(requsername=None, id=None, photoid=None):
+def get_photo_reaction(requsername=None, id=None, photoid=None,token=None):
     params = append_params(requsername=requsername, photoid=photoid)
-    url = base_url+'/basic/photo_reactions'
+    url = base_url+'/basic/photo_reactions/'
     if id is not None:
-        url += "/" + str(id)
+        url += str(id) + '/'
 
-    r = requests.get(url,params=params)
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     # Data is a single object, make it iterable
@@ -95,13 +105,15 @@ def get_photo_reaction(requsername=None, id=None, photoid=None):
         objects.append(obj)
     return objects
 
-def get_gallery_comment(requsername=None,id=None,galleryid=None):
+def get_gallery_comment(requsername=None,id=None,galleryid=None,token=None):
     params = append_params(requsername=requsername, galleryid=galleryid)
-    url = base_url+'/basic/gallery_comments'
+    url = base_url+'/basic/gallery_comments/'
     if id is not None:
-        url += "/" + str(id)
+        url += str(id) + '/'
 
-    r = requests.get(url,params=params)
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
 
@@ -121,12 +133,14 @@ def get_gallery_comment(requsername=None,id=None,galleryid=None):
         objects.append(obj)
     return objects
 
-def get_photo_comment(requsername=None, id=None, photoid=None):
+def get_photo_comment(requsername=None, id=None, photoid=None,token=None):
     params = append_params(requsername=requsername, photoid=photoid)
-    url = base_url+'/basic/photo_comments'
+    url = base_url+'/basic/photo_comments/'
     if id is not None:
-        url += "/" + str(id)
-    r = requests.get(url,params=params)
+        url += str(id) + '/'
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     # Data is a single object, make it iterable
@@ -140,14 +154,16 @@ def get_photo_comment(requsername=None, id=None, photoid=None):
         objects.append(obj)
     return objects
 
-def get_follow(id=None,FC_1_Username=None,FC_2_Username=None):
+def get_follow(id=None,FC_1_Username=None,FC_2_Username=None,token=None):
     params = append_params(fc1username=FC_1_Username,fc2username=FC_2_Username)
 
-    url = base_url+'/basic/follows'
+    url = base_url+'/basic/follows/'
     if id is not None:
-        url += "/" + str(id)
+        url += str(id) + '/'
 
-    r = requests.get(url,params=params)
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     if id is not None: data = [data]
@@ -160,13 +176,15 @@ def get_follow(id=None,FC_1_Username=None,FC_2_Username=None):
         objects.append(obj)
     return objects
 
-def get_profile(id=None,username=None):
+def get_profile(id=None,username=None,token=None):
     params = append_params(username=username)
-    url = base_url+'/basic/profiles'
+    url = base_url+'/basic/profiles/'
     if id is not None:
-        url += "/" + str(id)
+        url += str(id) + '/'
 
-    r = requests.get(url, params=params)
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     # Data is a single object, make it iterable
@@ -182,14 +200,16 @@ def get_profile(id=None,username=None):
 
     return objects
 
-def get_user(id=None,username=None):
+def get_user(id=None,username=None,token=None):
     params = append_params(username=username)
 
-    url = base_url+'/basic/users'
+    url = base_url+'/basic/users/'
     if id is not None:
-        url += "/" + str(id)
+        url += str(id) + '/'
 
-    r = requests.get(url, params=params)
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     # Data is a single object, make it iterable
@@ -205,10 +225,18 @@ def get_user(id=None,username=None):
 
 #Advance API
 
-def get_shared_galleries(requsername):
+def get_shared_galleries(requsername,token=None):
     params = append_params(requsername=requsername)
-    url = base_url+'/advanced/shared_galleries'
-    r = requests.get(url,params=params)
+    url = base_url+'/advanced/shared_galleries/'
+    reqdata = {
+        'token': token,
+    }
+
+    print("\n\n" + "=" * 160 + "\nREQUEST SHARE GALLERY\n" +  "=" * 160)
+
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
     objects=[]
 
@@ -219,10 +247,12 @@ def get_shared_galleries(requsername):
         objects.append(obj)
     return objects
 
-def get_followers(username):
+def get_followers(username,token=None):
     params = append_params(username=username)
-    url = base_url+'/advanced/followers'
-    r = requests.get(url,params=params)
+    url = base_url+'/advanced/followers/'
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     objects=[]
@@ -234,10 +264,12 @@ def get_followers(username):
         objects.append(obj)
     return objects
 
-def get_followers_profiles(username):
+def get_followers_profiles(username,token=None):
     params = append_params(username=username)
-    url = base_url+'/advanced/followers_profiles'
-    r = requests.get(url,params=params)
+    url = base_url+'/advanced/followers_profiles/'
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     objects=[]
@@ -249,10 +281,12 @@ def get_followers_profiles(username):
         objects.append(obj)
     return objects
 
-def get_following(username):
+def get_following(username,token=None):
     params = append_params(username=username)
-    url = base_url+'/advanced/following'
-    r = requests.get(url,params=params)
+    url = base_url+'/advanced/following/'
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     objects=[]
@@ -264,10 +298,12 @@ def get_following(username):
         objects.append(obj)
     return objects
 
-def get_following_profiles(username):
+def get_following_profiles(username,token=None):
     params = append_params(username=username)
-    url = base_url+'/advanced/following'
-    r = requests.get(url,params=params)
+    url = base_url+'/advanced/following/'
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     objects=[]
@@ -279,10 +315,12 @@ def get_following_profiles(username):
         objects.append(obj)
     return objects
 
-def get_search_profiles(query):
+def get_search_profiles(query,token=None):
     params = append_params(query=query)
-    url = base_url+'/advanced/profile_search'
-    r = requests.get(url,params=params)
+    url = base_url+'/advanced/profile_search/'
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     data = r.json()
 
     objects=[]
@@ -296,158 +334,202 @@ def get_search_profiles(query):
 
     return objects
 
-def photo_reaction_toggle(requsername,photoid):
+def photo_reaction_toggle(requsername,photoid,token=None):
     params = append_params(requsername=requsername,photoid=photoid)
-    url = base_url+'/photo_reaction_toggle'
-    r = requests.get(url,params=params)
+    url = base_url+'/photo_reaction_toggle/'
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     return r
 
-def gallery_reaction_toggle(requsername, galleryid):
+def gallery_reaction_toggle(requsername, galleryid,token=None):
     params = append_params(requsername=requsername,galleryid=galleryid)
-    url = base_url+'/gallery_reaction_toggle'
-    r = requests.get(url,params=params)
+    url = base_url+'/gallery_reaction_toggle/'
+    headers= {"TOKEN":token}
+
+    r = requests.get(url, params=params, headers=headers)
     return r
 
 # Post API
-def post_gallery(object,requsername):
+def post_gallery(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = GallerySerializer(object)
-
     data = serializer.data
     data["GalleryOwner"]=object.GalleryOwner.username
+    headers = {"TOKEN": token}
 
-    r = requests.post(base_url + '/basic/gallery/', data=data, params=params, files=dict(AlbumCover=object.AlbumCover))
+    r = requests.post(base_url + '/basic/gallery/', data=data, params=params,headers=headers, files=dict(AlbumCover=object.AlbumCover))
     return r
 
-def post_gallery_reaction(object,requsername):
+def post_gallery_reaction(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = GalleryReactionSerializer(object)
-    return requests.post(base_url + '/basic/gallery_reactions/', data=serializer.data ,params=params)
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.post(base_url + '/basic/gallery_reactions/', data=data ,params=params,headers=headers)
 
-def post_photo(object,requsername):
+def post_photo(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = PhotoSerializer(object)
-
-    r = requests.post(base_url + '/basic/photos/', data=serializer.data, params=params, files=dict(Photo=object.Photo))
+    data=serializer.data
+    headers = {"TOKEN": token}
+    r = requests.post(base_url + '/basic/photos/', data=data, params=params,headers=headers, files=dict(Photo=object.Photo))
 
     return r
 
-def post_photo_reaction(object,requsername):
+def post_photo_reaction(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = PhotoReactionSerializer(object)
-    return requests.post(base_url + '/basic/photo_reactions/', data=serializer.data, params=params)
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.post(base_url + '/basic/photo_reactions/', data=data, params=params,headers=headers)
 
-def post_gallery_comment(object,requsername):
+def post_gallery_comment(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = GalleryCommentSerializer(object)
-    return requests.post(base_url + '/basic/gallery_comments/', data=serializer.data, params=params)
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.post(base_url + '/basic/gallery_comments/', data=data, params=params,headers=headers)
 
-def post_photo_comment(object,requsername):
+def post_photo_comment(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = PhotoCommentSerializer(object)
-    return requests.post(base_url + '/basic/photo_comments/', data=serializer.data, params=params)
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.post(base_url + '/basic/photo_comments/', data=data, params=params,headers=headers)
 
-def post_follow(object,requsername):
+def post_follow(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = FollowSerializer(object)
-    response = requests.post(base_url + '/basic/follows/', data=serializer.data, params=params)
+    data=serializer.data
+    headers = {"TOKEN": token}
+    response = requests.post(base_url + '/basic/follows/', data=data, params=params,headers=headers)
     return response
 
-def post_profile(object,requsername):
+def post_profile(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = ProfileSerializer(object)
-    return requests.post(base_url + '/basic/profiles/', data=serializer.data, params=params, files=dict(ProfilePhoto=object.ProfilePhoto))
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.post(base_url + '/basic/profiles/', data=data, params=params,headers=headers, files=dict(ProfilePhoto=object.ProfilePhoto))
 
-def post_user(object,requsername):
+def post_user(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = UserSerializer(object)
-    return requests.post(base_url + '/basic/users/', data=serializer.data, params=params)
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.post(base_url + '/basic/users/', data=data, params=params,headers=headers)
 
 # Put API
-def put_gallery(object,requsername):
+def put_gallery(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = GallerySerializer(object)
-    return requests.put(base_url + '/basic/gallery/'+str(object.id)+"/", data=serializer.data, params=params, files=dict(AlbumCover=object.AlbumCover))
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.put(base_url + '/basic/gallery/'+str(object.id)+"/", data=data, params=params,headers=headers, files=dict(AlbumCover=object.AlbumCover))
 
-def put_gallery_reaction(object,requsername):
+def put_gallery_reaction(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = GalleryReactionSerializer(object)
-    return requests.put(base_url + '/basic/gallery_reactions/'+str(object.id)+"/", data=serializer.data, params=params)
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.put(base_url + '/basic/gallery_reactions/'+str(object.id)+"/", data=data, params=params,headers=headers)
 
-def put_photo(object,requsername):
+def put_photo(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = PhotoSerializer(object)
-    return requests.put(base_url + '/basic/photos/'+str(object.id)+"/", data=serializer.data, params=params, files=dict(Photo=object.Photo))
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.put(base_url + '/basic/photos/'+str(object.id)+"/", data=data, params=params,headers=headers, files=dict(Photo=object.Photo))
 
-def put_photo_reaction(object,requsername):
+def put_photo_reaction(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = PhotoReactionSerializer(object)
-    return requests.put(base_url + '/basic/photo_reactions/'+str(object.id)+"/", data=serializer.data, params=params)
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.put(base_url + '/basic/photo_reactions/'+str(object.id)+"/", data=data, params=params,headers=headers)
 
-def put_gallery_comment(object,requsername):
+def put_gallery_comment(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = GalleryCommentDeserializer(object)
-    return requests.put(base_url + '/basic/gallery_comments/'+str(object.id)+"/", data=serializer.data, params=params)
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.put(base_url + '/basic/gallery_comments/'+str(object.id)+"/", data=data, params=params,headers=headers)
 
-def put_photo_comment(object,requsername):
+def put_photo_comment(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = PhotoCommentDeserializer(object)
-    return requests.put(base_url + '/basic/photo_comments/'+str(object.id)+"/", data=serializer.data, params=params)
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.put(base_url + '/basic/photo_comments/'+str(object.id)+"/", data=data, params=params,headers=headers)
 
-def put_follow(object,requsername):
+def put_follow(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = FollowSerializer(object)
-    return requests.put(base_url + '/basic/follows/'+str(object.id)+"/", data=serializer.data, params=params)
+    data=serializer.data
+    headers = {"TOKEN": token}
+    return requests.put(base_url + '/basic/follows/'+str(object.id)+"/", data=data, params=params,headers=headers)
 
-def put_profile(object,requsername):
+def put_profile(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = ProfileSerializer(object)
+    # print("\n\n" + "=" * 160 + "\nPUT PROFILE OBJECT \n" + str(object) + "\n" + "=" * 160)
+    # print("\n\n" + "=" * 160 + "\nPUT PROFILE PHOTO OBJECT \n" + str(object.ProfilePhoto) + "\n" + "=" * 160)
     data = serializer.data
+    # print("\n\n" + "=" * 160 + "\nPUT PROFILE DATA \n" + str(data) + "\n" + "=" * 160)
+    # print("\n\n" + "=" * 160 + "\nPUT PROFILE IMAGE FILE TYPE \n" + str(type(object.ProfilePhoto)) + "\n" + "=" * 160)
 
 
-    # Remove user field
-    data.pop('user')
-    # Remove profile photo field if none is given
-    files = None
-    if data['ProfilePhoto'] is not None:
+    if len(str(object.ProfilePhoto))>1:
         files = dict(ProfilePhoto=object.ProfilePhoto)
     else:
-        data.pop('ProfilePhoto')
+        files = None
+    headers = {"TOKEN": token}
 
-    response = requests.put(base_url + '/basic/profiles/'+str(object.id)+"/", data=data, params=params,files=files)
+
+    response = requests.put(base_url + '/basic/profiles/'+str(object.id)+"/", data=data, params=params,headers=headers,files=files)
+
     return response
 
-def put_user(object,requsername):
+def put_user(object,requsername,token=None):
     params = append_params(requsername=requsername)
     serializer = UserSerializer(object)
     data = serializer.data
-    return requests.put(base_url + '/basic/users/'+str(object.id)+"/", data=data, params=params)
+    headers = {"TOKEN": token}
+    return requests.put(base_url + '/basic/users/'+str(object.id)+"/", data=data, params=params,headers=headers)
 
 # Delete API
-def delete_gallery(id,requsername):
+def delete_gallery(id,requsername,token=None):
     params = append_params(requsername=requsername)
-    return requests.delete(base_url + '/basic/gallery/' + str(id)+"/", params=params)
+    headers= {"TOKEN":token}
+    return requests.delete(base_url + '/basic/gallery/' + str(id)+"/", params=params,headers=headers)
 
-def delete_gallery_reaction(id,requsername):
+def delete_gallery_reaction(id,requsername,token=None):
     params = append_params(requsername=requsername)
-    return requests.delete(base_url + '/basic/gallery_reactions/' + str(id)+"/", params=params)
+    headers= {"TOKEN":token}
+    return requests.delete(base_url + '/basic/gallery_reactions/' + str(id)+"/", params=params,headers=headers)
 
-def delete_photo(id,requsername):
+def delete_photo(id,requsername,token=None):
     params = append_params(requsername=requsername)
-    return requests.delete(base_url + '/basic/photos/' + str(id)+"/", params=params)
+    headers= {"TOKEN":token}
+    return requests.delete(base_url + '/basic/photos/' + str(id)+"/", params=params,headers=headers)
 
-def delete_photo_reaction(id,requsername):
+def delete_photo_reaction(id,requsername,token=None):
     params = append_params(requsername=requsername)
-    return requests.delete(base_url + '/basic/photo_reactions/' + str(id)+"/", params=params)
+    headers= {"TOKEN":token}
+    return requests.delete(base_url + '/basic/photo_reactions/' + str(id)+"/", params=params,headers=headers)
 
-def delete_gallery_comment(id,requsername):
+def delete_gallery_comment(id,requsername,token=None):
     params = append_params(requsername=requsername)
-    return requests.delete(base_url + '/basic/gallery_comments/' + str(id)+"/", params=params)
+    headers= {"TOKEN":token}
+    return requests.delete(base_url + '/basic/gallery_comments/' + str(id)+"/", params=params,headers=headers)
 
-def delete_photo_comment(id,requsername):
+def delete_photo_comment(id,requsername,token=None):
     params = append_params(requsername=requsername)
-    return requests.delete(base_url + '/basic/photo_comments/' + str(id)+"/", params=params)
+    headers= {"TOKEN":token}
+    return requests.delete(base_url + '/basic/photo_comments/' + str(id)+"/", params=params,headers=headers)
 
-def delete_follow(id,requsername):
+def delete_follow(id,requsername,token=None):
     params = append_params(requsername=requsername)
-    return requests.delete(base_url + '/basic/follows/' + str(id)+"/", params=params)
+    headers= {"TOKEN":token}
+    return requests.delete(base_url + '/basic/follows/' + str(id)+"/", params=params,headers=headers)

@@ -95,4 +95,4 @@ class Profile(models.Model):    # authorization demanded for sure
     LastName = models.CharField(default='', max_length=30, blank=True, null=False)
     Sex = models.CharField(default=NOTANSWER, null=False, blank=False, max_length=2, choices=GENDER)
 
-    def __str__(self): return("User:" + str(self.user.username) + "Profile ID:" + str(self.id))    # this is what it is going to show
+    def __str__(self): return("User: " + str(self.user.username) + " Profile ID: " + str(self.id) + " Profile Photo: " +str(self.ProfilePhoto))    # this is what it is going to show

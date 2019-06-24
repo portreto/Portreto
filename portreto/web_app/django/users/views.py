@@ -43,8 +43,9 @@ def register(request):
                 username = form.cleaned_data.get('username')
                 messages.success(request,f'Your account has been successfully created {username}')
 
-                user = User(username=username)
-                api_client.post_user(user,username)
+                # No need to create user, it is automatically created by the app_service
+                # user = User(username=username)
+                # api_client.post_user(user,username,token=token)
 
                 response = redirect(PORTRETO)    #This is used to redirect in our home page after successful update of form
                 my_cookie_set(response, TOKEN_COOKIE, data["token"])
@@ -104,23 +105,27 @@ def logout(request):
 @my_login_required()
 def profile(request, username=None, token=None):
     requsername = username
-    user = get_api_objects_or_404(api_client.get_user(username=requsername))[0]
-    profile = get_api_objects_or_404(api_client.get_profile(username=requsername))[0]
+    user = get_api_objects_or_404(api_client.get_user(username=requsername,token=token))[0]
+    profile = get_api_objects_or_404(api_client.get_profile(username=requsername,token=token))[0]
 
 
-    my_galleries = api_client.get_gallery(requsername=requsername,username=requsername)
+    my_galleries = api_client.get_gallery(requsername=requsername,username=requsername,token=token)
 
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=user)
         profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=profile)    #request.files for images
+        print("\n\n" + "=" * 160 + "\nVIEW REQUEST FILES\n" + str(request.FILES) + "\n" + "=" * 160)
 
         if user_form.is_valid() and profile_form.is_valid():
 
             tuser = user_form.save(commit=False)
             tprofile = profile_form.save(commit=False)
+            if len(request.FILES)<1:
+                tprofile.ProfilePhoto = None
+                print("\n\n" + "=" * 160 + "\nVIEW NO FILES" + "\n" + "=" * 160)
 
-            api_client.put_profile(tprofile,requsername)
-            api_client.put_user(tuser,requsername)
+            api_client.put_profile(tprofile,requsername,token=token)
+            api_client.put_user(tuser,requsername,token=token)
 
             messages.success(request, f'Your account has been successfully updated')
             return redirect('users:profile')
@@ -144,11 +149,11 @@ def profile(request, username=None, token=None):
 def getProfile(request, profile_username, username=None, token=None):
     requsername = username
 
-    user = get_api_objects_or_404(api_client.get_user(username=profile_username))[0]
+    user = get_api_objects_or_404(api_client.get_user(username=profile_username,token=token))[0]
 
-    profile = get_api_objects_or_404(api_client.get_profile(username=profile_username))[0]
+    profile = get_api_objects_or_404(api_client.get_profile(username=profile_username,token=token))[0]
 
-    my_galleries = api_client.get_gallery(requsername=requsername, username=profile_username)
+    my_galleries = api_client.get_gallery(requsername=requsername, username=profile_username,token=token)
 
     user_form = UserUpdateForm(instance=user)
     profile_form = ProfileUpdateForm(instance=profile)
@@ -160,7 +165,7 @@ def getProfile(request, profile_username, username=None, token=None):
         'profile_form' : profile_form,
         'my_galleries': my_galleries,
         'requsername' : requsername,
-        'my_prof': get_api_objects_or_404(api_client.get_profile(username=requsername))[0]
+        'my_prof': get_api_objects_or_404(api_client.get_profile(username=requsername,token=token))[0]
 
     }
     return render(request,'users/profile.html',context)
