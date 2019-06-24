@@ -1,11 +1,13 @@
 certifi==2019.3.9
 chardet==3.0.4
+dataclasses==0.6
 Django==2.2.1
+djongo==1.2.33
 idna==2.8
 pycrypto==2.6.1
 PyJWT==1.7.1
+pymongo==3.8.0
 pytz==2019.1
 requests==2.22.0
-sqlparse==0.3.0
+sqlparse==0.2.4
 urllib3==1.25.2
-

@@ -247,9 +247,7 @@ def delete_photo(request, gallery_id, photo_id, username=None, token=None):
         messages.success(request, 'Photo successfully deleted ')
     else:
         messages.error(request, 'You cannot delete this photo')
-
     return redirect('webmain:detail',gallery_id)
-
 
 # Follow and unfollow users. NOTE: Added condition so that you cannot follow or unfollow yourself
 @my_login_required()
