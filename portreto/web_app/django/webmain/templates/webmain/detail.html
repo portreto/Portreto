@@ -72,7 +72,6 @@
                         <li role="presentation" class="active"><a href="{% url 'webmain:detail' gallery.id %}">View All</a></li>
                         {% if gallery.GalleryOwner.username == user.username %}
                             <li role="presentation"><a href="{% url 'webmain:add_photo' gallery.id %}">Add New Photo</a></li>
-                            <li role="presentation"><a href="{% url 'webmain:update_gallery' gallery.id %}">Update Gallery</a></li>
                             <li role="presentation"><a href="{% url 'webmain:delete_gallery' gallery.id %}">Delete Gallery</a></li>
                         {% endif %}
                     </ul>

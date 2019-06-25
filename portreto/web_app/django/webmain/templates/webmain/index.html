@@ -13,7 +13,9 @@
                         <div class="panel panel-default " >
                             <div class="row homefeed-panel-row">
                                 <div class="col-md-4 homefeed-sidepanel" >
-                                    <img src ="{{ gallery.GalleryOwnerPhoto }}" style="height: 35px; width: 35px; border-radius: 100%" alt=" ">
+                                    <a href="{% url 'users:getProfile' gallery.GalleryOwner %}">
+                                        <img src ="{{ gallery.GalleryOwnerPhoto }}" style="height: 35px; width: 35px; border-radius: 100%" alt=" ">
+                                    </a>
                                     <strong><a class='homefeed-username link' href="{% url 'users:getProfile' gallery.GalleryOwner %}">{{ gallery.GalleryOwner }}</a></strong>
                                     <p class="homefeed-description-box"> &nbsp;&nbsp;{{ gallery.Description }}</p>
 

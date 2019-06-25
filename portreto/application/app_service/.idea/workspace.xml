@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b66d2f42-88c5-463b-87dd-402db6e95ced" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/auth_token_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/auth_token_middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/users/UserConnection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/UserConnection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/templates/webmain/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +250,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="29" />
     <option name="y" value="56" />
     <option name="width" value="1872" />
@@ -385,15 +381,15 @@
       <workItem from="1561072415653" duration="11720000" />
       <workItem from="1561156330261" duration="55753000" />
       <workItem from="1561411290458" duration="2833000" />
-      <workItem from="1561419944612" duration="5602000" />
+      <workItem from="1561419944612" duration="6135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268423000" />
+    <option name="totallyTimeSpent" value="268956000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="29" y="56" width="1872" height="941" extended-state="0" />
+    <frame x="29" y="56" width="1872" height="941" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1286966" />

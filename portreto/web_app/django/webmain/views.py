@@ -145,32 +145,32 @@ def create_gallery(request, username=None, token=None):
 
     return render(request, 'webmain/create_gallery.html',context)
 
-# Updates photo that belongs on a gallery. NOTE: Only if the requested user is the galleryowner an update can occur
-@my_login_required()
-def update_gallery(request, gallery_id, username=None, token=None):
-    requsername = username
-
-    # u_galleries = Gallery.objects.filter(id=gallery_id).first()
-    u_galleries = get_api_objects_or_404(api_client.get_gallery(requsername=requsername,id=gallery_id,token=token))[0]
-
-    if request.method == 'POST':
-        form = GalleryForm(request.POST, request.FILES, instance=u_galleries)  # request.files for images
-
-        if form.is_valid():
-            gallery = form.save(commit=False)
-            api_client.put_gallery(gallery, requsername,token=token)
-            messages.success(request, f'Your gallery has been updated')
-            return redirect('webmain:detail', gallery_id)
-
-    else:
-        form = GalleryForm(instance=u_galleries)
-
-    context = {
-        "form": form,
-        'my_prof': get_api_objects_or_404(api_client.get_profile(username=requsername,token=token))[0]
-    }
-
-    return render(request, 'webmain/create_gallery.html', context)
+# # Updates photo that belongs on a gallery. NOTE: Only if the requested user is the galleryowner an update can occur
+# @my_login_required()
+# def update_gallery(request, gallery_id, username=None, token=None):
+#     requsername = username
+#
+#     # u_galleries = Gallery.objects.filter(id=gallery_id).first()
+#     u_galleries = get_api_objects_or_404(api_client.get_gallery(requsername=requsername,id=gallery_id,token=token))[0]
+#
+#     if request.method == 'POST':
+#         form = GalleryForm(request.POST, request.FILES, instance=u_galleries)  # request.files for images
+#
+#         if form.is_valid():
+#             gallery = form.save(commit=False)
+#             api_client.put_gallery(gallery, requsername,token=token)
+#             messages.success(request, f'Your gallery has been updated')
+#             return redirect('webmain:detail', gallery_id)
+#
+#     else:
+#         form = GalleryForm(instance=u_galleries)
+#
+#     context = {
+#         "form": form,
+#         'my_prof': get_api_objects_or_404(api_client.get_profile(username=requsername,token=token))[0]
+#     }
+#
+#     return render(request, 'webmain/create_gallery.html', context)
 
 # Create a new photo. NOTE: You cannot add two photos with the same name
 @my_login_required()
@@ -195,35 +195,35 @@ def add_photo(request, gallery_id, username=None, token=None):
     }
     return render(request, 'webmain/add_photo.html', context)
 
-@my_login_required()
-# Updates photo that belongs on a gallery. NOTE: Only if the requested user is the galleryowner an update can occur
-def update_photo(request, gallery_id, photo_id, username=None, token=None):
-    requsername = username
-
-    gallery = get_api_objects_or_404(api_client.get_gallery(requsername=requsername,id=gallery_id,token=token))[0]
-
-    u_photos = get_api_objects_or_404(api_client.get_photo(requsername=requsername, id=photo_id,token=token))[0]
-
-    if request.method == 'POST':
-        form = PhotoForm(request.POST, request.FILES, instance=u_photos)  # request.files for images
-
-        if form.is_valid():
-            form.save()
-            photo = form.save(commit=False)
-            api_client.put_photo(photo, requsername,token=token)
-
-            messages.success(request, f'Your photo has been updated')
-            return redirect('webmain:detail', gallery_id)
-    else:
-        form = PhotoForm(instance=u_photos)
-
-    context = {
-        'form': form,
-        'gallery': gallery,
-        'my_prof': get_api_objects_or_404(api_client.get_profile(username=requsername,token=token))[0]
-    }
-
-    return render(request, 'webmain/add_photo.html', context)
+# # Updates photo that belongs on a gallery. NOTE: Only if the requested user is the galleryowner an update can occur
+# @my_login_required()
+# def update_photo(request, gallery_id, photo_id, username=None, token=None):
+#     requsername = username
+#
+#     gallery = get_api_objects_or_404(api_client.get_gallery(requsername=requsername,id=gallery_id,token=token))[0]
+#
+#     u_photos = get_api_objects_or_404(api_client.get_photo(requsername=requsername, id=photo_id,token=token))[0]
+#
+#     if request.method == 'POST':
+#         form = PhotoForm(request.POST, request.FILES, instance=u_photos)  # request.files for images
+#
+#         if form.is_valid():
+#             form.save()
+#             photo = form.save(commit=False)
+#             api_client.put_photo(photo, requsername,token=token)
+#
+#             messages.success(request, f'Your photo has been updated')
+#             return redirect('webmain:detail', gallery_id)
+#     else:
+#         form = PhotoForm(instance=u_photos)
+#
+#     context = {
+#         'form': form,
+#         'gallery': gallery,
+#         'my_prof': get_api_objects_or_404(api_client.get_profile(username=requsername,token=token))[0]
+#     }
+#
+#     return render(request, 'webmain/add_photo.html', context)
 
 
 # Delete gallery. NOTE: Only the gallery owner has the permission to delete
