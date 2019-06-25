@@ -1,7 +1,9 @@
+from django.http import HttpResponse
 from django.http.request import QueryDict
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework import viewsets
-from webmain.models import *
+from users.models import TokenBlacklist
 from .serializers import *
 from rest_framework.generics import get_object_or_404
 from rest_framework.exceptions import AuthenticationFailed
@@ -11,6 +13,7 @@ from rest_framework.response import Response
 from rest_framework import authentication, permissions
 from django.contrib.auth.models import User
 from rest_framework import status
+from users.BusinessLogic.Tokens import UserIdentity
 
 #checks if "requser" can view "user" data
 def has_permission(user,requsername=None,requserid=None,cud=False):
@@ -561,8 +564,8 @@ class FollowingView(viewsets.ReadOnlyModelViewSet):
 
         queryset = User.objects.filter(id__in = list(s))
 
-        if following_filter != None:
-            queryset = queryset.filter(username=following_filter)
+        # if following_filter != None:
+        #     queryset = queryset.filter(username=following_filter)
 
         return queryset
 
@@ -667,3 +670,22 @@ class GalleryReactionToggle(APIView):
             return Response(status=status.HTTP_302_FOUND)
 
         return Response(status=status.HTTP_201_CREATED)
+
+@csrf_exempt
+def Blacklist(request):
+    try:
+        # Get token from header
+        token = request.META.get("HTTP_TOKEN")
+        # Decode and validate token
+        identity = UserIdentity()
+        decoded_token = identity.decode_token(token, 'app')
+        # Get token id
+        token_id = decoded_token['token-id']
+    except:
+        return HttpResponse(status=status.HTTP_401_UNAUTHORIZED)
+    try:
+        tbl=TokenBlacklist(token_id=token_id)
+        tbl.save()
+        return HttpResponse(status=status.HTTP_202_ACCEPTED)
+    except:
+        return  HttpResponse(status=status.HTTP_409_CONFLICT)

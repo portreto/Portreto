@@ -19,8 +19,8 @@ USERNAME_COOKIE = "portreto-user-username"
 AUTH_DOMAIN_NAME = 'auth'
 AUTH_PORT = '8000'
 
-APP_DOMAIN_NAME = 'app'
-APP_PORT = '8000'
+APP_DOMAIN_NAME = 'appservice'
+APP_PORT = '80'
 
 COOKIES_EXPIRE_AFTER = 30
 
@@ -58,19 +58,18 @@ def delete_my_cookies(response):
 def cookie_in_blacklist(token, domainIn=None, portIn=None):
     protocol='' if PROTOCOL_VALID is False else 'http://'
     domain = APP_DOMAIN_NAME if domainIn is None else domainIn
-    port = APP_PORT if portIn is None else portIn
-    location = '/delete/token/'
-    url = str(protocol) + str(domain) + ':' + str(port) + str(location)
-    data = {"token": token}
+    location = '/api/blt/'
+    url = str(protocol) + str(domain) + str(location)
+    headers= {"TOKEN":token}
 
-    try:
-        response = requests.post(url, data=json.dumps(data))
-        if response.status_code == 202:
-            return True
-        else:
-            return
-    except:
-        return True # TODO
+    response = requests.post(url, headers=headers)
+    print('\n\n\n\n' + "8" * 180 +"\n RESPONCE" + str(response))
+    if response.status_code == 202:
+        return True
+    else:
+        return
+    # except:
+    #     return True # TODO
 
 # ------------------------------------------------------------------------
 

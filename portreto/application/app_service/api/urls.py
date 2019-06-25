@@ -21,12 +21,14 @@ advanced_router.register('followers_profiles', views.FollowersProfileView)
 advanced_router.register('following', views.FollowingView)
 advanced_router.register('following_profiles', views.FollowingProfileView)
 advanced_router.register('profile_search', views.SearchProfileView)
+# advanced_router.register('blt', views.Blacklist)
 
 # advanced_router.register('photo_reaction_toggle', views.PhotoReactionToggle)
 
 urlpatterns = [
     path('basic/', include(basic_router.urls)),
     path('advanced/', include(advanced_router.urls)),
+    path('blt/',views.Blacklist),
     path('photo_reaction_toggle/', views.PhotoReactionToggle.as_view()),
     path('gallery_reaction_toggle/', views.GalleryReactionToggle.as_view())
 ]

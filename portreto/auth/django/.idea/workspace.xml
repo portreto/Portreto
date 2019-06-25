@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b87ff6a7-1ba0-4768-84b4-1211a069dcb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/app_service/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/app_service/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../application/app_service/users/auth_token_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/auth_token_middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Authentication_Service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Authentication_Service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication_Service/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication_Service/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/init.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../setup-rs/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../setup-rs/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../setup-rs/dbInit.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../setup-rs/dbInit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../setup-rs/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../setup-rs/setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web_app/django/users/UserConnection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/UserConnection.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="347">
+              <caret line="88" column="30" lean-forward="true" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
               <folding>
                 <element signature="e#202#1456#0" />
                 <element signature="e#210#1424#0" />
@@ -50,10 +42,6 @@
                 <element signature="e#3020#3592#0" />
                 <element signature="e#3764#3939#0" />
                 <element signature="e#3941#3990#0" />
-                <element signature="e#4099#4738#0" />
-                <element signature="e#4136#4543#0" />
-                <element signature="e#4153#4323#0" />
-                <element signature="e#4367#4543#0" />
                 <element signature="e#4562#4738#0" />
                 <element signature="e#4741#4764#0" />
                 <element signature="e#4906#6328#0" />
@@ -85,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Authentication_Service/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="402">
-              <caret line="150" column="78" lean-forward="true" selection-start-line="150" selection-start-column="78" selection-end-line="150" selection-end-column="78" />
+              <caret line="150" column="78" selection-start-line="150" selection-start-column="78" selection-end-line="150" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -155,6 +143,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,7 +160,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -245,17 +233,18 @@
       <workItem from="1557933784916" duration="3797000" />
       <workItem from="1561405355155" duration="673000" />
       <workItem from="1561411290853" duration="2451000" />
+      <workItem from="1561423591528" duration="19000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69419000" />
+    <option name="totallyTimeSpent" value="69438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="83" width="1833" height="891" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13094571" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13206491" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -427,10 +416,17 @@
     <entry file="file://$USER_HOME$/python_venvs/portreto_auth/lib/python3.5/site-packages/django/contrib/auth/__init__.py" />
     <entry file="file://$PROJECT_DIR$/django/API/urls.py" />
     <entry file="file://$PROJECT_DIR$/django/Service/BusinessLogic/Services.py" />
+    <entry file="file://$PROJECT_DIR$/Authentication_Service/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="150" column="78" selection-start-line="150" selection-start-column="78" selection-end-line="150" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        <state relative-caret-position="347">
+          <caret line="88" column="30" lean-forward="true" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
           <folding>
             <element signature="e#202#1456#0" />
             <element signature="e#210#1424#0" />
@@ -446,10 +442,6 @@
             <element signature="e#3020#3592#0" />
             <element signature="e#3764#3939#0" />
             <element signature="e#3941#3990#0" />
-            <element signature="e#4099#4738#0" />
-            <element signature="e#4136#4543#0" />
-            <element signature="e#4153#4323#0" />
-            <element signature="e#4367#4543#0" />
             <element signature="e#4562#4738#0" />
             <element signature="e#4741#4764#0" />
             <element signature="e#4906#6328#0" />
@@ -477,13 +469,6 @@
             <element signature="e#9233#9411#0" />
             <element signature="e#9430#9605#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Authentication_Service/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="150" column="78" lean-forward="true" selection-start-line="150" selection-start-column="78" selection-end-line="150" selection-end-column="78" />
         </state>
       </provider>
     </entry>

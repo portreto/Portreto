@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="756a196a-dc82-470a-9b8f-6552f5312f1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../auth/django/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../application/app_service/users/auth_token_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/auth_token_middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/.idea/Authentication_Service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/.idea/Authentication_Service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../auth/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/UserConnection.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/UserConnection.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,13 +32,43 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+            <state relative-caret-position="754">
+              <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
               <folding>
                 <element signature="e#644#737#0" />
+                <element signature="e#766#2642#0" />
+                <element signature="e#1159#2463#0" />
+                <element signature="e#1241#2463#0" />
+                <element signature="e#1430#2169#0" />
+                <element signature="e#1637#1709#0" />
+                <element signature="e#2219#2319#0" />
+                <element signature="e#2354#2463#0" />
+                <element signature="e#2679#4203#0" />
+                <element signature="e#2991#4035#0" />
+                <element signature="e#3323#3763#0" />
+                <element signature="e#3805#3905#0" />
+                <element signature="e#3932#4035#0" />
+                <element signature="e#4230#4257#0" />
+                <element signature="e#4690#5557#0" />
+                <element signature="e#5039#5557#0" />
+                <element signature="e#5184#5293#0" />
+                <element signature="e#5576#5676#0" />
+                <element signature="e#5692#5923#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmain/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="22" column="109" selection-start-line="22" selection-start-column="109" selection-end-line="22" selection-end-column="109" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,22 +87,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webmain/templates/webmain/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webmain/api_client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9246">
-              <caret line="405" column="100" selection-start-line="405" selection-start-column="100" selection-end-line="405" selection-end-column="100" />
+            <state relative-caret-position="368">
+              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -105,7 +124,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webmain/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1541">
+            <state relative-caret-position="708">
               <caret line="109" selection-start-line="109" selection-end-line="118" selection-end-column="68" />
               <folding>
                 <element signature="e#175#445#0" />
@@ -119,11 +138,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/users/UserConnection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3358">
-              <caret line="153" column="20" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="20" />
+            <state relative-caret-position="1472">
+              <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PORTRETO/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="136" column="37" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -140,7 +168,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Share</find>
       <find>print</find>
       <find>navbar_new.html</find>
       <find>webmain:lik</find>
@@ -170,6 +197,7 @@
       <find>respo</find>
       <find>delete</find>
       <find>del</find>
+      <find>80</find>
     </findStrings>
     <replaceStrings>
       <replace>(base_url + '/basic/gallery'</replace>
@@ -187,7 +215,6 @@
       <replace>url += str(id)</replace>
       <replace>data=json.dumps(reqdata)</replace>
       <replace>data=json.dumps(data)</replace>
-      <replace>data['token']=json.dump(token)</replace>
       <replace>data['token']=json.dump(token)</replace>
       <replace>data['token']=json.dumps({'token':token})</replace>
       <replace>data=data, json=json.dumps({'token':token}),</replace>
@@ -229,7 +256,6 @@
         <option value="$PROJECT_DIR$/users/static/css/navbar.css" />
         <option value="$PROJECT_DIR$/PORTRETO/settings.py" />
         <option value="$PROJECT_DIR$/init.sh" />
-        <option value="$PROJECT_DIR$/users/UserConnection.py" />
         <option value="$PROJECT_DIR$/webmain/storage.py" />
         <option value="$PROJECT_DIR$/users/BusinessLogic/Tokens.py" />
         <option value="$PROJECT_DIR$/users/urls.py" />
@@ -254,6 +280,7 @@
         <option value="$PROJECT_DIR$/webmain/serializers.py" />
         <option value="$PROJECT_DIR$/webmain/api_client.py" />
         <option value="$PROJECT_DIR$/webmain/views.py" />
+        <option value="$PROJECT_DIR$/users/UserConnection.py" />
       </list>
     </option>
   </component>
@@ -275,6 +302,21 @@
             <path>
               <item name="django" type="b2602c69:ProjectViewProjectNode" />
               <item name="django" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django" type="462c0819:PsiDirectoryNode" />
+              <item name="PORTRETO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django" type="462c0819:PsiDirectoryNode" />
+              <item name="webmain" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -339,11 +381,12 @@
       <workItem from="1561156649531" duration="60962000" />
       <workItem from="1561312021367" duration="29654000" />
       <workItem from="1561411290458" duration="102000" />
+      <workItem from="1561415667700" duration="6104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219826000" />
+    <option name="totallyTimeSpent" value="225930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -358,7 +401,7 @@
     <frame x="42" y="56" width="1857" height="954" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16077349" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16243094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -492,13 +535,6 @@
     <entry file="file://$PROJECT_DIR$/PORTRETO/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/PORTRETO/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="136" column="37" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webmain/new_templates/webmain/add_photo.html" />
     <entry file="file://$PROJECT_DIR$/webmain/templates/webmain/add_photo.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -586,16 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmain/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="109" selection-start-line="22" selection-start-column="109" selection-end-line="22" selection-end-column="109" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webmain/templates/webmain/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="708">
@@ -633,23 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmain/templates/webmain/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webmain/api_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9246">
-          <caret line="405" column="100" selection-start-line="405" selection-start-column="100" selection-end-line="405" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webmain/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="851">
@@ -674,25 +683,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmain/serializers.py">
+    <entry file="file://$PROJECT_DIR$/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1541">
-          <caret line="109" selection-start-line="109" selection-end-line="118" selection-end-column="68" />
+        <state relative-caret-position="754">
+          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
           <folding>
-            <element signature="e#175#445#0" />
-            <element signature="e#301#356#0" />
-            <element signature="e#411#445#0" />
-            <element signature="e#1635#1791#0" />
-            <element signature="e#1858#2323#0" />
-            <element signature="e#2388#2542#0" />
+            <element signature="e#644#737#0" />
+            <element signature="e#766#2642#0" />
+            <element signature="e#1159#2463#0" />
+            <element signature="e#1241#2463#0" />
+            <element signature="e#1430#2169#0" />
+            <element signature="e#1637#1709#0" />
+            <element signature="e#2219#2319#0" />
+            <element signature="e#2354#2463#0" />
+            <element signature="e#2679#4203#0" />
+            <element signature="e#2991#4035#0" />
+            <element signature="e#3323#3763#0" />
+            <element signature="e#3805#3905#0" />
+            <element signature="e#3932#4035#0" />
+            <element signature="e#4230#4257#0" />
+            <element signature="e#4690#5557#0" />
+            <element signature="e#5039#5557#0" />
+            <element signature="e#5184#5293#0" />
+            <element signature="e#5576#5676#0" />
+            <element signature="e#5692#5923#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/UserConnection.py">
+    <entry file="file://$PROJECT_DIR$/webmain/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3358">
-          <caret line="153" column="20" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="20" />
+        <state relative-caret-position="365">
+          <caret line="22" column="109" selection-start-line="22" selection-start-column="109" selection-end-line="22" selection-end-column="109" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PORTRETO/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="136" column="37" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmain/templates/webmain/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -706,13 +748,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/views.py">
+    <entry file="file://$PROJECT_DIR$/webmain/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        <state relative-caret-position="708">
+          <caret line="109" selection-start-line="109" selection-end-line="118" selection-end-column="68" />
           <folding>
-            <element signature="e#644#737#0" />
+            <element signature="e#175#445#0" />
+            <element signature="e#301#356#0" />
+            <element signature="e#411#445#0" />
+            <element signature="e#1635#1791#0" />
+            <element signature="e#1858#2323#0" />
+            <element signature="e#2388#2542#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmain/api_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/UserConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1472">
+          <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
         </state>
       </provider>
     </entry>
