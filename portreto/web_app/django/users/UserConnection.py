@@ -63,7 +63,6 @@ def cookie_in_blacklist(token, domainIn=None, portIn=None):
     headers= {"TOKEN":token}
 
     response = requests.post(url, headers=headers)
-    print('\n\n\n\n' + "8" * 180 +"\n RESPONCE" + str(response))
     if response.status_code == 202:
         return True
     else:

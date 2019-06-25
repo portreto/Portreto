@@ -33,7 +33,10 @@ services:
     build:
       context: ./web_app
       network: host
+    image: almidi/portreto-web
     hostname: web
+    deploy:
+      replicas: 3
     # initialization shell script
     # command: sh ./init.sh
     command: sh init.sh
@@ -41,12 +44,17 @@ services:
       - ./web_app/django:/app
     ports:
        - "8000:8000"
+    # networks:
+    #   - webnet       
 
 # Django Application Service
   appservice:
     build:
       context: ./application
       network: host
+    image: almidi/portreto-app
+    deploy:
+      replicas: 3
     hostname: appservice
     # initialization shell script
     # command: sh ./init.sh
@@ -58,12 +66,17 @@ services:
     depends_on:
       - zoo
       - storage
+    # networks:
+    #   - webnet      
 
   auth:
     build:
       context: ./auth
       network: host
     hostname: auth
+    image: almidi/portreto-auth
+    deploy:
+      replicas: 3
     command: sh init.sh
     volumes:
       - ./auth/django:/app
@@ -73,13 +86,19 @@ services:
     depends_on:
       - web
     # networks:
-    #   - main    
+    #   - webnet
 
 # Storage Servers
   storage1:
     build:
       context: ./storage
       network: host
+    image: almidi/portreto-storage
+    deploy:
+      mode: global
+      restart_policy:
+          condition: on-failure
+          delay: 5s
     # initialization shell script
     command: sh init.sh
     hostname: storage1
@@ -93,11 +112,19 @@ services:
       EXTERNAL_URL: "http://localhost:8001"
     depends_on:
       - zoo
+    # networks:
+    #   - webnet      
 
   storage2:
     build:
       context: ./storage
       network: host
+    image: almidi/portreto-storage
+    deploy:
+      mode: global
+      restart_policy:
+          condition: on-failure
+          delay: 5s
     # initialization shell script
     command: sh init.sh
     hostname: storage2
@@ -109,14 +136,21 @@ services:
     environment:
       STORAGE_ID: 2 
       EXTERNAL_URL: "http://localhost:8002"
-
     depends_on:
       - zoo
+    # networks:
+    #   - webnet      
       
   storage3:
     build:
       context: ./storage
       network: host
+    image: almidi/portreto-storage
+    deploy:
+      mode: global
+      restart_policy:
+          condition: on-failure
+          delay: 5s
     restart: always
     # initialization shell script
     command: sh init.sh
@@ -130,12 +164,20 @@ services:
       STORAGE_ID: 3 
       EXTERNAL_URL: "http://localhost:8003"
     depends_on:
-      - zoo     
+      - zoo  
+    # networks:
+    #   - webnet         
 
   storage4:
     build:
       context: ./storage
       network: host
+    image: almidi/portreto-storage
+    deploy:
+      mode: global
+      restart_policy:
+          condition: on-failure
+          delay: 5s
     # initialization shell script
     command: sh init.sh
     hostname: storage4
@@ -149,11 +191,19 @@ services:
       EXTERNAL_URL: "http://localhost:8004"
     depends_on:
       - zoo
+    # networks:
+    #   - webnet      
 
   storage5:
     build:
       context: ./storage
       network: host
+    image: almidi/portreto-storage
+    deploy:
+      mode: global
+      restart_policy:
+          condition: on-failure
+          delay: 5s
     # initialization shell script
     command: sh init.sh
     hostname: storage5
@@ -168,11 +218,19 @@ services:
 
     depends_on:
       - zoo
+    # networks:
+    #   - webnet      
       
   storage6:
     build:
         context: ./storage
         network: host
+    image: almidi/portreto-storage
+    deploy:
+      mode: global
+      restart_policy:
+          condition: on-failure
+          delay: 5s
     restart: always
     # initialization shell script
     command: sh init.sh
@@ -186,7 +244,9 @@ services:
       STORAGE_ID: 6 
       EXTERNAL_URL: "http://localhost:8006"
     depends_on:
-      - zoo     
+      - zoo
+    # networks:
+    #   - webnet           
    
 # Zookeeper Ensemble
   zoo1:
@@ -197,8 +257,7 @@ services:
       - 2181:2181
     environment:
       ZOO_MY_ID: 1
-      ZOO_SERVERS: server.1=0.0.0.0:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
-      ZOO_TICK_TIME: 2000
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=zoo3:2888:3888;2181
 
   zoo2:
     image: zookeeper
@@ -208,8 +267,7 @@ services:
       - 2182:2181
     environment:
       ZOO_MY_ID: 2
-      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=0.0.0.0:2888:3888 server.3=zoo3:2888:3888
-      ZOO_TICK_TIME: 2000
+      ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=0.0.0.0:2888:3888;2181 server.3=zoo3:2888:3888;2181
 
   zoo3:
     image: zookeeper
@@ -219,8 +277,7 @@ services:
       - 2183:2181
     environment:
       ZOO_MY_ID: 3
-      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=0.0.0.0:2888:3888
-      ZOO_TICK_TIME: 2000
+      ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=0.0.0.0:2888:3888;2181    
 
   # Web GUI for Zookeeper
   zoonav:
@@ -235,18 +292,25 @@ services:
     depends_on:
      - zoonav-api
     restart: always
+    # networks:
+    #   - webnet    
   
   zoonav-api:
     image: elkozmon/zoonavigator-api:0.6.1
     container_name: zoonav-api
     environment:
       API_HTTP_PORT: 9000
-    restart: always    
+    restart: always
+    # networks:
+    #   - webnet        
 
 # Mongo replica set    
   mongo-rs0-1:
-    image: "mongo-start"
-    build: ./mongo-rs0-1
+    image: "mongo"
+    command: --replSet rs0 --smallfiles --oplogSize 128
+    deploy:
+      restart_policy:
+          condition: on-failure    
     ports:
       - "27017:27017"
     # volumes:
@@ -254,33 +318,54 @@ services:
     depends_on:
       - "mongo-rs0-2"
       - "mongo-rs0-3"
+    # networks:
+    #   - webnet      
 
   mongo-rs0-2:
     image: "mongo"
     command: --replSet rs0 --smallfiles --oplogSize 128
+    deploy:
+      mode: global
+      restart_policy:
+          condition: on-failure    
     ports:
       - "27018:27017"
     # volumes:
     #   - ./mongo-rs0-2/data:/data/db
+    # networks:
+    #   - webnet    
 
   mongo-rs0-3:
     image: "mongo"
     command: --replSet rs0 --smallfiles --oplogSize 128
+    deploy:
+      mode: global
+      restart_policy:
+          condition: on-failure    
     ports:
       - "27019:27017"
     # volumes:
     #   - ./mongo-rs0-3/data:/data/db
+    # networks:
+    #   - webnet    
 
-  # Docker to setup replica set and then die (:
+# Docker to setup replica set and then die (:
   setup-rs:
-    image: "setup-rs"
+    image: almidi/porteto-setup-rs
     build: ./setup-rs
+    deploy:
+      mode: global
+      restart_policy:
+          condition: on-failure
+          max_attempts: 2
     depends_on:
       - "mongo-rs0-1"
-  
-  # Admin page for mongoDB
+    # networks:
+    #   - webnet  
+
+# Admin page for mongoDB
   adminmongo:
-    image: "adicom/admin-mongo"
+    image: adicom/admin-mongo
     # First connection can be initialized with environment variables
     # Web connection syntax: mongodb://<user>:<password>@127.0.0.1:<port>/<db>
     # Web connection 1 string:  mongodb://mongo-rs0-1
@@ -288,15 +373,27 @@ services:
     environment:
       # The name of the connection to create on boot
       CONN_NAME: mongo1
-      # The username for the database connection
-      # - DB_USERNAME=""
-      # The password fot the database user
-      # - DB_PASSWORD=""
-      # The host IP address or DNS name without the port!      
       DB_HOST: mongo-rs0-1
-      # The port of the mongoDB database, if not provided the default 27017 will be used      
-      # - DB_PORT=
     ports:
       - "1234:1234"
     depends_on:
       - "mongo-rs0-1"
+    # networks:
+    #   - webnet
+
+#Docker Visualizer
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8090:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      mode: global
+      placement:
+        constraints: [node.role == manager]
+    # networks:
+    #   - webnet
+# networks:
+#   webnet:
+#     driver: bridge

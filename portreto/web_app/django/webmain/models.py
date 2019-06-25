@@ -1,15 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from PIL import Image
-from .storage import ExternalStorage
-from django.conf.global_settings import MEDIA_ROOT
-from sorl.thumbnail import ImageField, get_thumbnail
-
-
-from io import BytesIO
-from django.core.files.uploadedfile import InMemoryUploadedFile
-import sys
-
 
 MALE = 'ML'
 FEMALE = 'FM'
@@ -26,7 +16,7 @@ GENDER = (
 # Create your models here.
 class Gallery(models.Model):
     GalleryOwner = models.ForeignKey(User, on_delete=models.CASCADE, default=1, null=True, blank=True)
-    AlbumCover = models.ImageField(default='album_cover/default.jpeg', storage=ExternalStorage(),blank=True,null=True)
+    AlbumCover = models.ImageField(default='album_cover/default.jpeg', blank=True,null=True)
     Name = models.CharField(max_length=50, null=False, blank=False)
     Description = models.CharField(default='', null=True, blank=True, max_length=1024)
     UploadDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
@@ -42,7 +32,7 @@ class GalleryReaction(models.Model):
 
 class Photo(models.Model):
     Gallery = models.IntegerField(null=True, blank=True)  #TODO is this corrent ?
-    Photo = models.ImageField(default='photos/default.jpg',storage=ExternalStorage(),blank=True, null=True)
+    Photo = models.ImageField(default='photos/default.jpg',blank=True, null=True)
     UploadDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
     Location = models.CharField(default='', blank=True, null=True, max_length=50)   #INIT AS START.CHECK IF WE WANT LONGTITUDE, LATITUDE
     Description = models.CharField(default='', blank=True, null=True, max_length=1024)
@@ -87,7 +77,7 @@ class Follow(models.Model): # authorize maybe?
 
 class Profile(models.Model):    # authorization demanded for sure
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    ProfilePhoto = models.ImageField(default='/profile_pics/default.jpg',storage=ExternalStorage(), null=True, blank=True)
+    ProfilePhoto = models.ImageField(default='/profile_pics/default.jpg', null=True, blank=True)
     RegisterDateTime = models.DateTimeField(auto_now_add=True, null=True, editable=False)
     BirthDate = models.DateField(null=True, blank=True, editable=True)
     Bio = models.CharField(default='', max_length=500, blank=True, null=True)
