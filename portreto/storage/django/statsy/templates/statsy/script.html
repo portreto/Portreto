@@ -1,0 +1,7 @@
+{% load static from staticfiles %}
+
+<script src="{% static 'statsy/api.js' %}"></script>
+
+<input type="hidden" id="statsy_send_url" value="{% url 'statsy.send' %}"/>
+
+{% csrf_token %}

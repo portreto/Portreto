@@ -109,7 +109,7 @@ services:
       - "8001:80"
     environment:
       STORAGE_ID: 1 
-      EXTERNAL_URL: "http://172.21.0.1:8001"
+      EXTERNAL_URL: "http://localhost:8001"
     depends_on:
       - zoo
     # networks:
@@ -135,7 +135,7 @@ services:
       - "8002:80"
     environment:
       STORAGE_ID: 2 
-      EXTERNAL_URL: "http://172.21.0.1:8002"
+      EXTERNAL_URL: "http://localhost:8002"
     depends_on:
       - zoo
     # networks:
@@ -162,7 +162,7 @@ services:
       - "8003:80"
     environment:
       STORAGE_ID: 3 
-      EXTERNAL_URL: "http://172.21.0.1:8003"
+      EXTERNAL_URL: "http://localhost:8003"
     depends_on:
       - zoo  
     # networks:
@@ -188,7 +188,7 @@ services:
       - "8004:80"
     environment:
       STORAGE_ID: 4 
-      EXTERNAL_URL: "http://172.21.0.1:8004"
+      EXTERNAL_URL: "http://localhost:8004"
     depends_on:
       - zoo
     # networks:
@@ -214,7 +214,7 @@ services:
       - "8005:80"
     environment:
       STORAGE_ID: 5 
-      EXTERNAL_URL: "http://172.21.0.1:8005"
+      EXTERNAL_URL: "http://localhost:8005"
 
     depends_on:
       - zoo
@@ -242,7 +242,7 @@ services:
       - "8006:80"
     environment:
       STORAGE_ID: 6 
-      EXTERNAL_URL: "http://172.21.0.1:8006"
+      EXTERNAL_URL: "http://localhost:8006"
     depends_on:
       - zoo
     # networks:
@@ -257,7 +257,11 @@ services:
       - 2181:2181
     environment:
       ZOO_MY_ID: 1
-      ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=zoo3:2888:3888;2181
+      
+      # for swarm
+      # ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=zoo3:2888:3888;2181
+      # for docker compose
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
     # networks:
     #   - host    
       
@@ -269,7 +273,10 @@ services:
       - 2182:2181
     environment:
       ZOO_MY_ID: 2
-      ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=0.0.0.0:2888:3888;2181 server.3=zoo3:2888:3888;2181
+      # for swarm
+      # ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=0.0.0.0:2888:3888;2181 server.3=zoo3:2888:3888;2181
+      # for docker compose
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=0.0.0.0:2888:3888 server.3=zoo3:2888:3888
     # networks:
     #   - host
 
@@ -281,7 +288,10 @@ services:
       - 2183:2181
     environment:
       ZOO_MY_ID: 3
-      ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=0.0.0.0:2888:3888;2181    
+      # for swarm
+      # ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=0.0.0.0:2888:3888;2181    
+      # for docker compose
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=0.0.0.0:2888:3888    
     # networks:
     #   - host      
 

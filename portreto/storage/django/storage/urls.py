@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('zkclient.urls')),
     path('api/', include('storage_api.urls')),
+    url(r'^stats/', include('statsy.urls'))
     # url(r'^', include(router.urls)),
     # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

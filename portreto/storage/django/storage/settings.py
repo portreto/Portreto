@@ -29,6 +29,9 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+# import statsy
+
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'storage_api.apps.StorageApiConfig'
+    'storage_api.apps.StorageApiConfig',
+    'statsy.apps.StatsyConfig',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +140,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'data')
 MEDIA_URL = '/data/'
 
 GLOBALS = {}
+
+STATSY_VIEW_PERMISSION = 'statsy.stats_view'

@@ -2,6 +2,8 @@ from rest_framework.parsers import FileUploadParser
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
+import statsy
+
 from .serializers import FileSerializer
 from django.http import HttpResponse
 import hashlib
@@ -19,6 +21,7 @@ def randomString(stringLength=10):
 class FilesView(APIView):
     parser_class = (FileUploadParser,)
     # Upload Image
+    @statsy.watch()
     def post(self, request, *args, **kwargs):      
         file_serializer = FileSerializer(data=request.data)
         # Hash Value
@@ -43,6 +46,7 @@ class FilesView(APIView):
         return Response(file_serializer.data, status=status.HTTP_201_CREATED)
 
     # Get Image
+    @statsy.watch()
     def get(self, request):
         # get hashing key
         key = settings.GLOBALS["hash_key"]
@@ -64,6 +68,7 @@ class FilesView(APIView):
         return response
 
     # Delete Image
+    @statsy.watch()
     def delete(self, request):
         # get hashing key
         key = settings.GLOBALS["hash_key"]
@@ -91,7 +96,7 @@ class FilesView(APIView):
         return Response(status=status.HTTP_200_OK)
 
 class NameView(APIView):
-        # Get Image
+    # Get New Image Name
     def get(self, request):
         # get hashing key
         key = settings.GLOBALS["hash_key"]

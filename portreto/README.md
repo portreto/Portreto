@@ -113,4 +113,6 @@ For developent purposes groups have been created using noop images
 
 groups are called through `docker-compose run <name>` just like any other container
 
+## Docker Swarm
+For complete fault-tolerance the containers can be run in a docker swarm environment. In this case special attention must be given to the storage services environment variable <EXTERNAL_URL>
 
