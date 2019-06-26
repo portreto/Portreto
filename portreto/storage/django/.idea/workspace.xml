@@ -3,30 +3,57 @@
   <component name="ChangeListManager">
     <list default="true" id="716b7eca-3415-400e-8d63-907b5d298e09" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/app_service/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/app_service/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/api_client.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/auth_token_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/auth_token_middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0002_photo_photourl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0003_auto_20190518_1640.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0004_auto_20190518_1736.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0005_remove_photo_photourl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0006_auto_20190518_1847.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0007_auto_20190518_1851.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0008_auto_20190519_1941.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0009_auto_20190520_2047.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0010_auto_20190520_2147.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0011_auto_20190521_1347.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0012_auto_20190522_0015.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0013_auto_20190522_0041.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0014_auto_20190623_0000.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/django/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/django/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/storage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zkclient/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/zkclient/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storage_1/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../storage_1/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_1/llwhvbkvzseqxammtbyo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_1/sitqfnbitbebrruposyo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_2/awopyazhrmvmxdlkpgmi.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../storage_2/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../storage_2/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_2/rbkapknffyhwifdinxgd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_2/vhicyvrzljfloqirafzc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_2/xoluemcxzzzufcsxzdpk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_3/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../storage_3/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_3/eljuytffzybnkjecfams.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_3/hqgbocqvtrcygjvtgrwe.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../storage_4/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../storage_4/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_4/eljuytffzybnkjecfams.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_4/ffgtbjwdmdalwukobbxw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_4/hqgbocqvtrcygjvtgrwe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_4/limbyuenzdtehaqgtrcu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_4/sitqfnbitbebrruposyo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_5/awopyazhrmvmxdlkpgmi.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../storage_5/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../storage_5/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_5/ffgtbjwdmdalwukobbxw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_5/limbyuenzdtehaqgtrcu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_5/mmafprdfsboknbilfvmo.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_5/rbkapknffyhwifdinxgd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_5/utjcdjyvhohhnygvngtb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_5/vhicyvrzljfloqirafzc.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../storage_6/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../storage_6/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/api_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../web_app/django/webmain/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_6/llwhvbkvzseqxammtbyo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_6/mmafprdfsboknbilfvmo.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_6/utjcdjyvhohhnygvngtb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storage_6/xoluemcxzzzufcsxzdpk.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zkclient/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
-              <caret line="54" column="67" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
+            <state relative-caret-position="553">
+              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <element signature="e#314#500#0" />
@@ -182,7 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,6 +230,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -269,16 +296,18 @@
       <workItem from="1557685120472" duration="1085000" />
       <workItem from="1560551031669" duration="2246000" />
       <workItem from="1561156497608" duration="142000" />
+      <workItem from="1561504149629" duration="921000" />
+      <workItem from="1561511030343" duration="13000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54033000" />
+    <option name="totallyTimeSpent" value="54967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="24" y="71" width="1847" height="926" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20544142" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20988339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -410,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zkclient/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="54" column="67" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
+        <state relative-caret-position="553">
+          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <element signature="e#314#500#0" />

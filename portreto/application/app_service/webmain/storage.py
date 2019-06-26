@@ -45,13 +45,7 @@ def bytes_to_dict(the_binary):
 
 logging.basicConfig(level=logging.DEBUG)
 
-# Connect to zookeeper
-zk = KazooClient(hosts=settings.ZOOCLIENTS)
-zk.start()
-
-
-
-# Listen to connection
+# Zookeeper Listener
 def zklistener(state):
     if state == KazooState.LOST:
         print("Zookeeper Connection Lost")
@@ -59,23 +53,35 @@ def zklistener(state):
         print("Zookeeper Connection Suspended")
     else:
         print("Zookeeper Connected")
-zk.add_listener(zklistener)
 
-# Add watcher for hashing key
-@zk.DataWatch("/storage")
-def watch_node(data, stat):
-    settings.GLOBALS["hash_key"] = data.decode("utf-8")
+# Try until connecting to zookeeper
+while True:
+    try:
+        # Connect to zookeeper
+        zk = KazooClient(hosts=settings.ZOOCLIENTS)
+        zk.start()
 
-# Add watcher for storage hosts
-@zk.ChildrenWatch("/storage")
-def watch_children(children):
-    if len(children) >0:
-        hosts = {}
-        for child in children:
-            temp_dict = bytes_to_dict(zk.get("/storage/"+child)[0])
-            host={temp_dict["ID"]:{'hostname' : temp_dict["hostname"], 'ext_url' : temp_dict["EXT_URL"]}}
-            hosts.update(host.copy())
-        settings.GLOBALS["hosts"]=hosts
+        # Listen to connection
+        zk.add_listener(zklistener)
+
+        # Add watcher for hashing key
+        @zk.DataWatch("/storage")
+        def watch_node(data, stat):
+            settings.GLOBALS["hash_key"] = data.decode("utf-8")
+
+        # Add watcher for storage hosts
+        @zk.ChildrenWatch("/storage")
+        def watch_children(children):
+            if len(children) >0:
+                hosts = {}
+                for child in children:
+                    temp_dict = bytes_to_dict(zk.get("/storage/"+child)[0])
+                    host={temp_dict["ID"]:{'hostname' : temp_dict["hostname"], 'ext_url' : temp_dict["EXT_URL"]}}
+                    hosts.update(host.copy())
+                settings.GLOBALS["hosts"]=hosts
+        break
+    except:
+        continue
 
 @deconstructible
 class ExternalStorage(Storage):

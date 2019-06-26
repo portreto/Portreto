@@ -3,6 +3,7 @@ from rest_framework import status
 from rest_framework.utils import json
 from .BusinessLogic.Tokens import UserIdentity, encryption
 from django.contrib.auth.models import User
+from webmain.models import Profile
 from .models import TokenBlacklist
 # from app_service.settings import DEBUG
 
@@ -27,6 +28,13 @@ def token_check(get_response):
 
 
     def middleware(request):
+
+        # Create admin profile if non exists
+        if User.objects.filter(username='admin').exists():
+            admin = User.objects.get(username='admin')
+            frofile, created = Profile.objects.get_or_create(user=admin)
+
+
         print_debug("REQUEST",request)
         print_debug("REQUEST BODY",request.body)
         print_debug("REQUEST META",request.META)

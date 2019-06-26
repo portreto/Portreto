@@ -112,3 +112,4 @@ class Profile(models.Model):    # authorization demanded for sure
     #         output_size = (300, 300)
     #         pf.thumbnail(output_size)
     #         pf.save(self.ProfilePhoto.path)
+

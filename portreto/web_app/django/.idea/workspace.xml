@@ -2,19 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="756a196a-dc82-470a-9b8f-6552f5312f1b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../storage/storage_2/swlmgafkfobntmojoomw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../storage/storage_3/rxwiqnpbhfujgitrzzuw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../storage/storage_3/swlmgafkfobntmojoomw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../storage/storage_5/rxwiqnpbhfujgitrzzuw.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/auth_token_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/auth_token_middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/users/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0002_photo_photourl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0003_auto_20190518_1640.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0004_auto_20190518_1736.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0005_remove_photo_photourl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0006_auto_20190518_1847.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0007_auto_20190518_1851.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0008_auto_20190519_1941.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0009_auto_20190520_2047.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0010_auto_20190520_2147.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0011_auto_20190521_1347.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0012_auto_20190522_0015.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0013_auto_20190522_0041.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/migrations/0014_auto_20190623_0000.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../application/app_service/webmain/storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../application/app_service/webmain/storage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/django/zkclient/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/django/zkclient/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_1/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/llwhvbkvzseqxammtbyo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_1/sitqfnbitbebrruposyo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/awopyazhrmvmxdlkpgmi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_2/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/rbkapknffyhwifdinxgd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/vhicyvrzljfloqirafzc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_2/xoluemcxzzzufcsxzdpk.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_3/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/eljuytffzybnkjecfams.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_3/hqgbocqvtrcygjvtgrwe.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_4/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/eljuytffzybnkjecfams.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/ffgtbjwdmdalwukobbxw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/hqgbocqvtrcygjvtgrwe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/limbyuenzdtehaqgtrcu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_4/sitqfnbitbebrruposyo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/awopyazhrmvmxdlkpgmi.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_5/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/UserConnection.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/UserConnection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0002_auto_20190522_0013.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/migrations/0003_auto_20190522_0017.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmain/storage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/ffgtbjwdmdalwukobbxw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/limbyuenzdtehaqgtrcu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/mmafprdfsboknbilfvmo.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/rbkapknffyhwifdinxgd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/utjcdjyvhohhnygvngtb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_5/vhicyvrzljfloqirafzc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../storage/storage_6/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/llwhvbkvzseqxammtbyo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/mmafprdfsboknbilfvmo.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/utjcdjyvhohhnygvngtb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../storage/storage_6/xoluemcxzzzufcsxzdpk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webmain/templates/webmain/add_photo.html" beforeDir="false" afterPath="$PROJECT_DIR$/webmain/templates/webmain/add_photo.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,17 +151,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/UserConnection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
+            <state relative-caret-position="1311">
               <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webmain/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="506">
+              <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
               <folding>
                 <element signature="e#175#445#0" />
                 <element signature="e#301#356#0" />
@@ -125,6 +169,18 @@
                 <element signature="e#1635#1791#0" />
                 <element signature="e#1858#2323#0" />
                 <element signature="e#2388#2542#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webmain/templates/webmain/add_photo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,7 +198,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>share</find>
       <find>shared_galleries</find>
       <find>url += str(id)</find>
       <find>data=reqdata</find>
@@ -172,6 +227,7 @@
       <find>RESPONSE</find>
       <find>RESPO</find>
       <find>RESP</find>
+      <find>update_ga</find>
     </findStrings>
     <replaceStrings>
       <replace>(base_url + '/basic/gallery'</replace>
@@ -233,7 +289,6 @@
         <option value="$PROJECT_DIR$/users/BusinessLogic/Tokens.py" />
         <option value="$PROJECT_DIR$/users/urls.py" />
         <option value="$PROJECT_DIR$/webmain/templates/webmain/create_gallery.html" />
-        <option value="$PROJECT_DIR$/webmain/templates/webmain/add_photo.html" />
         <option value="$PROJECT_DIR$/webmain/templates/webmain/navbar_new.html" />
         <option value="$PROJECT_DIR$/users/static/css/style.css" />
         <option value="$PROJECT_DIR$/webmain/templates/webmain/photo_detail.html" />
@@ -256,6 +311,7 @@
         <option value="$PROJECT_DIR$/webmain/models.py" />
         <option value="$PROJECT_DIR$/webmain/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/users/UserConnection.py" />
+        <option value="$PROJECT_DIR$/webmain/templates/webmain/add_photo.html" />
       </list>
     </option>
   </component>
@@ -271,7 +327,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -298,6 +353,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -360,11 +416,12 @@
       <workItem from="1561472371832" duration="1841000" />
       <workItem from="1561494638442" duration="880000" />
       <workItem from="1561495590514" duration="51000" />
+      <workItem from="1561511045023" duration="626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229904000" />
+    <option name="totallyTimeSpent" value="230530000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -377,8 +434,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="23" y="52" width="1857" height="954" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16740331" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16906077" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -501,18 +559,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/webmain/new_templates/webmain/add_photo.html" />
-    <entry file="file://$PROJECT_DIR$/webmain/templates/webmain/add_photo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
-          <folding>
-            <element signature="e#1101#1107#1" expanded="true" />
-            <element signature="e#1187#1193#0" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -733,15 +779,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/users/UserConnection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
+        <state relative-caret-position="1311">
           <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webmain/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state relative-caret-position="506">
+          <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
           <folding>
             <element signature="e#175#445#0" />
             <element signature="e#301#356#0" />
@@ -749,6 +795,16 @@
             <element signature="e#1635#1791#0" />
             <element signature="e#1858#2323#0" />
             <element signature="e#2388#2542#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmain/templates/webmain/add_photo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

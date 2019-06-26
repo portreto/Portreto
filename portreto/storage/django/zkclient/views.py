@@ -26,8 +26,13 @@ def bytes_to_dict(the_binary):
 logging.basicConfig(level=logging.DEBUG)
 
 # Connect to zookeeper
-zk = KazooClient(hosts="zoo1:2181,zoo2:2181,zoo3:2181")
-zk.start()
+while True:
+    try:
+        zk = KazooClient(hosts="zoo1:2181,zoo2:2181,zoo3:2181")
+        zk.start()
+        break
+    except:
+        continue
 
 # Listen to connection
 def zklistener(state):

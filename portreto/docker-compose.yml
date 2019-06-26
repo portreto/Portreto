@@ -45,7 +45,7 @@ services:
     ports:
        - "8000:8000"
     # networks:
-    #   - webnet       
+    #   - host       
 
 # Django Application Service
   appservice:
@@ -67,7 +67,7 @@ services:
       - zoo
       - storage
     # networks:
-    #   - webnet      
+    #   - host      
 
   auth:
     build:
@@ -86,7 +86,7 @@ services:
     depends_on:
       - web
     # networks:
-    #   - webnet
+    #   - host
 
 # Storage Servers
   storage1:
@@ -109,11 +109,11 @@ services:
       - "8001:80"
     environment:
       STORAGE_ID: 1 
-      EXTERNAL_URL: "http://localhost:8001"
+      EXTERNAL_URL: "http://172.21.0.1:8001"
     depends_on:
       - zoo
     # networks:
-    #   - webnet      
+    #   - host      
 
   storage2:
     build:
@@ -135,11 +135,11 @@ services:
       - "8002:80"
     environment:
       STORAGE_ID: 2 
-      EXTERNAL_URL: "http://localhost:8002"
+      EXTERNAL_URL: "http://172.21.0.1:8002"
     depends_on:
       - zoo
     # networks:
-    #   - webnet      
+    #   - host      
       
   storage3:
     build:
@@ -162,11 +162,11 @@ services:
       - "8003:80"
     environment:
       STORAGE_ID: 3 
-      EXTERNAL_URL: "http://localhost:8003"
+      EXTERNAL_URL: "http://172.21.0.1:8003"
     depends_on:
       - zoo  
     # networks:
-    #   - webnet         
+    #   - host         
 
   storage4:
     build:
@@ -188,11 +188,11 @@ services:
       - "8004:80"
     environment:
       STORAGE_ID: 4 
-      EXTERNAL_URL: "http://localhost:8004"
+      EXTERNAL_URL: "http://172.21.0.1:8004"
     depends_on:
       - zoo
     # networks:
-    #   - webnet      
+    #   - host      
 
   storage5:
     build:
@@ -214,12 +214,12 @@ services:
       - "8005:80"
     environment:
       STORAGE_ID: 5 
-      EXTERNAL_URL: "http://localhost:8005"
+      EXTERNAL_URL: "http://172.21.0.1:8005"
 
     depends_on:
       - zoo
     # networks:
-    #   - webnet      
+    #   - host      
       
   storage6:
     build:
@@ -242,11 +242,11 @@ services:
       - "8006:80"
     environment:
       STORAGE_ID: 6 
-      EXTERNAL_URL: "http://localhost:8006"
+      EXTERNAL_URL: "http://172.21.0.1:8006"
     depends_on:
       - zoo
     # networks:
-    #   - webnet           
+    #   - host           
    
 # Zookeeper Ensemble
   zoo1:
@@ -258,7 +258,9 @@ services:
     environment:
       ZOO_MY_ID: 1
       ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=zoo3:2888:3888;2181
-
+    # networks:
+    #   - host    
+      
   zoo2:
     image: zookeeper
     restart: always
@@ -268,6 +270,8 @@ services:
     environment:
       ZOO_MY_ID: 2
       ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=0.0.0.0:2888:3888;2181 server.3=zoo3:2888:3888;2181
+    # networks:
+    #   - host
 
   zoo3:
     image: zookeeper
@@ -278,6 +282,8 @@ services:
     environment:
       ZOO_MY_ID: 3
       ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=0.0.0.0:2888:3888;2181    
+    # networks:
+    #   - host      
 
   # Web GUI for Zookeeper
   zoonav:
@@ -293,7 +299,7 @@ services:
      - zoonav-api
     restart: always
     # networks:
-    #   - webnet    
+    #   - host    
   
   zoonav-api:
     image: elkozmon/zoonavigator-api:0.6.1
@@ -302,7 +308,7 @@ services:
       API_HTTP_PORT: 9000
     restart: always
     # networks:
-    #   - webnet        
+    #   - host        
 
 # Mongo replica set    
   mongo-rs0-1:
@@ -313,13 +319,13 @@ services:
           condition: on-failure    
     ports:
       - "27017:27017"
-    # volumes:
-    #   - ./mongo-rs0-1/data:/data/db
+    volumes:
+      - ./mongo-rs0-1/data:/data/db
     depends_on:
       - "mongo-rs0-2"
       - "mongo-rs0-3"
     # networks:
-    #   - webnet      
+    #   - host      
 
   mongo-rs0-2:
     image: "mongo"
@@ -330,10 +336,10 @@ services:
           condition: on-failure    
     ports:
       - "27018:27017"
-    # volumes:
-    #   - ./mongo-rs0-2/data:/data/db
+    volumes:
+      - ./mongo-rs0-2/data:/data/db
     # networks:
-    #   - webnet    
+    #   - host    
 
   mongo-rs0-3:
     image: "mongo"
@@ -344,10 +350,10 @@ services:
           condition: on-failure    
     ports:
       - "27019:27017"
-    # volumes:
-    #   - ./mongo-rs0-3/data:/data/db
+    volumes:
+      - ./mongo-rs0-3/data:/data/db
     # networks:
-    #   - webnet    
+    #   - host    
 
 # Docker to setup replica set and then die (:
   setup-rs:
@@ -361,7 +367,7 @@ services:
     depends_on:
       - "mongo-rs0-1"
     # networks:
-    #   - webnet  
+    #   - host  
 
 # Admin page for mongoDB
   adminmongo:
@@ -379,7 +385,7 @@ services:
     depends_on:
       - "mongo-rs0-1"
     # networks:
-    #   - webnet
+    #   - host
 
 #Docker Visualizer
   visualizer:
@@ -393,7 +399,7 @@ services:
       placement:
         constraints: [node.role == manager]
     # networks:
-    #   - webnet
+    #   - host
 # networks:
 #   webnet:
 #     driver: bridge
