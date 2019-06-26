@@ -1,12 +1,12 @@
 #ignore database files
-portreto/mongo-rs0-1/data/**
-portreto/mongo-rs0-2/data/**
-portreto/mongo-rs0-3/data/**
+# portreto/mongo-rs0-1/data/**
+# portreto/mongo-rs0-2/data/**
+# portreto/mongo-rs0-3/data/**
 
 #ignore storage files
-portreto/storage/storage_1/*.jp*
-portreto/storage/storage_2/*.jp*
-portreto/storage/storage_3/*.jp*
-portreto/storage/storage_4/*.jp*
-portreto/storage/storage_5/*.jp*
-portreto/storage/storage_6/*.jp*
+# portreto/storage/storage_1/*.jp*
+# portreto/storage/storage_2/*.jp*
+# portreto/storage/storage_3/*.jp*
+# portreto/storage/storage_4/*.jp*
+# portreto/storage/storage_5/*.jp*
+# portreto/storage/storage_6/*.jp*
