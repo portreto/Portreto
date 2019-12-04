@@ -4,7 +4,7 @@ cffi==1.12.3
 chardet==3.0.4
 cryptography==2.7
 dataclasses==0.6
-Django==2.2.1
+Django==2.2.8
 django-crispy-forms==1.7.2
 django-stubs==0.12.1
 djangorestframework==3.9.4
